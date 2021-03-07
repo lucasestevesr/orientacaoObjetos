@@ -29,7 +29,7 @@ Quando estiver tudo prontinho
 
 Volte para a master: git checkout main
 
-Atualize a master: git pullgit
+Atualize a master: git pull
 
 Volte para a sua branch: git checkout nomedabranch
 
