@@ -1,2 +1,21 @@
 Adicione as novas classes na pasta "Sistema".
 Exemplo Classe Usuario.
+
+Rotina:
+
+git status 
+
+//caso não haja alterações para enviar
+
+git pull (atualiza seu repositório antes de tudo, para evitar conflitos)
+
+Após modifiações incrementadas:
+git pull (Atualiza seu repositório)
+
+git add . (ADICIONA TODAS AS MODIFICAÇÕES)
+
+git commit -m "Digite sua Mensagem" (Envia alterações para o Repositório)
+
+git push origin main (Confirma as alterações enviadas no repositório)
+
+git pull (Puxa as informações do Repositório, ou seja, atualiza seu repositório local)
