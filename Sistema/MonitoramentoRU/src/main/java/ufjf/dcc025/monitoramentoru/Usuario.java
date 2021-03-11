@@ -7,31 +7,48 @@ package ufjf.dcc025.monitoramentoru;
 
 /**
  *
- * @author Lucas
+ * @author Lucas Esteves
  */
-public class Usuario implements MenuInicial {
+public abstract class Usuario {
 
-    protected String id;
-    protected String nome;
-    protected String email;
-    protected String senha;
-    protected String cargo;
+    private String nome;
+    private String identificador;
+    private String email;
+    private String telefone;
+    private String senha;
+    //private int[][] horarios = new int[15][5];
 
-    public Usuario(String id, String nome, String email, String senha, String cargo) {
-        this.id = id;
+    public Usuario(String nome, String identificador, String email, String telefone, String senha) {
+
         this.nome = nome;
+        this.identificador = identificador;
         this.email = email;
+        this.telefone = telefone;
         this.senha = senha;
-        this.cargo = cargo;
-    }
+        System.out.println("Foi realizado o cadastro do usúario identificado pelo email: " + this.email + " e pelo identificador: " + this.identificador);
 
-    public String getId() {
-        return id;
     }
-
-    public void setId(String id) {
-        this.id = id;
+    public boolean autenticaLogin(String identificador, String senha){
+        System.out.println("Autenticando o Login.");
+        return ((this.senha == null ? senha == null : this.senha.equals(senha)) && this.identificador.equals(identificador));
     }
+    public void editaCadastro(String nome, String identificador, String email, String telefone, String senha){
+        System.out.println("Editando o Cadastro.");
+        this.nome = nome;
+        this.identificador = identificador;
+        this.email = email;
+        this.telefone = telefone;
+        this.senha = senha;
+    }
+//    public boolean cadastraHorarios(int[][] horario){
+//        int h = 0;
+//        for (int i = 0; i <= 5; i++) {
+//            for (int j = 0; j <= 15; j++) {
+//                
+//            }
+//            
+//        }
+//    }
 
     public String getNome() {
         return nome;
@@ -39,6 +56,14 @@ public class Usuario implements MenuInicial {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getIdentificador() {
+        return identificador;
+    }
+
+    public void setIdentificador(String identificador) {
+        this.identificador = identificador;
     }
 
     public String getEmail() {
@@ -49,6 +74,14 @@ public class Usuario implements MenuInicial {
         this.email = email;
     }
 
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
     public String getSenha() {
         return senha;
     }
@@ -57,29 +90,12 @@ public class Usuario implements MenuInicial {
         this.senha = senha;
     }
 
-    public String getCargo() {
-        return cargo;
-    }
-
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
-    }
-
-    @Override
-    public void login() {
-
-    }
-
-    @Override
-    public void cadastro() {
-
-    }
-
-    //polimorfismo de sobreposição
-    @Override
-    public String toString() {
-        return "Usuario{" + "id=" + id + ", nome=" + nome + ", email=" + email + ", senha=" + senha + ","
-                + " cargo=" + cargo + '}';
-    }
+//    public int[][] getHorarios() {
+//        return horarios;
+//    }
+//
+//    public void setHorarios(int[][] horarios) {
+//        this.horarios = horarios;
+//    }
 
 }
