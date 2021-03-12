@@ -13,6 +13,8 @@ import javax.swing.JOptionPane;
 public class AgendarRefeicao{
     
     private ArrayList <Refeicao> refeicao;
+    private String diaSemana;
+    
     
     AgendarRefeicao(){
         refeicao = new ArrayList();
@@ -34,12 +36,17 @@ public class AgendarRefeicao{
         String opcoesTurno[] = {"Café da Manhã", "Almoço", "Jantar"};
         String opcoesHorario[] = {"11:00 às 11:30", "11:30 às 12:00", "12:00 às 12:30", "12:30 às 13:00", "13:00 às 13:30", "13:30 às 14:00"};
         
-        
         String diaSemana = (String) JOptionPane.showInputDialog(null, "Escolha um dia da semana", "Dia da semana", JOptionPane.INFORMATION_MESSAGE, null,opcoesDia, opcoesDia[0]);
         String turno = (String) JOptionPane.showInputDialog(null, "Escolha o turno da refeicao", "Turno da refeicao", JOptionPane.INFORMATION_MESSAGE, null,opcoesTurno, opcoesTurno[0]);
         String horario = (String) JOptionPane.showInputDialog(null, "Escolha um horario da refeicao", "Horario da refeicao", JOptionPane.INFORMATION_MESSAGE, null,opcoesHorario, opcoesHorario[0]);
         
-        a.agendar(new Refeicao (diaSemana, turno, horario));
+        Refeicao almoco = new Refeicao (diaSemana, turno, horario);
+        a.agendar(almoco);
+        
+//        System.out.println(a.diaSemana);
+//        System.out.println(a.refeicao);
+//        System.out.println(a.refeicao.get(0));
+        
         
         diaSemana = (String) JOptionPane.showInputDialog(null, "Escolha um dia da semana", "Dia da semana", JOptionPane.INFORMATION_MESSAGE, null,opcoesDia, opcoesDia[0]);
         turno = (String) JOptionPane.showInputDialog(null, "Escolha o turno da refeicao", "Turno da refeicao", JOptionPane.INFORMATION_MESSAGE, null,opcoesTurno, opcoesTurno[0]);

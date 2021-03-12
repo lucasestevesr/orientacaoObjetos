@@ -14,9 +14,36 @@ public class Refeicao {
     private String turnoRefeicao;
     private String horario;
     
-    public Refeicao(String tipoRefeicao, String turnoRefeicao, String horario){
+    public Refeicao(String diaSemana, String turnoRefeicao, String horario){
         this.diaSemana = diaSemana;
         this.turnoRefeicao = turnoRefeicao;
         this.horario = horario;
     }
+
+    public String getDiaSemana() {
+        return diaSemana;
+    }
+
+    public void setDiaSemana(String diaSemana) {
+        this.diaSemana = diaSemana;
+    }
+
+    public String getTurnoRefeicao() {
+        return turnoRefeicao;
+    }
+
+    public void setTurnoRefeicao(String turnoRefeicao) {
+        this.turnoRefeicao = turnoRefeicao;
+    }
+
+    public String getHorario() {
+        return horario;
+    }
+
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
+    
+    
+    
 }
