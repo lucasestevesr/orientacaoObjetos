@@ -3,14 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ufjf.dcc025.monitoramentoru;
+package ufjf.dcc025.monitoramentoru.DataBase;
 
+import ufjf.dcc025.monitoramentoru.model.Usuario;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  *
- * @author Lucas
+ *  @author Your Name <lucas.esteves@engenharia.ufjf.br>
  */
 public class BancoDeDados {
     

@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ufjf.dcc025.monitoramentoru;
+package ufjf.dcc025.monitoramentoru.model;
 
 /**
  *
- * @author Lucas
+ *  @author Your Name <lucas.esteves@engenharia.ufjf.br>
  */
-public class Discente extends Usuario {
+public class Docente extends Usuario {
 
-    public Discente(String nome, String identificador, String email, String telefone, String senha) {
+    public Docente(String nome, String identificador, String email, String telefone, String senha) {
         super(nome, identificador, email, telefone, senha);
-        System.out.println("Foi criado  um cadastro do tipo discente.");
+        System.out.println("Foi criado  um cadastro do tipo docente.");
     }
 
     @Override

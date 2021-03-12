@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ufjf.dcc025.monitoramentoru;
+package ufjf.dcc025.monitoramentoru.model;
 
 /**
  *
- * @author Lucas Esteves
+ *  @author Your Name <lucas.esteves@engenharia.ufjf.br>
  */
 public abstract class Usuario {
 
@@ -28,6 +28,8 @@ public abstract class Usuario {
         System.out.println("Foi realizado o cadastro do usúario identificado pelo email: " + this.email + " e pelo identificador: " + this.identificador);
 
     }
+       
+    
     public boolean autenticaLogin(String identificador, String senha){
         System.out.println("Autenticando o Login.");
         return ((this.senha == null ? senha == null : this.senha.equals(senha)) && this.identificador.equals(identificador));
