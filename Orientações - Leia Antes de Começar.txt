@@ -1,5 +1,4 @@
-Adicione as novas classes na pasta "Sistema".
-Exemplo Classe Usuario.
+Adicione as novas classes na pasta "Sistema" seguindo a arquitetura MVC.
 
 Rotina:
 
@@ -19,3 +18,5 @@ git commit -m "Digite sua Mensagem" (Envia alterações para o Repositório)
 git push origin main (Confirma as alterações enviadas no repositório)
 
 git pull (Puxa as informações do Repositório, ou seja, atualiza seu repositório local)
+
+@Lucas Esteves
