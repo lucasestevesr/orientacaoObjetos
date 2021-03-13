@@ -5,6 +5,7 @@
  */
 package com.mycompany.cardapio;
 
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 
 /**
@@ -248,23 +249,27 @@ public class Cardapio {
     }
     
 
-    public static void main(String[] args) {
-        
-        Cardapio cardapio = new Cardapio();
-        
-        String diaSemana;
-        String turno;
-        
-        cardapio.declarar();
-        
-        String opcoesDia[] = {"Segunda-feira", "Terça-feira", "Quarta-feira","Quinta-feira","Sexta-feira","Sábado"};
-        String opcoesTurno[] = {"Café da Manhã", "Almoço", "Jantar"};
-        
-        diaSemana = (String) JOptionPane.showInputDialog(null, "Escolha um dia da semana", "Dia da semana", JOptionPane.INFORMATION_MESSAGE, null,opcoesDia, opcoesDia[0]);
-        turno = (String) JOptionPane.showInputDialog(null, "Escolha o turno da refeicao", "Turno da refeicao", JOptionPane.INFORMATION_MESSAGE, null,opcoesTurno, opcoesTurno[0]);
+//    public static void main(String[] args) {
+//        
+//        Cardapio cardapio = new Cardapio();
+//        
+//        String diaSemana;
+//        String turno;
+//        
+//        cardapio.declarar();
+//        
+//        String opcoesDia[] = {"Segunda-feira", "Terça-feira", "Quarta-feira","Quinta-feira","Sexta-feira","Sábado"};
+//        String opcoesTurno[] = {"Café da Manhã", "Almoço", "Jantar"};
+//        
+//        diaSemana = (String) JOptionPane.showInputDialog(null, "Escolha um dia da semana", "Dia da semana", JOptionPane.INFORMATION_MESSAGE, null,opcoesDia, opcoesDia[0]);
+//        turno = (String) JOptionPane.showInputDialog(null, "Escolha o turno da refeicao", "Turno da refeicao", JOptionPane.INFORMATION_MESSAGE, null,opcoesTurno, opcoesTurno[0]);
+//
+//        cardapio.acessar(diaSemana, turno);
+//        
+//    }
 
-        cardapio.acessar(diaSemana, turno);
-        
+    public void acessar(JComboBox<String> diaSemana, JComboBox<String> turno) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
