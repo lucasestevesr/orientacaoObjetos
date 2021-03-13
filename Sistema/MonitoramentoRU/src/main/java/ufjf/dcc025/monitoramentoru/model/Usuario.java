@@ -100,4 +100,8 @@ public abstract class Usuario {
 //        this.horarios = horarios;
 //    }
 
+    public void cadastrarUsuario(Usuario usuario) {
+        
+    }
+
 }

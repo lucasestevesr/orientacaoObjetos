@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ufjf.dcc025.monitoramentoru.DataBase;
+package ufjf.dcc025.monitoramentoru.dao;
 
 import ufjf.dcc025.monitoramentoru.model.Usuario;
 import java.util.ArrayList;
