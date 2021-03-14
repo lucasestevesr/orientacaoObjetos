@@ -11,15 +11,19 @@ package ufjf.dcc025.monitoramentoru.model;
  */
 public abstract class Usuario {
 
+    private int id;
     private String nome;
     private String identificador;
     private String email;
     private String telefone;
     private String senha;
+    int tipo;
     //private int[][] horarios = new int[15][5];
 
-    public Usuario(String nome, String identificador, String email, String telefone, String senha) {
-
+    public Usuario(int id, int tipo, String nome, String identificador, String email, String telefone, String senha) {
+        
+        this.id = id;
+        this.tipo = tipo;
         this.nome = nome;
         this.identificador = identificador;
         this.email = email;
@@ -91,6 +95,16 @@ public abstract class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+    
 
 //    public int[][] getHorarios() {
 //        return horarios;

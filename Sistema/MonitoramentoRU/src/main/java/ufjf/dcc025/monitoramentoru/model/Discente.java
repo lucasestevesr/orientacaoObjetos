@@ -11,8 +11,9 @@ package ufjf.dcc025.monitoramentoru.model;
  */
 public class Discente extends Usuario{
 
-    public Discente(String nome, String identificador, String email, String telefone, String senha) {
-        super(nome, identificador, email, telefone, senha);
+    public Discente(int id, int tipo, String nome, String identificador, String email, String telefone, String senha) {
+        super(id, tipo, nome, identificador, email, telefone, senha);
+        super.tipo = 2;//privado?
         System.out.println("Foi criado  um cadastro do tipo discente.");
     }
        

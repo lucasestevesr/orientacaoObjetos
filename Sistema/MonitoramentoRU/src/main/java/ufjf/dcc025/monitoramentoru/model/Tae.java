@@ -11,8 +11,9 @@ package ufjf.dcc025.monitoramentoru.model;
  */
 public class Tae extends Usuario {
 
-    public Tae(String nome, String identificador, String email, String telefone, String senha) {
-        super(nome, identificador, email, telefone, senha);
+    public Tae(int id, int tipo, String nome, String identificador, String email, String telefone, String senha) {
+        super(id, tipo, nome, identificador, email, telefone, senha);
+        super.tipo=3;//privado?
         System.out.println("Foi criado  um cadastro do tipo Tae.");
     }
 
