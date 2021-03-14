@@ -7,59 +7,57 @@ package com.mycompany.cardapio;
 
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
+import view.MostraCardapio;
 
 /**
  *
  * @author arthu
  */
 public class Cardapio {
-           
+
     String diaSemana;
     String turno;
     String[][] cardapioCafe = new String[7][4];
     String[][] cardapioAlmoco = new String[7][8];
     String[][] cardapioJanta = new String[6][8];
-    
-    
+
     public void declarar() {
-        
-        cardapioCafe[0][0] = "Fruta";
-        cardapioCafe[0][1] = "Bebida";
-        cardapioCafe[0][2] = "Opção Proteica";
-        cardapioCafe[0][3] = "Panificado";
-        
+
+        cardapioCafe[0][0] = "Fruta: ";
+        cardapioCafe[0][1] = "Bebida: ";
+        cardapioCafe[0][2] = "Opção Proteica: ";
+        cardapioCafe[0][3] = "Panificado: ";
+
         cardapioCafe[1][0] = "Banana";
         cardapioCafe[1][1] = "Café ou Chá de Canela";
         cardapioCafe[1][2] = "Leite Integral";
         cardapioCafe[1][3] = "Pão Francês";
-        
+
         cardapioCafe[2][0] = "Laranja";
         cardapioCafe[2][1] = "Café ou Chá de Cidreira";
         cardapioCafe[2][2] = "Leite Integral";
-        cardapioCafe[2][3] = "Pão Francês:";
-        
+        cardapioCafe[2][3] = "Pão Francês";
+
         cardapioCafe[3][0] = "Maça";
         cardapioCafe[3][1] = "Café ou Chá de Camomila";
         cardapioCafe[3][2] = "Leite Integral";
-        cardapioCafe[3][3] = "Pão Francês:";
-        
+        cardapioCafe[3][3] = "Pão Francês";
+
         cardapioCafe[4][0] = "Melancia";
         cardapioCafe[4][1] = "Café ou Chá de Hortelã";
         cardapioCafe[4][2] = "Iorguete";
-        cardapioCafe[4][3] = "Pão Francês:";
-        
+        cardapioCafe[4][3] = "Pão Francês";
+
         cardapioCafe[5][0] = "Abacaxi";
         cardapioCafe[5][1] = "Café ou Chá de Alecrim";
         cardapioCafe[5][2] = "Leite Integral";
-        cardapioCafe[5][3] = "Pão Francês:";
-        
-        cardapioCafe[6][0] = "Melão";
-        cardapioCafe[6][1] = "Café ou Chá de Mate:";
-        cardapioCafe[6][2] = "Leite Integral";
-        cardapioCafe[6][3] = "Pão Francês:";
+        cardapioCafe[5][3] = "Pão Francês";
 
-        
-        
+        cardapioCafe[6][0] = "Melão";
+        cardapioCafe[6][1] = "Café ou Chá de Mate";
+        cardapioCafe[6][2] = "Leite Integral";
+        cardapioCafe[6][3] = "Pão Francês";
+
         // Declarando almoço
         // Colunas
         cardapioAlmoco[0][0] = "Prato Principal";
@@ -120,7 +118,7 @@ public class Cardapio {
         cardapioAlmoco[5][5] = "Preto";
         cardapioAlmoco[5][6] = "Caldo Verde";
         cardapioAlmoco[5][7] = "Gelatina/Melancia";
-        
+
         // Sábado
         cardapioAlmoco[6][0] = "Strogonoff de Frango";
         cardapioAlmoco[6][1] = "Croquete de Lentiha";
@@ -131,27 +129,26 @@ public class Cardapio {
         cardapioAlmoco[6][6] = "Caldo Verde";
         cardapioAlmoco[6][7] = "Gelatina/Melancia";
 
-        
         // Declarando Jantar
         // Colunas
-        cardapioJanta[0][0] = "Prato Principal";
-        cardapioJanta[0][1] = "Opção";
-        cardapioJanta[0][2] = "Guarnição";
-        cardapioJanta[0][3] = "Macarrão";
-        cardapioJanta[0][4] = "Arroz";
-        cardapioJanta[0][5] = "Feijão";
-        cardapioJanta[0][6] = "Sopa";
-        cardapioJanta[0][7] = "Sobremesa";
-        
+        cardapioJanta[0][0] = "Prato Principal: ";
+        cardapioJanta[0][1] = "Opção: ";
+        cardapioJanta[0][2] = "Guarnição: ";
+        cardapioJanta[0][3] = "Macarrão: ";
+        cardapioJanta[0][4] = "Arroz: ";
+        cardapioJanta[0][5] = "Feijão: ";
+        cardapioJanta[0][6] = "Sopa: ";
+        cardapioJanta[0][7] = "Sobremesa: ";
+
         cardapioJanta[1][0] = "Carne Moída";
         cardapioJanta[1][1] = "Omelete";
         cardapioJanta[1][2] = "Polenta";
         cardapioJanta[1][3] = " - ";
         cardapioJanta[1][4] = "Branco";
         cardapioJanta[1][5] = "Preto";
-        cardapioJanta[1][6] = "Batat c/ Cenoura e Frango";
+        cardapioJanta[1][6] = "Batata c/ Cenoura e Frango";
         cardapioJanta[1][7] = "Mamão / Gelatina";
-        
+
         cardapioJanta[2][0] = "Strogonoff de Frango";
         cardapioJanta[2][1] = "Quibe de Soja";
         cardapioJanta[2][2] = "Batata Palha";
@@ -160,7 +157,7 @@ public class Cardapio {
         cardapioJanta[2][5] = "Carioquinha";
         cardapioJanta[2][6] = "Fubá c/ Couve e Carne de Boi";
         cardapioJanta[2][7] = "Tangerina / Gelatina";
-        
+
         cardapioJanta[3][0] = "Frango à Milanesa";
         cardapioJanta[3][1] = "Omelete";
         cardapioJanta[3][2] = "Purê de Batata";
@@ -169,7 +166,7 @@ public class Cardapio {
         cardapioJanta[3][5] = "Preto";
         cardapioJanta[3][6] = "Grão de Bico, Espinafre e Frango";
         cardapioJanta[3][7] = "Banana / Gelatina";
-        
+
         cardapioJanta[4][0] = "Moqueca de Peixe";
         cardapioJanta[4][1] = "Bolinho de Soja";
         cardapioJanta[4][2] = "Batata Sautê";
@@ -178,7 +175,7 @@ public class Cardapio {
         cardapioJanta[4][5] = "Carinhoquinha batido";
         cardapioJanta[4][6] = "Cebola c/ Couve e Carne de Boi";
         cardapioJanta[4][7] = "Laranja / Gelatina";
-        
+
         cardapioJanta[5][0] = "Almondega";
         cardapioJanta[5][1] = "Ovo Cozido";
         cardapioJanta[5][2] = "Quibere";
@@ -187,67 +184,156 @@ public class Cardapio {
         cardapioJanta[5][5] = "Preto";
         cardapioJanta[5][6] = "Inhame /c Espinafre e Frango";
         cardapioJanta[5][7] = "Maça Doce de Goiaba";
-        
+
     }
-    
-    public void acessar(String diaSemana, String turno ){
-        
+
+    public void acessar(String diaSemana, String turno) {
+
         int dia = 0;
         int t = 0;
-        
-        if ("Segunda-feira".equals(diaSemana)) 
+
+        if ("Segunda-feira".equals(diaSemana)) {
             dia = 1;
-        if ("Terça-feira".equals(diaSemana)) 
+        }
+        if ("Terça-feira".equals(diaSemana)) {
             dia = 2;
-        if ("Quarta-feira".equals(diaSemana)) 
+        }
+        if ("Quarta-feira".equals(diaSemana)) {
             dia = 3;
-        if ("Quinta-feira".equals(diaSemana)) 
+        }
+        if ("Quinta-feira".equals(diaSemana)) {
             dia = 4;
-        if ("Sexta-feira".equals(diaSemana)) 
+        }
+        if ("Sexta-feira".equals(diaSemana)) {
             dia = 5;
-        if ("Sábado".equals(diaSemana)) 
+        }
+        if ("Sábado".equals(diaSemana)) {
             dia = 6;
-      
-        
-        if ("Café da Manhã".equals(turno)) {
-            JOptionPane.showMessageDialog(null, "Cadápio do " + (turno) + " de " + diaSemana + "\n\n"
-                    + cardapioCafe[0][0] + ":                         " + cardapioCafe[dia][0] + "\n"
-                    + cardapioCafe[0][1] + ":                      " + cardapioCafe[dia][1] + "\n"
-                    + cardapioCafe[0][2] + ":        " + cardapioCafe[dia][2] + "\n"
-                    + cardapioCafe[0][3] + ":                " + cardapioCafe[dia][3] );
+        }
 
+        MostraCardapio mostracardapio = new MostraCardapio();
 
-        }   
         if ("Almoço".equals(turno)) {
-            JOptionPane.showMessageDialog(null, "Cadápio do " + (turno) + " de " + diaSemana + "\n\n"
-                    + cardapioAlmoco[0][0] + ":          " + cardapioAlmoco[dia][0] + "\n"
-                    + cardapioAlmoco[0][1] + ":                         " + cardapioAlmoco[dia][1] + "\n"
-                    + cardapioAlmoco[0][2] + ":                  " + cardapioAlmoco[dia][2] + "\n"
-                    + cardapioAlmoco[0][3] + ":                    " + cardapioAlmoco[dia][3] + "\n"
-                    + cardapioAlmoco[0][4] + ":                           " + cardapioAlmoco[dia][4] + "\n"
-                    + cardapioAlmoco[0][5] + ":                          " + cardapioAlmoco[dia][5] + "\n"
-                    + cardapioAlmoco[0][6] + ":                           " + cardapioAlmoco[dia][6] + "\n"
-                    + cardapioAlmoco[0][7] + ":                " + cardapioAlmoco[dia][7] + "\n");
+            mostracardapio.jLabelDiaSemana.setText("Dia da Semana: ");
+            mostracardapio.jLabelTurno.setText("Turno: ");
+            mostracardapio.jLabelOpcaoPrincipal.setText("Prato Principal: ");
+            mostracardapio.jLabelOpcaoVegetariana.setText("Opção Vegetariana: ");
+            mostracardapio.jLabelGuarnicao.setText("Guarnição: ");
+            mostracardapio.jLabelMacarrao.setText("Macarrão: ");
+            mostracardapio.jLabelArroz.setText("Arroz: ");
+            mostracardapio.jLabelFeijao.setText("Feijão: ");
+            mostracardapio.jLabelSopa.setText("Sopa: ");
+            mostracardapio.jLabelSobremesa.setText("Sobremesa: ");
+            
+            mostracardapio.jLabelRespDiaSemana.setText(diaSemana);
+            mostracardapio.jLabelRespTurno.setText(turno);
+            mostracardapio.jLabelRespPrincipal.setText(cardapioAlmoco[dia][0]);
+            mostracardapio.jLabelRespVegetariano.setText(cardapioAlmoco[dia][1]);
+            mostracardapio.jLabelRespGuarnicao.setText(cardapioAlmoco[dia][2]);
+            mostracardapio.jLabelRespMacarrao.setText(cardapioAlmoco[dia][3]);
+            mostracardapio.jLabelRespArroz.setText(cardapioAlmoco[dia][4]);
+            mostracardapio.jLabelRespFeijao.setText(cardapioAlmoco[dia][5]);
+            mostracardapio.jLabelRespSopa.setText(cardapioAlmoco[dia][6]);
+            mostracardapio.jLabelRespSobremesa.setText(cardapioAlmoco[dia][7]);
+
+            mostracardapio.setVisible(true);
         }
         
         if ("Jantar".equals(turno)) {
             if (dia == 6) {
                 JOptionPane.showMessageDialog(null, "Não haverá janta neste dia");
             } else {
-                JOptionPane.showMessageDialog(null, "Cadápio do " + (turno) + " de " + diaSemana + "\n\n"
-                        + cardapioJanta[0][0] + ":          " + cardapioJanta[dia][0] + "\n"
-                        + cardapioJanta[0][1] + ":                         " + cardapioJanta[dia][1] + "\n"
-                        + cardapioJanta[0][2] + ":                  " + cardapioJanta[dia][2] + "\n"
-                        + cardapioJanta[0][3] + ":                    " + cardapioJanta[dia][3] + "\n"
-                        + cardapioJanta[0][4] + ":                           " + cardapioJanta[dia][4] + "\n"
-                        + cardapioJanta[0][5] + ":                          " + cardapioJanta[dia][5] + "\n"
-                        + cardapioJanta[0][6] + ":                           " + cardapioJanta[dia][6] + "\n"
-                        + cardapioJanta[0][7] + ":                " + cardapioJanta[dia][7] + "\n");
+                mostracardapio.jLabelDiaSemana.setText("Dia da Semana: ");
+                mostracardapio.jLabelTurno.setText("Turno: ");
+                mostracardapio.jLabelOpcaoPrincipal.setText("Prato Principal: ");
+                mostracardapio.jLabelOpcaoVegetariana.setText("Opção Vegetariana: ");
+                mostracardapio.jLabelGuarnicao.setText("Guarnição: ");
+                mostracardapio.jLabelMacarrao.setText("Macarrão: ");
+                mostracardapio.jLabelArroz.setText("Arroz: ");
+                mostracardapio.jLabelFeijao.setText("Feijão: ");
+                mostracardapio.jLabelSopa.setText("Sopa: ");
+                mostracardapio.jLabelSobremesa.setText("Sobremesa: ");
+
+                mostracardapio.jLabelRespDiaSemana.setText(diaSemana);
+                mostracardapio.jLabelRespTurno.setText(turno);
+                mostracardapio.jLabelRespPrincipal.setText(cardapioJanta[dia][0]);
+                mostracardapio.jLabelRespVegetariano.setText(cardapioJanta[dia][1]);
+                mostracardapio.jLabelRespGuarnicao.setText(cardapioJanta[dia][2]);
+                mostracardapio.jLabelRespMacarrao.setText(cardapioJanta[dia][3]);
+                mostracardapio.jLabelRespArroz.setText(cardapioJanta[dia][4]);
+                mostracardapio.jLabelRespFeijao.setText(cardapioJanta[dia][5]);
+                mostracardapio.jLabelRespSopa.setText(cardapioJanta[dia][6]);
+                mostracardapio.jLabelRespSobremesa.setText(cardapioJanta[dia][7]);
+
+                mostracardapio.setVisible(true);
             }
+        }
+        
+        if ("Café da Manhã".equals(turno)) {
+            mostracardapio.jLabelDiaSemana.setText("Dia da Semana: ");
+            mostracardapio.jLabelTurno.setText("Turno: ");
+            mostracardapio.jLabelOpcaoPrincipal.setText("Fruta: ");
+            mostracardapio.jLabelOpcaoVegetariana.setText("Bebida: ");
+            mostracardapio.jLabelGuarnicao.setText("Opção Proteica: ");
+            mostracardapio.jLabelMacarrao.setText("Panificado: ");
+            mostracardapio.jLabelArroz.setVisible(false);
+            mostracardapio.jLabelFeijao.setVisible(false);
+            mostracardapio.jLabelSopa.setVisible(false);
+            mostracardapio.jLabelSobremesa.setVisible(false);
+            
+            mostracardapio.jLabelRespDiaSemana.setText(diaSemana);
+            mostracardapio.jLabelRespTurno.setText(turno);
+            mostracardapio.jLabelRespPrincipal.setText(cardapioCafe[dia][0]);
+            mostracardapio.jLabelRespVegetariano.setText(cardapioCafe[dia][1]);
+            mostracardapio.jLabelRespGuarnicao.setText(cardapioCafe[dia][2]);
+            mostracardapio.jLabelRespMacarrao.setText(cardapioCafe[dia][3]);
+            mostracardapio.jLabelRespArroz.setVisible(false);
+            mostracardapio.jLabelRespFeijao.setVisible(false);
+            mostracardapio.jLabelRespSopa.setVisible(false);
+            mostracardapio.jLabelRespSobremesa.setVisible(false);
+
+            mostracardapio.setVisible(true);
+        }
+//                this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+        if ("Café da Manhã".equals(turno)) {
+//            JOptionPane.showMessageDialog(null, "Cadápio do " + (turno) + " de " + diaSemana + "\n\n"
+//                    + cardapioCafe[0][0] + ":                         " + cardapioCafe[dia][0] + "\n"
+//                    + cardapioCafe[0][1] + ":                      " + cardapioCafe[dia][1] + "\n"
+//                    + cardapioCafe[0][2] + ":        " + cardapioCafe[dia][2] + "\n"
+//                    + cardapioCafe[0][3] + ":                " + cardapioCafe[dia][3] );
+
+        }
+        if ("Almoço".equals(turno)) {
+//            JOptionPane.showMessageDialog(null, "Cadápio do " + (turno) + " de " + diaSemana + "\n\n"
+//                    + cardapioAlmoco[0][0] + ":          " + cardapioAlmoco[dia][0] + "\n"
+//                    + cardapioAlmoco[0][1] + ":                         " + cardapioAlmoco[dia][1] + "\n"
+//                    + cardapioAlmoco[0][2] + ":                  " + cardapioAlmoco[dia][2] + "\n"
+//                    + cardapioAlmoco[0][3] + ":                    " + cardapioAlmoco[dia][3] + "\n"
+//                    + cardapioAlmoco[0][4] + ":                           " + cardapioAlmoco[dia][4] + "\n"
+//                    + cardapioAlmoco[0][5] + ":                          " + cardapioAlmoco[dia][5] + "\n"
+//                    + cardapioAlmoco[0][6] + ":                           " + cardapioAlmoco[dia][6] + "\n"
+//                    + cardapioAlmoco[0][7] + ":                " + cardapioAlmoco[dia][7] + "\n");
+        }
+
+        if ("Jantar".equals(turno)) {
+//            if (dia == 6) {
+//                JOptionPane.showMessageDialog(null, "Não haverá janta neste dia");
+//            } else {
+//                JOptionPane.showMessageDialog(null, "Cadápio do " + (turno) + " de " + diaSemana + "\n\n"
+//                        + cardapioJanta[0][0] + ":          " + cardapioJanta[dia][0] + "\n"
+//                        + cardapioJanta[0][1] + ":                         " + cardapioJanta[dia][1] + "\n"
+//                        + cardapioJanta[0][2] + ":                  " + cardapioJanta[dia][2] + "\n"
+//                        + cardapioJanta[0][3] + ":                    " + cardapioJanta[dia][3] + "\n"
+//                        + cardapioJanta[0][4] + ":                           " + cardapioJanta[dia][4] + "\n"
+//                        + cardapioJanta[0][5] + ":                          " + cardapioJanta[dia][5] + "\n"
+//                        + cardapioJanta[0][6] + ":                           " + cardapioJanta[dia][6] + "\n"
+//                        + cardapioJanta[0][7] + ":                " + cardapioJanta[dia][7] + "\n");
+//            }
         }
 
     }
-    
 
 //    public static void main(String[] args) {
 //        
@@ -267,9 +353,8 @@ public class Cardapio {
 //        cardapio.acessar(diaSemana, turno);
 //        
 //    }
-
     public void acessar(JComboBox<String> diaSemana, JComboBox<String> turno) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

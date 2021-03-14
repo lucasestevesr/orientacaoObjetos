@@ -55,7 +55,7 @@ public class TelaCardapio extends javax.swing.JFrame {
         JTurno.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         JTurno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Café da Manhã", "Almoço", "Jantar" }));
 
-        jButton1.setFont(new java.awt.Font("Calibri Light", 0, 12)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Calibri Light", 0, 14)); // NOI18N
         jButton1.setText("Visualizar");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -63,7 +63,7 @@ public class TelaCardapio extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Calibri Light", 0, 12)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Calibri Light", 0, 14)); // NOI18N
         jButton2.setText("Voltar");
 
         jLabel3.setFont(new java.awt.Font("Calibri Light", 0, 18)); // NOI18N
@@ -84,11 +84,11 @@ public class TelaCardapio extends javax.swing.JFrame {
                     .addComponent(JDiaSemana, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(82, 82, 82)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(84, 84, 84))
+                .addGap(94, 94, 94)
+                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(39, 39, 39)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(100, 100, 100))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(53, Short.MAX_VALUE)
                 .addComponent(jLabel3)
@@ -107,9 +107,9 @@ public class TelaCardapio extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(JTurno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton1))
                 .addGap(45, 45, 45))
         );
@@ -133,8 +133,13 @@ public class TelaCardapio extends javax.swing.JFrame {
         String turno = JTurno.getSelectedItem()+"";
         
         cardapio.declarar();
-        
         cardapio.acessar(diaSemana, turno);
+        
+//        MostraCardapio mostracardapio = new MostraCardapio();
+//        
+//        mostracardapio.jLabelOpcaoPrincipal.setText("Prato Principal");
+//        mostracardapio.setVisible(true);
+        
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**

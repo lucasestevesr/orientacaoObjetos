@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package com.mycompany.view;
-
 import com.mycompany.usuario.Usuario;
 
 
@@ -90,7 +89,7 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Calibri Light", 0, 14)); // NOI18N
         jLabel4.setText("Telefone:");
 
-        jLabel1.setFont(new java.awt.Font("Calibri Light", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Calibri Light", 0, 20)); // NOI18N
         jLabel1.setText("Cadastro de Usuários");
 
         jTextSenha.setFont(new java.awt.Font("Calibri Light", 0, 14)); // NOI18N
@@ -122,7 +121,7 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(126, 126, 126)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel1)
                                     .addComponent(jLabel2))
                                 .addGap(101, 101, 101))
@@ -147,7 +146,7 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
                                         .addComponent(jTextIdentificador)
                                         .addComponent(jComboBoxCargo, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jTextSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -188,7 +187,7 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonSalvarCadastro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButtonVoltar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         pack();
@@ -207,6 +206,17 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
         String senha = jTextSenha.getText();     
         
         usuario.cadastraUsuario(usuario, nome, identificador, email, telefone, senha);
+        
+        jTextNome.setText("");
+        jTextIdentificador.setText("");
+        jTextEmail.setText("");
+        jTextTelefone.setText("");
+        jTextSenha.setText("");   
+        jTextConfirmaSenha.setText("");   
+        
+//                MostraCardapio mostracardapio = new MostraCardapio();
+//        
+//        jLabelOpcaoPrincipal.setText("Prato Principal");
         
     }//GEN-LAST:event_jButtonSalvarCadastroMouseClicked
 
