@@ -5,24 +5,24 @@
  */
 package ufjf.dcc025.monitoramentoru.dao;
 
-import ufjf.dcc025.monitoramentoru.model.Usuario;
 import java.util.ArrayList;
 import java.util.List;
+import ufjf.dcc025.monitoramentoru.model.Refeicao;
 
 /**
  *
- *  @author Your Name <lucas.esteves@engenharia.ufjf.br>
+ * @author tawan
  */
-public class BancoDeDados {
+public class BancoDeDadosAgendar {
     
-    private static final List<Usuario> usuarios;
+    private static final List<Refeicao> usuarios;
 	
 	static {
             usuarios = new ArrayList<>();
 	}
 			
-	public static List<Usuario> getUsuarios(){
+	public static List<Refeicao> getUsuarios(){
             return usuarios;
 	}
-
+        
 }
