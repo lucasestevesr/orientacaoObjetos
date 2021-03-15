@@ -9,7 +9,7 @@ package ufjf.dcc025.monitoramentoru.model;
  *
  *  @author Your Name <lucas.esteves@engenharia.ufjf.br>
  */
-public abstract class Usuario {
+public abstract class Usuario implements InterfaceUsuario {
 
     private int id;
     private String nome;

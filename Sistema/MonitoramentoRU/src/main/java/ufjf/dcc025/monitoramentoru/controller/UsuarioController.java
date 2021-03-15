@@ -23,18 +23,25 @@ public class UsuarioController extends Usuario {
 
     public static LinkedList<Usuario> usuarios = new LinkedList();
 
-    public void cadastrarUsuario(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha) {
-        if (telefone != null && nome != null && nome.length() > 0 && identificador != null && identificador.length() > 0 && email != null && email.length() > 0 && telefone.length() > 0
-                && senha != null && senha.length() > 0 && (senha == null ? confirmarSenha == null : senha.equals(confirmarSenha))) {
+    public boolean cadastrarUsuario(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha) {
+        if (telefone != null && nome != null && nome.length() > 0 && identificador != null && identificador.length() > 0 
+                && email != null && email.length() > 0 && telefone.length() > 0 && senha != null && senha.length() > 0 
+                && (senha == null ? confirmarSenha == null : senha.equals(confirmarSenha))) {
 
             int tamanho = usuarios.size() + 1;
-            Usuario registroDiscente = new Discente(tamanho, 2, nome, identificador, email, telefone, senha);
-            usuarios.add(registroDiscente);
+
             Usuario registroDocente = new Docente(tamanho, 1, nome, identificador, email, telefone, senha);
             usuarios.add(registroDocente);
+
+            Usuario registroDiscente = new Discente(tamanho, 2, nome, identificador, email, telefone, senha);
+            usuarios.add(registroDiscente);
+
             Usuario registroTae = new Tae(tamanho, 3, nome, identificador, email, telefone, senha);
             usuarios.add(registroTae);
+            
+            return true;
         }
+        return false;
     }
 
     /**
@@ -44,5 +51,10 @@ public class UsuarioController extends Usuario {
     @Override
     public int getId() {
         return usuarios.size();
+    }
+
+    @Override
+    public void setTipo(int tipo) {
+
     }
 }
