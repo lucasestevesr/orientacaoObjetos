@@ -7,9 +7,9 @@ package ufjf.dcc025.monitoramentoru.model;
 
 /**
  *
- *  @author Your Name <lucas.esteves@engenharia.ufjf.br>
+ * @author Your Name <lucas.esteves@engenharia.ufjf.br>
  */
-public abstract class Usuario implements InterfaceUsuario {
+public abstract class Usuario {
 
     private int id;
     private String nome;
@@ -17,44 +17,38 @@ public abstract class Usuario implements InterfaceUsuario {
     private String email;
     private String telefone;
     private String senha;
+    private String confirmarSenha;
     int tipo;
-    //private int[][] horarios = new int[15][5];
 
-    public Usuario(int id, int tipo, String nome, String identificador, String email, String telefone, String senha) {
-        
-        this.id = id;
-        this.tipo = tipo;
+    public Usuario(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha) {      
+      
         this.nome = nome;
         this.identificador = identificador;
         this.email = email;
         this.telefone = telefone;
         this.senha = senha;
+        this.confirmarSenha = confirmarSenha;
         System.out.println("Foi realizado o cadastro do usúario identificado pelo email: " + this.email + " e pelo identificador: " + this.identificador);
 
     }
-       
-    
-    public boolean autenticaLogin(String identificador, String senha){
+
+    public boolean autenticaLogin(String identificador, String senha) {
         System.out.println("Autenticando o Login.");
         return ((this.senha == null ? senha == null : this.senha.equals(senha)) && this.identificador.equals(identificador));
     }
-    public void editaCadastro(String nome, String identificador, String email, String telefone, String senha){
-        System.out.println("Editando o Cadastro.");
+
+    public void editaCadastro(String nome, String identificador, String email, String telefone, String senha) {
+        System.out.println("Editando o Cadastro.");        
         this.nome = nome;
         this.identificador = identificador;
         this.email = email;
         this.telefone = telefone;
         this.senha = senha;
     }
-//    public boolean cadastraHorarios(int[][] horario){
-//        int h = 0;
-//        for (int i = 0; i <= 5; i++) {
-//            for (int j = 0; j <= 15; j++) {
-//                
-//            }
-//            
-//        }
-//    }
+
+    public void cadastrarUsuario() {
+        //view chamar controller
+    }
 
     public String getNome() {
         return nome;
@@ -103,19 +97,26 @@ public abstract class Usuario implements InterfaceUsuario {
     public void setId(int id) {
         this.id = id;
     }
-    
-    
 
-//    public int[][] getHorarios() {
-//        return horarios;
-//    }
-//
-//    public void setHorarios(int[][] horarios) {
-//        this.horarios = horarios;
-//    }
-
-    public void cadastrarUsuario(Usuario usuario) {
-        
+    public String getConfirmarSenha() {
+        return confirmarSenha;
     }
 
+    public void setConfirmarSenha(String confirmarSenha) {
+        this.confirmarSenha = confirmarSenha;
+    }
+
+    public int getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
+    }
+    
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "id=" + id + ", nome=" + nome + ", identificador=" + identificador + ", email=" + email + ", telefone=" + telefone + ", senha=" + senha + ", confirmarSenha=" + confirmarSenha + ", tipo=" + tipo + '}';
+    }
 }

@@ -7,16 +7,18 @@ package ufjf.dcc025.monitoramentoru.model;
 
 /**
  *
- *  @author Your Name <lucas.esteves@engenharia.ufjf.br>
+ * @author Your Name <lucas.esteves@engenharia.ufjf.br>
  */
-public class Discente extends Usuario{
+public class Discente extends Usuario {
 
-    public Discente(int id, int tipo, String nome, String identificador, String email, String telefone, String senha) {
-        super(id, tipo, nome, identificador, email, telefone, senha);
-        super.tipo = 2;//privado?
+    private final int tipo;
+
+    public Discente(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha) {
+        super(nome, identificador, email, telefone, senha, confirmarSenha);
+        this.tipo = 2;
+        super.tipo = this.tipo;
         System.out.println("Foi criado  um cadastro do tipo discente.");
     }
-       
 
     @Override
     public void editaCadastro(String nome, String identificador, String email, String telefone, String senha) {
@@ -26,11 +28,7 @@ public class Discente extends Usuario{
     @Override
     public boolean autenticaLogin(String identificador, String senha) {
         return super.autenticaLogin(identificador, senha);
-    }    
-
-    @Override
-    public void setTipo(int tipo) {
-        
     }
 
+  
 }

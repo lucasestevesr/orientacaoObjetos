@@ -11,6 +11,7 @@ import ufjf.dcc025.monitoramentoru.model.Docente;
 import ufjf.dcc025.monitoramentoru.model.Tae;
 import ufjf.dcc025.monitoramentoru.model.Usuario;
 
+
 /**
  *
  * @author Your Name <lucas.esteves@engenharia.ufjf.br>
@@ -23,38 +24,32 @@ public class UsuarioController extends Usuario {
 
     public static LinkedList<Usuario> usuarios = new LinkedList();
 
-    public boolean cadastrarUsuario(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha) {
-        if (telefone != null && nome != null && nome.length() > 0 && identificador != null && identificador.length() > 0 
-                && email != null && email.length() > 0 && telefone.length() > 0 && senha != null && senha.length() > 0 
-                && (senha == null ? confirmarSenha == null : senha.equals(confirmarSenha))) {
+    public boolean cadastrarUsuario(int id,int tipo, String nome, String identificador, String email, String telefone,
+            String senha, String confirmarSenha){
+        if ((senha == null ? confirmarSenha == null : senha.equals(confirmarSenha)) && nome != null && nome.length() > 0
+                && identificador != null && identificador.length() > 0 && email != null && email.length() > 0 && telefone != null  && telefone.length() > 0
+                && senha != null && senha.length() > 0) {
 
-            int tamanho = usuarios.size() + 1;
-
-            Usuario registroDocente = new Docente(tamanho, 1, nome, identificador, email, telefone, senha);
+            Usuario registroDocente = new Docente(nome, identificador, email, telefone, senha, confirmarSenha);
+            registroDocente.setId(usuarios.size());
             usuarios.add(registroDocente);
 
-            Usuario registroDiscente = new Discente(tamanho, 2, nome, identificador, email, telefone, senha);
+            Usuario registroDiscente = new Discente(nome, identificador, email, telefone, senha, confirmarSenha);
+            registroDiscente.setId(usuarios.size());
             usuarios.add(registroDiscente);
 
-            Usuario registroTae = new Tae(tamanho, 3, nome, identificador, email, telefone, senha);
+            Usuario registroTae = new Tae(nome, identificador, email, telefone, senha, confirmarSenha);
+            registroTae.setId(usuarios.size());
             usuarios.add(registroTae);
-            
+
             return true;
+        } else {
+            return false;
         }
-        return false;
     }
 
-    /**
-     *
-     * @return
-     */
     @Override
     public int getId() {
         return usuarios.size();
-    }
-
-    @Override
-    public void setTipo(int tipo) {
-
     }
 }
