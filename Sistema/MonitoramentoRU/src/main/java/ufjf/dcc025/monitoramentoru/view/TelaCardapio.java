@@ -5,10 +5,11 @@
  */
 package ufjf.dcc025.monitoramentoru.view;
 
-import com.mycompany.cardapio.Cardapio;
+
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import ufjf.dcc025.monitoramentoru.model.Cardapio;
 
 /**
  *
