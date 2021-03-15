@@ -15,7 +15,7 @@ public class TesteUsuario {
 
     public static void main(String[] args) {
 
-        Discente discente = new Discente("Arthur", "11111111", "arthur@gmail", "3298555555", "arthur123"); //POLIMORFISMO       
+       // Discente discente = new Discente("Arthur", "11111111", "arthur@gmail", "3298555555", "arthur123"); //POLIMORFISMO       
         
 
     }
