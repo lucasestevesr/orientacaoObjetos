@@ -23,6 +23,10 @@ public class UsuarioController extends Usuario {
 
     public static LinkedList<Usuario> usuarios = new LinkedList();
 
+    public UsuarioController(int id, int tipo, String nome, String identificador, String email, String telefone, String senha) {
+        super(id, tipo, nome, identificador, email, telefone, senha);
+    }
+
     public boolean cadastrarUsuario(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha) {
         if (telefone != null && nome != null && nome.length() > 0 && identificador != null && identificador.length() > 0 
                 && email != null && email.length() > 0 && telefone.length() > 0 && senha != null && senha.length() > 0 
