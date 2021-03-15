@@ -28,4 +28,9 @@ public class Tae extends Usuario {
         return super.autenticaLogin(identificador, senha);
     }
 
+    @Override
+    public void setTipo(int tipo) {
+        
+    }
+
 }

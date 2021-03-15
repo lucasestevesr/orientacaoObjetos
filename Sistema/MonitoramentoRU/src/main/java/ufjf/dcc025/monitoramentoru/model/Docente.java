@@ -13,7 +13,7 @@ public class Docente extends Usuario {
 
     public Docente(int id, int tipo,String nome, String identificador, String email, String telefone, String senha) {
         super(id, tipo, nome, identificador, email, telefone, senha);
-        super.tipo = 1; //privado?
+       
         System.out.println("Foi criado  um cadastro do tipo docente.");
     }
 
@@ -25,6 +25,11 @@ public class Docente extends Usuario {
     @Override
     public boolean autenticaLogin(String identificador, String senha) {
         return super.autenticaLogin(identificador, senha);
+    }
+
+    @Override
+    public void setTipo(int tipo) {
+      super.tipo = 1;
     }
 
 }
