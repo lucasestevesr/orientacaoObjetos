@@ -3,23 +3,31 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.agendarrefeicao;
+package ufjf.dcc025.monitoramentoru.model;
 
 /**
  *
  * @author tawan
  */
-public class Refeicao {
+public abstract class Refeicao {
     private String diaSemana;
     private String turnoRefeicao;
     private String horario;
+    String tipo;
     
-    public Refeicao(String diaSemana, String turnoRefeicao, String horario){
+    public Refeicao(String tipo, String diaSemana, String turnoRefeicao, String horario){
         this.diaSemana = diaSemana;
         this.turnoRefeicao = turnoRefeicao;
         this.horario = horario;
+        this.tipo = tipo;
+        System.out.println("Foi feito um cadastro de refeição do tipo " + this.tipo + " no dia " + this.diaSemana + " às "
+        + this.horario);
     }
-
+    
+//    public void opcoesDiaSemana(){
+//        String [] opcoes = {"Segunda-feira", "Terça-feira", "Quarta-feira","Quinta-feira","Sexta-feira","Sábado"};
+//    }
+    
     public String getDiaSemana() {
         return diaSemana;
     }

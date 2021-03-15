@@ -10,14 +10,15 @@ package ufjf.dcc025.monitoramentoru.model;
  *  @author Your Name <lucas.esteves@engenharia.ufjf.br>
  */
 public class Docente extends Usuario {
-    private final int tipo;
+    private final int tipo = 1;
 
     public Docente(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha) {
-        super(nome, identificador, email, telefone, senha, confirmarSenha); 
-        this.tipo = 1;
+        super(nome, identificador, email, telefone, senha, confirmarSenha);     
         super.tipo = this.tipo;
         System.out.println("Foi criado  um cadastro do tipo docente.");
     }
+
+  
 
     @Override
     public void editaCadastro(String nome, String identificador, String email, String telefone, String senha) {

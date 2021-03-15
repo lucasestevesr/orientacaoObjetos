@@ -17,7 +17,10 @@ public class TesteUsuario {
         System.out.println(arthur.autenticaLogin("identificador", "senha"));
         arthur.editaCadastro("Lucas", "201369130A", "lucas@gmail.com", "32984406363", "123456");
         arthur.toString();
+        System.out.println(arthur);
         System.out.println(arthur.getSenha());
         System.out.println(arthur.getTipo());
+        
+        
     }
 }

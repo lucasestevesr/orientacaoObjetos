@@ -11,11 +11,10 @@ package ufjf.dcc025.monitoramentoru.model;
  */
 public class Tae extends Usuario {
 
-    private final int tipo;
+    private final int tipo = 3;
 
     public Tae(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha) {
-        super(nome, identificador, email, telefone, senha, confirmarSenha);
-        this.tipo = 3;
+        super(nome, identificador, email, telefone, senha, confirmarSenha);        
         super.tipo = this.tipo;
         System.out.println("Foi criado  um cadastro do tipo Tae.");
     }

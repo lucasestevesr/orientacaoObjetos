@@ -11,11 +11,10 @@ package ufjf.dcc025.monitoramentoru.model;
  */
 public class Discente extends Usuario {
 
-    private final int tipo;
+    private final int tipo =2;
 
     public Discente(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha) {
-        super(nome, identificador, email, telefone, senha, confirmarSenha);
-        this.tipo = 2;
+        super(nome, identificador, email, telefone, senha, confirmarSenha);        
         super.tipo = this.tipo;
         System.out.println("Foi criado  um cadastro do tipo discente.");
     }

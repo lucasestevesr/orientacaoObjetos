@@ -6,10 +6,7 @@
 package ufjf.dcc025.monitoramentoru.controller;
 
 import java.util.LinkedList;
-import ufjf.dcc025.monitoramentoru.model.Discente;
-import ufjf.dcc025.monitoramentoru.model.Docente;
-import ufjf.dcc025.monitoramentoru.model.Tae;
-import ufjf.dcc025.monitoramentoru.model.Usuario;
+import ufjf.dcc025.monitoramentoru.model.*;
 
 
 /**
@@ -20,7 +17,7 @@ import ufjf.dcc025.monitoramentoru.model.Usuario;
  * O Controller faz a ligação do "Banco de Dados" à Model, ou seja, conecta o
  * "banco" a modelagem das classes.
  */
-public class UsuarioController extends Usuario {
+public class UsuarioController{
 
     public static LinkedList<Usuario> usuarios = new LinkedList();
 
@@ -46,10 +43,5 @@ public class UsuarioController extends Usuario {
         } else {
             return false;
         }
-    }
-
-    @Override
-    public int getId() {
-        return usuarios.size();
-    }
+    } 
 }
