@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package view;
+package ufjf.dcc025.monitoramentoru.view;
 
 import com.mycompany.cardapio.Cardapio;
 import javax.swing.JComboBox;

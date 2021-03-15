@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.cardapio;
+package ufjf.dcc025.monitoramentoru.model;
 
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
-import view.MostraCardapio;
+import ufjf.dcc025.monitoramentoru.view.MostraCardapio;
 
 /**
  *
