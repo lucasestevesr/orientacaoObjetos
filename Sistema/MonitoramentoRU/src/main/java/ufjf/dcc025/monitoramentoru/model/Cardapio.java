@@ -8,6 +8,7 @@ package ufjf.dcc025.monitoramentoru.model;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import ufjf.dcc025.monitoramentoru.view.MostraCardapio;
+import ufjf.dcc025.monitoramentoru.view.MostraCardapio;
 
 /**
  *
@@ -297,41 +298,41 @@ public class Cardapio {
 //                this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
-        if ("Café da Manhã".equals(turno)) {
-//            JOptionPane.showMessageDialog(null, "Cadápio do " + (turno) + " de " + diaSemana + "\n\n"
-//                    + cardapioCafe[0][0] + ":                         " + cardapioCafe[dia][0] + "\n"
-//                    + cardapioCafe[0][1] + ":                      " + cardapioCafe[dia][1] + "\n"
-//                    + cardapioCafe[0][2] + ":        " + cardapioCafe[dia][2] + "\n"
-//                    + cardapioCafe[0][3] + ":                " + cardapioCafe[dia][3] );
-
-        }
-        if ("Almoço".equals(turno)) {
-//            JOptionPane.showMessageDialog(null, "Cadápio do " + (turno) + " de " + diaSemana + "\n\n"
-//                    + cardapioAlmoco[0][0] + ":          " + cardapioAlmoco[dia][0] + "\n"
-//                    + cardapioAlmoco[0][1] + ":                         " + cardapioAlmoco[dia][1] + "\n"
-//                    + cardapioAlmoco[0][2] + ":                  " + cardapioAlmoco[dia][2] + "\n"
-//                    + cardapioAlmoco[0][3] + ":                    " + cardapioAlmoco[dia][3] + "\n"
-//                    + cardapioAlmoco[0][4] + ":                           " + cardapioAlmoco[dia][4] + "\n"
-//                    + cardapioAlmoco[0][5] + ":                          " + cardapioAlmoco[dia][5] + "\n"
-//                    + cardapioAlmoco[0][6] + ":                           " + cardapioAlmoco[dia][6] + "\n"
-//                    + cardapioAlmoco[0][7] + ":                " + cardapioAlmoco[dia][7] + "\n");
-        }
-
-        if ("Jantar".equals(turno)) {
-//            if (dia == 6) {
-//                JOptionPane.showMessageDialog(null, "Não haverá janta neste dia");
-//            } else {
-//                JOptionPane.showMessageDialog(null, "Cadápio do " + (turno) + " de " + diaSemana + "\n\n"
-//                        + cardapioJanta[0][0] + ":          " + cardapioJanta[dia][0] + "\n"
-//                        + cardapioJanta[0][1] + ":                         " + cardapioJanta[dia][1] + "\n"
-//                        + cardapioJanta[0][2] + ":                  " + cardapioJanta[dia][2] + "\n"
-//                        + cardapioJanta[0][3] + ":                    " + cardapioJanta[dia][3] + "\n"
-//                        + cardapioJanta[0][4] + ":                           " + cardapioJanta[dia][4] + "\n"
-//                        + cardapioJanta[0][5] + ":                          " + cardapioJanta[dia][5] + "\n"
-//                        + cardapioJanta[0][6] + ":                           " + cardapioJanta[dia][6] + "\n"
-//                        + cardapioJanta[0][7] + ":                " + cardapioJanta[dia][7] + "\n");
-//            }
-        }
+//        if ("Café da Manhã".equals(turno)) {
+////            JOptionPane.showMessageDialog(null, "Cadápio do " + (turno) + " de " + diaSemana + "\n\n"
+////                    + cardapioCafe[0][0] + ":                         " + cardapioCafe[dia][0] + "\n"
+////                    + cardapioCafe[0][1] + ":                      " + cardapioCafe[dia][1] + "\n"
+////                    + cardapioCafe[0][2] + ":        " + cardapioCafe[dia][2] + "\n"
+////                    + cardapioCafe[0][3] + ":                " + cardapioCafe[dia][3] );
+//
+//        }
+//        if ("Almoço".equals(turno)) {
+////            JOptionPane.showMessageDialog(null, "Cadápio do " + (turno) + " de " + diaSemana + "\n\n"
+////                    + cardapioAlmoco[0][0] + ":          " + cardapioAlmoco[dia][0] + "\n"
+////                    + cardapioAlmoco[0][1] + ":                         " + cardapioAlmoco[dia][1] + "\n"
+////                    + cardapioAlmoco[0][2] + ":                  " + cardapioAlmoco[dia][2] + "\n"
+////                    + cardapioAlmoco[0][3] + ":                    " + cardapioAlmoco[dia][3] + "\n"
+////                    + cardapioAlmoco[0][4] + ":                           " + cardapioAlmoco[dia][4] + "\n"
+////                    + cardapioAlmoco[0][5] + ":                          " + cardapioAlmoco[dia][5] + "\n"
+////                    + cardapioAlmoco[0][6] + ":                           " + cardapioAlmoco[dia][6] + "\n"
+////                    + cardapioAlmoco[0][7] + ":                " + cardapioAlmoco[dia][7] + "\n");
+//        }
+//
+//        if ("Jantar".equals(turno)) {
+////            if (dia == 6) {
+////                JOptionPane.showMessageDialog(null, "Não haverá janta neste dia");
+////            } else {
+////                JOptionPane.showMessageDialog(null, "Cadápio do " + (turno) + " de " + diaSemana + "\n\n"
+////                        + cardapioJanta[0][0] + ":          " + cardapioJanta[dia][0] + "\n"
+////                        + cardapioJanta[0][1] + ":                         " + cardapioJanta[dia][1] + "\n"
+////                        + cardapioJanta[0][2] + ":                  " + cardapioJanta[dia][2] + "\n"
+////                        + cardapioJanta[0][3] + ":                    " + cardapioJanta[dia][3] + "\n"
+////                        + cardapioJanta[0][4] + ":                           " + cardapioJanta[dia][4] + "\n"
+////                        + cardapioJanta[0][5] + ":                          " + cardapioJanta[dia][5] + "\n"
+////                        + cardapioJanta[0][6] + ":                           " + cardapioJanta[dia][6] + "\n"
+////                        + cardapioJanta[0][7] + ":                " + cardapioJanta[dia][7] + "\n");
+////            }
+//        }
 
     }
 

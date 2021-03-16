@@ -171,7 +171,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBarTelaPrincipal;
     private javax.swing.JMenu jMenuContato;
     private javax.swing.JMenuItem jMenuItemAgendarHorario;
-    private javax.swing.JMenuItem jMenuItemCardapio;
+    public javax.swing.JMenuItem jMenuItemCardapio;
     private javax.swing.JMenuItem jMenuItemEditarPerfil;
     private javax.swing.JMenuItem jMenuItemEncomenda;
     private javax.swing.JMenuItem jMenuItemEticket;
