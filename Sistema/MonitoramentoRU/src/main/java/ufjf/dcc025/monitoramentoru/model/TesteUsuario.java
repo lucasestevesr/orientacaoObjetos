@@ -21,6 +21,10 @@ public class TesteUsuario {
         System.out.println(arthur.getSenha());
         System.out.println(arthur.getTipo());
         
+        Refeicao almoco = new AgendarRefeicao("Segunda Feira", "Almoço", "11:00 as 11:30");
+        almoco.toString();
+        System.out.println(almoco);
+        
         
     }
 }
