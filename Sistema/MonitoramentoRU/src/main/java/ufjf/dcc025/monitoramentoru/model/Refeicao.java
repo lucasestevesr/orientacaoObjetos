@@ -15,18 +15,23 @@ public abstract class Refeicao {
     private String horario;
     String tipo;
     
-    public Refeicao(String tipo, String diaSemana, String turnoRefeicao, String horario){
+    public Refeicao(String diaSemana, String turnoRefeicao, String horario){
         this.diaSemana = diaSemana;
         this.turnoRefeicao = turnoRefeicao;
         this.horario = horario;
-        this.tipo = tipo;
-        System.out.println("Foi feito um cadastro de refeição do tipo " + this.tipo + " no dia " + this.diaSemana + " às "
-        + this.horario);
     }
     
-//    public void opcoesDiaSemana(){
-//        String [] opcoes = {"Segunda-feira", "Terça-feira", "Quarta-feira","Quinta-feira","Sexta-feira","Sábado"};
-//    }
+    public void editaRefeicao(String tipo, String diaSemana, String turnoRefeicao, String horario){
+        System.out.println("Editando Refeicao do tipo " + tipo);
+        this.diaSemana = diaSemana;
+        this.turnoRefeicao = turnoRefeicao;
+        this.horario = horario;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+    
     
     public String getDiaSemana() {
         return diaSemana;
@@ -52,6 +57,10 @@ public abstract class Refeicao {
         this.horario = horario;
     }
     
+    public void cadastrarRefeicao(Refeicao refeicao){}   
     
-    
+    @Override
+    public String toString() {
+        return "Refeicao{" + "Dia da Semana" + diaSemana + ", turno=" + turnoRefeicao + ", horario=" + horario + ", tipo=" + tipo + '}';
+    }
 }

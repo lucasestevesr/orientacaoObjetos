@@ -15,14 +15,22 @@ import ufjf.dcc025.monitoramentoru.model.Refeicao;
  * @author tawan
  */
 public class RefeicaoController {
+    
     public static LinkedList<Refeicao> refeicoes = new LinkedList();
 
-    public void agendamentoRefeicao(String tipo, String diaSemana, String turnoRefeicao, String horario) {
+    public boolean cadastrarRefeicao(String tipo, String diaSemana, String turnoRefeicao, String horario){
         if (diaSemana != null && turnoRefeicao != null && horario != null) {
+            
             Refeicao agendarRefeicao = new AgendarRefeicao("Agendamento", diaSemana, turnoRefeicao, horario);
             refeicoes.add(agendarRefeicao);
+            
             Refeicao encomendarRefeicao = new EncomendarRefeicao("Encomenda", diaSemana, turnoRefeicao, horario);
             refeicoes.add(encomendarRefeicao);
+            
+            return true;
+        } else {
+            return false;
         }
     }
+    
 }

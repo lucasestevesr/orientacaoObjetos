@@ -15,14 +15,14 @@ import ufjf.dcc025.monitoramentoru.model.Refeicao;
  */
 public class BancoDeDadosAgendar {
     
-    private static final List<Refeicao> usuarios;
+    private static final List<Refeicao> refeicoes;
 	
 	static {
-            usuarios = new ArrayList<>();
+            refeicoes = new ArrayList<>();
 	}
 			
-	public static List<Refeicao> getUsuarios(){
-            return usuarios;
+	public static List<Refeicao> getRefeicao(){
+            return refeicoes;
 	}
         
 }

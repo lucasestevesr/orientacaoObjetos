@@ -11,10 +11,17 @@ package ufjf.dcc025.monitoramentoru.model;
  */
 public class AgendarRefeicao extends Refeicao{
     
-    public AgendarRefeicao(String tipo, String diaSemana, String turnoRefeicao, String horario){
-        super(tipo, diaSemana, turnoRefeicao, horario);
-        super.tipo = "Agendamento";
-    }
-
+    private final String tipo = "Agendamento";
     
+    public AgendarRefeicao(String diaSemana, String turnoRefeicao, String horario){
+        super(diaSemana, turnoRefeicao, horario);
+        super.tipo = this.tipo;
+        
+        System.out.println("Foi criado um agendamento de refeição");
+    }
+    
+    @Override
+    public void editaRefeicao(String tipo, String diaSemana, String turnoRefeicao, String horario) {
+        super.editaRefeicao(this.tipo, diaSemana, turnoRefeicao, horario);
+    }
 }
