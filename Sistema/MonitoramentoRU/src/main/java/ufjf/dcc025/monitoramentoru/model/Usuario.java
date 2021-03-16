@@ -19,9 +19,12 @@ public abstract class Usuario {
     private String senha;
     private String confirmarSenha;
     int tipo;
+    private int total = 1;
+    
 
     public Usuario(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha) {      
-      
+        
+        this.id = total++;
         this.nome = nome;
         this.identificador = identificador;
         this.email = email;
@@ -46,9 +49,9 @@ public abstract class Usuario {
         this.senha = senha;
     }
 
-    public void cadastrarUsuario() {
-        //view chamar controller
-    }
+//    public void cadastrarUsuario() {
+//        //view chamar controller
+//    }
 
     public String getNome() {
         return nome;
