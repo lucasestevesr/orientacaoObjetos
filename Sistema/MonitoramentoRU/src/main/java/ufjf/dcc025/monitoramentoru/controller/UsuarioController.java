@@ -20,23 +20,23 @@ public class UsuarioController {
 
     public static LinkedList<Usuario> usuarios = new LinkedList();
 
-    public boolean cadastrarUsuario(int tipo, String nome, String identificador, String email, String telefone,
+    public boolean cadastrarUsuario(String tipo, String nome, String identificador, String email, String telefone,
             String senha, String confirmarSenha) {
         if ((senha == null ? confirmarSenha == null : senha.equals(confirmarSenha)) && nome != null && nome.length() > 0
                 && identificador != null && identificador.length() > 0 && email != null && email.length() > 0 && telefone != null && telefone.length() > 0
                 && senha != null && senha.length() > 0) {
             switch (tipo) {
-                case 1 -> {
+                case ("Docente") -> {
                     Usuario registroDocente = new Docente(nome, identificador, email, telefone, senha, confirmarSenha);
                     registroDocente.setId(usuarios.size());
                     usuarios.add(registroDocente);
                 }
-                case 2 -> {
+                case ("Discente") -> {
                     Usuario registroDiscente = new Discente(nome, identificador, email, telefone, senha, confirmarSenha);
                     registroDiscente.setId(usuarios.size());
                     usuarios.add(registroDiscente);
                 }
-                case 3 -> {
+                case ("Tae") -> {
                     Usuario registroTae = new Tae(nome, identificador, email, telefone, senha, confirmarSenha);
                     registroTae.setId(usuarios.size());
                     usuarios.add(registroTae);
@@ -45,9 +45,16 @@ public class UsuarioController {
                     System.out.println("Tipo de Usuário inválido.");
                 }
             }
+            
             return true;
         } else {
             return false;
         }
+    }
+     public boolean autenticaLogin(UsuarioLogin usuario) {
+        System.out.println("Autenticando o Login.");
+        String id = usuario.getIdentificador();
+        String senha =usuario.getSenha();
+        return usuario.autenticaLogin(id, senha);
     }
 }

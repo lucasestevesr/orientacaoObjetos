@@ -23,7 +23,7 @@ public class TesteUsuario {
         System.out.println(arthur.getTipo());
         
         UsuarioController usuarioController = new UsuarioController();
-        usuarioController.cadastrarUsuario(5,"Lucas", "201366547AB", "lucas@gmail.com.br", "32984406363", "x9w9q7s6", "x9w9q7s6");
+        usuarioController.cadastrarUsuario("Discente","Lucas", "201366547AB", "lucas@gmail.com.br", "32984406363", "x9w9q7s6", "x9w9q7s6");
         System.out.println(usuarioController); //chama o toString.
         // Está CADASTRANDO OS 3 TIPOS: DOCENTE, DISCENTE, TAE;                
     }

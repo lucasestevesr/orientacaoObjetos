@@ -11,7 +11,7 @@ package ufjf.dcc025.monitoramentoru.model;
  */
 public abstract interface InterfaceUsuario {
     
-    public abstract void pagarETicket(double valorCafe, double valorRefeicao, int tipo);
+    public abstract void pagarETicket(double valorCafe, double valorRefeicao, String tipo);
 
     //PAGAR ETICKER UM PREÇO PARA CADA USUÁRIO.
     //    public abstract void pagarETicket(int tipo) {

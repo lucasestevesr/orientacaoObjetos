@@ -11,12 +11,12 @@ package ufjf.dcc025.monitoramentoru.model;
  */
 public class Docente extends Usuario implements InterfaceUsuario{
 
-    private final int tipo = 1;
+    private final String tipo = "Docente";
 
     public Docente(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha) {
         super(nome, identificador, email, telefone, senha, confirmarSenha);
         setTipo(tipo);
-        System.out.println("Foi criado  um cadastro do tipo docente.");
+        System.out.println("Foi criado  um cadastro do tipo" + tipo +".");
     }
 
     @Override
@@ -30,8 +30,8 @@ public class Docente extends Usuario implements InterfaceUsuario{
     }
 
     @Override
-    public void pagarETicket(double valorCafe, double valorRefeicao, int tipo) {
-        if (tipo == this.tipo) {
+    public void pagarETicket(double valorCafe, double valorRefeicao, String tipo) {
+        if (tipo == null ? this.tipo == null : tipo.equals(this.tipo)) {
             valorCafe = 1.64;
             valorRefeicao = 8.4;
         }
