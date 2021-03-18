@@ -23,17 +23,18 @@ public class UsuarioController {
     public boolean cadastrarUsuario(String tipo, String nome, String identificador, String email, String telefone,
             String senha, String confirmarSenha) {
         if ((senha == null ? confirmarSenha == null : senha.equals(confirmarSenha)) && nome != null && nome.length() > 0
-                && identificador != null && identificador.length() > 0 && email != null && email.length() > 0 && telefone != null && telefone.length() > 0
+                && identificador != null && identificador.length() > 0 && email != null && email.length() > 0
+                && telefone != null && telefone.length() > 0
                 && senha != null && senha.length() > 0) {
             switch (tipo) {
                 case ("Docente") -> {
                     Usuario registroDocente = new Docente(nome, identificador, email, telefone, senha, confirmarSenha);
-                    registroDocente.setId(usuarios.size());
+                    //registroDocente.setId(usuarios.size());
                     usuarios.add(registroDocente);
                 }
                 case ("Discente") -> {
                     Usuario registroDiscente = new Discente(nome, identificador, email, telefone, senha, confirmarSenha);
-                    registroDiscente.setId(usuarios.size());
+                    //registroDiscente.setId(usuarios.size());
                     usuarios.add(registroDiscente);
                 }
                 case ("Tae") -> {
@@ -45,16 +46,34 @@ public class UsuarioController {
                     System.out.println("Tipo de Usuário inválido.");
                 }
             }
-            
+
             return true;
         } else {
             return false;
         }
     }
-     public boolean autenticaLogin(UsuarioLogin usuario) {
+
+    public boolean autenticaLogin(UsuarioLogin autenticador) {
         System.out.println("Autenticando o Login.");
-        String id = usuario.getIdentificador();
-        String senha =usuario.getSenha();
-        return usuario.autenticaLogin(id, senha);
+        for (int i = 0; i < usuarios.size(); i++) {
+            usuarios.get(i);
+            if (autenticador.getIdentificador() == usuarios.get(i).getIdentificador() && autenticador.getSenha() == usuarios.get(i).getSenha()) {
+                System.out.println("Login Verificado" + usuarios.get(i).getNome());
+                return true;
+            }
+
+        }
+        System.out.println("Login Invalido");
+        return false;
     }
+
+    String display = "";
+
+    public void imprimirListaUsuarios() {
+        for (int i = 0; i < usuarios.size(); i++) {
+            display += "\n" + usuarios.get(i);
+        }
+        System.out.println(display);
+    }
+
 }

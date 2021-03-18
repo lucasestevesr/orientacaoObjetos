@@ -151,15 +151,12 @@ public class TelaLogin extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Login Realizado.");
                 TelaPrincipal telaPrincipal = new TelaPrincipal();
                 telaPrincipal.setVisible(true);
-                this.dispose();
-
             } else {
                 JOptionPane.showMessageDialog(this, "Os campos não foram preenchidos corretamente.", "Aviso", JOptionPane.WARNING_MESSAGE);
             }
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "Erro: " + ex);
         }
-
     }
 
     public static void main(String args[]) {

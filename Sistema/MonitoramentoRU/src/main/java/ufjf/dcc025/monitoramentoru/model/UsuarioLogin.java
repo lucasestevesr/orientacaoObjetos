@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package ufjf.dcc025.monitoramentoru.model;
+
 /**
  *
  * @author Your Name <lucas.esteves@engenharia.ufjf.br>
@@ -16,7 +17,7 @@ public class UsuarioLogin {
     public UsuarioLogin(String identificador, String senha) {
         this.identificador = identificador;
         this.senha = senha;
-    }     
+    }
 
     public boolean autenticaLogin(String identificador, String senha) {
         System.out.println("Autenticando o Login.");
