@@ -56,6 +56,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuItemCardapio.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jMenuItemCardapio.setText("Cardápio");
+        jMenuItemCardapio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCardapioActionPerformed(evt);
+            }
+        });
         jMenuPrincipal.add(jMenuItemCardapio);
 
         jMenuItemEncomenda.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
@@ -92,6 +97,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuItemEditarPerfil.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jMenuItemEditarPerfil.setText("Editar Perfil");
+        jMenuItemEditarPerfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemEditarPerfilActionPerformed(evt);
+            }
+        });
         jMenuPerfil.add(jMenuItemEditarPerfil);
 
         jMenuBarTelaPrincipal.add(jMenuPerfil);
@@ -112,11 +122,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 690, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addContainerGap(480, Short.MAX_VALUE))
         );
 
         pack();
@@ -130,6 +142,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void jMenuItemEticketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEticketActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemEticketActionPerformed
+
+    private void jMenuItemCardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCardapioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemCardapioActionPerformed
+
+    private void jMenuItemEditarPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEditarPerfilActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemEditarPerfilActionPerformed
 
     /**
      * @param args the command line arguments
@@ -157,6 +177,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -171,7 +192,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBarTelaPrincipal;
     private javax.swing.JMenu jMenuContato;
     private javax.swing.JMenuItem jMenuItemAgendarHorario;
-    public javax.swing.JMenuItem jMenuItemCardapio;
+    private javax.swing.JMenuItem jMenuItemCardapio;
     private javax.swing.JMenuItem jMenuItemEditarPerfil;
     private javax.swing.JMenuItem jMenuItemEncomenda;
     private javax.swing.JMenuItem jMenuItemEticket;

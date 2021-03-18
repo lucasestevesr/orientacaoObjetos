@@ -5,6 +5,9 @@
  */
 package ufjf.dcc025.monitoramentoru.model;
 
+import ufjf.dcc025.monitoramentoru.controller.UsuarioController;
+import static ufjf.dcc025.monitoramentoru.controller.UsuarioController.usuarios;
+
 /**
  *
  * @author Your Name <lucas.esteves@engenharia.ufjf.br>
@@ -13,18 +16,14 @@ public class TesteUsuario {
 
     public static void main(String[] args) {
 
-        Usuario arthur = new Docente("arthur", "identificador", "email", "telefone", "senha", "senha");        
-        System.out.println(arthur.autenticaLogin("identificador", "senha"));
-        arthur.editaCadastro("Lucas", "201369130A", "lucas@gmail.com", "32984406363", "123456");
-        arthur.toString();
-        System.out.println(arthur);
-        System.out.println(arthur.getSenha());
-        System.out.println(arthur.getTipo());
-        
-        Refeicao almoco = new AgendarRefeicao("Segunda Feira", "Almoço", "11:00 as 11:30");
-        almoco.toString();
-        System.out.println(almoco);
-        
-        
+        UsuarioController usuarioController = new UsuarioController();
+
+        usuarioController.cadastrarUsuario("Discente", "Lucas", "201366547AB", "lucas@gmail.com.br", "32984406363", "x9w9q7s6", "x9w9q7s6");
+        usuarioController.cadastrarUsuario("Docente", "Joao", "2222222", "joaos@gmail.com.br", "33626262", "465645", "465645");
+
+        UsuarioLogin autenticador = new UsuarioLogin("201366547AB", "x9w9q7sa6");
+        usuarioController.imprimirListaUsuarios();
+        usuarioController.autenticaLogin(autenticador);
+
     }
 }

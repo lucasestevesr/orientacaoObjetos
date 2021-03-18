@@ -9,14 +9,14 @@ package ufjf.dcc025.monitoramentoru.model;
  *
  * @author Your Name <lucas.esteves@engenharia.ufjf.br>
  */
-public class Tae extends Usuario {
+public class Tae extends Usuario implements InterfaceUsuario  {
 
-    private final int tipo = 3;
+    private final String tipo = "Tae";
 
     public Tae(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha) {
         super(nome, identificador, email, telefone, senha, confirmarSenha);        
-        super.tipo = this.tipo;
-        System.out.println("Foi criado  um cadastro do tipo Tae.");
+        setTipo(tipo);
+        System.out.println("Foi criado  um cadastro do tipo " + tipo + ".");
     }
 
     @Override
@@ -27,6 +27,14 @@ public class Tae extends Usuario {
     @Override
     public boolean autenticaLogin(String identificador, String senha) {
         return super.autenticaLogin(identificador, senha);
+    }
+    
+    @Override
+    public void pagarETicket(double valorCafe, double valorRefeicao, String tipo) {
+        if (tipo == null ? this.tipo == null : tipo.equals(this.tipo)) {
+            valorCafe = 1.64;
+            valorRefeicao = 8.4;
+        }
     }
 
 }
