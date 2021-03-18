@@ -9,6 +9,7 @@ import java.util.LinkedList;
 import ufjf.dcc025.monitoramentoru.model.AgendarRefeicao;
 import ufjf.dcc025.monitoramentoru.model.EncomendarRefeicao;
 import ufjf.dcc025.monitoramentoru.model.Refeicao;
+import ufjf.dcc025.monitoramentoru.controller.UsuarioController;
 
 /**
  *
@@ -21,12 +22,19 @@ public class RefeicaoController {
     public boolean cadastrarRefeicao(String tipo, String diaSemana, String turnoRefeicao, String horario){
         if (diaSemana != null && turnoRefeicao != null && horario != null) {
             
-            Refeicao agendarRefeicao = new AgendarRefeicao(diaSemana, turnoRefeicao, horario);
-            refeicoes.add(agendarRefeicao);
-            
-            Refeicao encomendarRefeicao = new EncomendarRefeicao(diaSemana, turnoRefeicao, horario);
-            refeicoes.add(encomendarRefeicao);
-            
+            switch (tipo) {
+                case ("Agendamento") -> {
+                    Refeicao agendarRefeicao = new AgendarRefeicao(diaSemana, turnoRefeicao, horario);
+                    refeicoes.add(agendarRefeicao);
+                }
+                case ("Encomenda") -> {
+                    Refeicao encomendarRefeicao = new EncomendarRefeicao(diaSemana, turnoRefeicao, horario);
+                    refeicoes.add(encomendarRefeicao);
+                }
+                default -> {
+                    System.out.println("Tipo de Usuário inválido.");
+                }
+            }
             return true;
         } else {
             return false;

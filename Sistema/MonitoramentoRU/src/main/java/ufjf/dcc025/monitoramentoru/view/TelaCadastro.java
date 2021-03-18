@@ -83,6 +83,11 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabelNome.setText("Nome: ");
 
         textFieldNome.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
+        textFieldNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textFieldNomeActionPerformed(evt);
+            }
+        });
 
         jLabelCargo.setFont(new java.awt.Font("Gill Sans MT", 1, 14)); // NOI18N
         jLabelCargo.setText("Cargo:");
@@ -258,6 +263,10 @@ public class TelaCadastro extends javax.swing.JFrame {
     private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonVoltarActionPerformed
+
+    private void textFieldNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textFieldNomeActionPerformed
 
     /**
      * @param args the command line arguments
