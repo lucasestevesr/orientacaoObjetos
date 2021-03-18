@@ -8,6 +8,7 @@ package ufjf.dcc025.monitoramentoru.view;
 import java.awt.event.ActionEvent;
 import ufjf.dcc025.monitoramentoru.controller.HorariosController;
 import ufjf.dcc025.monitoramentoru.model.Horarios;
+import ufjf.dcc025.monitoramentoru.model.Usuario;
 
 /**
  *
@@ -18,8 +19,11 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
     /**
      * Creates new form TelaCadastraHorarios
      */
+    private Usuario usuario;
+
     public TelaCadastraHorarios() {
         initComponents();
+        this.usuario = null;
     }
 
     /**
@@ -97,6 +101,11 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
         jLabel2.setText("Identificador");
 
         jButtonCadastrar.setText("Cadastrar");
+        jButtonCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCadastrarActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Cancelar");
 
@@ -107,6 +116,11 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
         jLabel4.setText("Cadastre abaixo os horários em que estará presente na UFJF");
 
         jButtonConcluir.setText("Concluir Registro");
+        jButtonConcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonConcluirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -225,6 +239,16 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox7hActionPerformed
 
+    private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
+        cadastrar(usuario.getHorariosUsuario());
+    }//GEN-LAST:event_jButtonCadastrarActionPerformed
+
+    private void jButtonConcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConcluirActionPerformed
+        HorariosController horariosController = new HorariosController();
+        horariosController.ConcluirCadastro(usuario.getHorariosUsuario());
+    }//GEN-LAST:event_jButtonConcluirActionPerformed
+
+    
     /**
      * @param args the command line arguments
      */
@@ -257,17 +281,17 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
             public void run() {
                 TelaCadastraHorarios tela = new TelaCadastraHorarios();
                 tela.setVisible(true);
-                Horarios grade = new Horarios();
-                
-                tela.jButtonCadastrar.addActionListener((ActionEvent e) -> {
-                    tela.cadastrar(grade);
-                });
-                
-                tela.jButtonConcluir.addActionListener((ActionEvent e) -> {
-                    HorariosController horariosController = new HorariosController();
-                    horariosController.ConcluirCadastro(grade);
-                });
-                
+
+//                Horarios grade = new Horarios();
+//                tela.jButtonCadastrar.addActionListener((ActionEvent e) -> {
+//                    tela.cadastrar(usuario.getHorariosUsuario());
+//                });
+
+//                tela.jButtonConcluir.addActionListener((ActionEvent e) -> {
+//                    HorariosController horariosController = new HorariosController();
+//                    horariosController.ConcluirCadastro(usuario.getHorariosUsuario());
+//                });
+
             }
         });
     }
@@ -276,10 +300,10 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
 
         HorariosController horariosController = new HorariosController();
 //        Horarios grade = new Horarios();
-        
+
         String id = jTextFieldIdentificador.getText();
         String diaSemana = jComboBoxDiaSemana.getSelectedItem() + "";
-        
+
         boolean h7 = jCheckBox7h.isSelected();
         boolean h8 = jCheckBox8h.isSelected();
         boolean h9 = jCheckBox9h.isSelected();
@@ -295,8 +319,9 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
         boolean h19 = jCheckBox19h.isSelected();
         boolean h20 = jCheckBox20h.isSelected();
 
+//        horariosController.cadastrarHorarios(grade, diaSemana, id, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20);
         horariosController.cadastrarHorarios(grade, diaSemana, id, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20);
-        
+
         jCheckBox7h.setSelected(false);
         jCheckBox8h.setSelected(false);
         jCheckBox9h.setSelected(false);

@@ -5,6 +5,8 @@
  */
 package ufjf.dcc025.monitoramentoru.view;
 
+import ufjf.dcc025.monitoramentoru.model.Usuario;
+
 /**
  *
  * @author Your Name <lucas.esteves@engenharia.ufjf.br>
@@ -14,10 +16,19 @@ public class TelaPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form TelaPrincipal
      */
+    private Usuario usuario;
+    
     public TelaPrincipal() {
         initComponents();
+        this.usuario = null;
     }
 
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -41,7 +52,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuSair = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(350, 350));
 
         jMenuPrincipal2.setText("Menu Principal");
         jMenuPrincipal2.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
@@ -70,6 +80,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuItemRegistraHorario.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jMenuItemRegistraHorario.setText("Registrar Horários");
+        jMenuItemRegistraHorario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemRegistraHorarioActionPerformed(evt);
+            }
+        });
         jMenuPrincipal2.add(jMenuItemRegistraHorario);
 
         jMenuItemAgendarHorario.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
@@ -141,6 +156,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemEditarPerfilActionPerformed
 
+    private void jMenuItemRegistraHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemRegistraHorarioActionPerformed
+        
+        TelaCadastraHorarios telacadastro = new TelaCadastraHorarios();
+        telacadastro.setVisible(true);
+        
+    }//GEN-LAST:event_jMenuItemRegistraHorarioActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -177,24 +199,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuBar jMenuBarTelaPrincipal;
-    private javax.swing.JMenuBar jMenuBarTelaPrincipal1;
     private javax.swing.JMenuBar jMenuBarTelaPrincipal2;
     private javax.swing.JMenu jMenuContato;
     private javax.swing.JMenuItem jMenuItemAgendarHorario;
-    private javax.swing.JMenuItem jMenuItemCardapio;
-    private javax.swing.JMenuItem jMenuItemCardapio1;
     private javax.swing.JMenuItem jMenuItemCardapio2;
     private javax.swing.JMenuItem jMenuItemEditarPerfil;
     private javax.swing.JMenuItem jMenuItemEncomenda;
     private javax.swing.JMenuItem jMenuItemEticket;
-    private javax.swing.JMenuItem jMenuItemMonitorarLotacao;
-    private javax.swing.JMenuItem jMenuItemMonitorarLotacao1;
     private javax.swing.JMenuItem jMenuItemMonitorarLotacao2;
     private javax.swing.JMenuItem jMenuItemRegistraHorario;
     private javax.swing.JMenu jMenuPerfil;
-    private javax.swing.JMenu jMenuPrincipal;
-    private javax.swing.JMenu jMenuPrincipal1;
     private javax.swing.JMenu jMenuPrincipal2;
     private javax.swing.JMenu jMenuSair;
     // End of variables declaration//GEN-END:variables

@@ -7,6 +7,7 @@ package ufjf.dcc025.monitoramentoru.view;
 
 import javax.swing.JOptionPane;
 import ufjf.dcc025.monitoramentoru.controller.UsuarioController;
+import ufjf.dcc025.monitoramentoru.model.Usuario;
 import ufjf.dcc025.monitoramentoru.model.UsuarioLogin;
 
 /**
@@ -18,8 +19,12 @@ public class TelaLogin extends javax.swing.JFrame {
     /**
      * Creates new form TelaLogin
      */
+    
+    private Usuario usuario;
+    
     public TelaLogin() {
         initComponents();
+        this.usuario = null;
     }
 
     /**
@@ -127,6 +132,8 @@ public class TelaLogin extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         validar();
+        TelaPrincipal telaPrincipal = new TelaPrincipal();
+        telaPrincipal.setUsuario(usuario);
 
     }//GEN-LAST:event_btnLoginActionPerformed
 
@@ -137,6 +144,7 @@ public class TelaLogin extends javax.swing.JFrame {
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
         TelaCadastro telacadastro = new TelaCadastro();
         telacadastro.setVisible(true);
+        usuario = telacadastro.getUsuario();
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     public void validar() {

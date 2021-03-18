@@ -20,7 +20,7 @@ public abstract class Usuario {
     private String confirmarSenha;
     String tipo;
     private int total = 1;
-    
+    private Horarios horariosUsuario;
 
     public Usuario(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha) {      
         
@@ -116,6 +116,14 @@ public abstract class Usuario {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     } 
+
+    public Horarios getHorariosUsuario() {
+        return horariosUsuario;
+    }
+
+    public void setHorariosUsuario(Horarios horariosUsuario) {
+        this.horariosUsuario = horariosUsuario;
+    }
     
     @Override
     public String toString() {

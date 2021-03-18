@@ -5,8 +5,10 @@
  */
 package ufjf.dcc025.monitoramentoru.view;
 
+import java.util.LinkedList;
 import javax.swing.JOptionPane;
 import ufjf.dcc025.monitoramentoru.controller.UsuarioController;
+import ufjf.dcc025.monitoramentoru.model.Usuario;
 
 /**
  *
@@ -17,9 +19,13 @@ public class TelaCadastro extends javax.swing.JFrame {
     /**
      * Creates new form TelaCadastro
      */
+    private Usuario usuario;
+    
+    
     public TelaCadastro() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.usuario = null;
         //txtId.setText(Integer.toString(UsuarioController.getId()));
 
     }
@@ -329,11 +335,18 @@ public class TelaCadastro extends javax.swing.JFrame {
     private java.awt.TextField textFieldNome;
     private java.awt.TextField textFieldTelefone;
     // End of variables declaration//GEN-END:variables
+    
+    public Usuario getUsuario(){
+        return this.usuario;
+    }
+    
     private void validacao() {
         boolean sucesso;
+        
+        
         try {
             UsuarioController usuarioContoller = new UsuarioController();
-
+            
             sucesso = usuarioContoller.cadastrarUsuario(jComboBoxCargo.getSelectedItem().toString(), textFieldNome.getText(), jTextFieldIdentificador.getText(), textFieldEmail.getText(), textFieldTelefone.getText(), jPasswordFieldSenha.getText(), jPasswordFieldConfirmarSenha.getText());
 
             if (sucesso) {
@@ -342,6 +355,11 @@ public class TelaCadastro extends javax.swing.JFrame {
             } else {
                 JOptionPane.showMessageDialog(null, "Os campos não foram preenchidos corretamente.");
             }
+            
+            LinkedList<Usuario> listaUsuarios = UsuarioController.getUsuarios();
+            
+            usuario = listaUsuarios.getLast();
+            
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "Erro: " + ex);
         }

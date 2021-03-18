@@ -76,4 +76,10 @@ public class UsuarioController {
         System.out.println(display);
     }
 
+    public static LinkedList<Usuario> getUsuarios() {
+        return usuarios;
+    }
+    
+    
+
 }

@@ -17,9 +17,11 @@ public class HorariosController {
 
     public static LinkedList<Horarios> horarios = new LinkedList();
 
+//    public void cadastrarHorarios(Horarios grade, String DiaSemana, String id, boolean h7, boolean h8, boolean h9, boolean h10, boolean h11, boolean h12, boolean h13, boolean h14, boolean h15, boolean h16, boolean h17, boolean h18, boolean h19, boolean h20) {
     public void cadastrarHorarios(Horarios grade, String DiaSemana, String id, boolean h7, boolean h8, boolean h9, boolean h10, boolean h11, boolean h12, boolean h13, boolean h14, boolean h15, boolean h16, boolean h17, boolean h18, boolean h19, boolean h20) {
 
         int dia = ConverteDia(DiaSemana);
+
         grade.getHorariosUsuario()[dia][0] = h7;
         grade.getHorariosUsuario()[dia][1] = h8;
         grade.getHorariosUsuario()[dia][2] = h9;
@@ -66,7 +68,6 @@ public class HorariosController {
     public void ConcluirCadastro(Horarios grade) {
         horarios.add(grade);
         JOptionPane.showMessageDialog(null, "Todos os horários foram registrados!");
-
     }
 
     public void cadastrarHorarios(String diaSemana, String id, boolean h7, boolean h8, boolean h9, boolean h10, boolean h11, boolean h12, boolean h13, boolean h14, boolean h15, boolean h16, int i, boolean h18, int i0, boolean h20, boolean h21, boolean h22) {
