@@ -27,11 +27,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jMenuBarTelaPrincipal = new javax.swing.JMenuBar();
-        jMenuPrincipal = new javax.swing.JMenu();
-        jMenuItemMonitorarLotacao = new javax.swing.JMenuItem();
-        jMenuItemCardapio = new javax.swing.JMenuItem();
+        jMenuBarTelaPrincipal2 = new javax.swing.JMenuBar();
+        jMenuPrincipal2 = new javax.swing.JMenu();
+        jMenuItemMonitorarLotacao2 = new javax.swing.JMenuItem();
+        jMenuItemCardapio2 = new javax.swing.JMenuItem();
         jMenuItemEncomenda = new javax.swing.JMenuItem();
         jMenuItemRegistraHorario = new javax.swing.JMenuItem();
         jMenuItemAgendarHorario = new javax.swing.JMenuItem();
@@ -42,26 +41,23 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuSair = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Sistema de Monitoramento do RU");
+        setPreferredSize(new java.awt.Dimension(350, 350));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/#UtilizeoRU.png"))); // NOI18N
+        jMenuPrincipal2.setText("Menu Principal");
+        jMenuPrincipal2.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
 
-        jMenuPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/botao-de-menu-de-tres-linhas-horizontais.png"))); // NOI18N
-        jMenuPrincipal.setText("Menu Principal");
-        jMenuPrincipal.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
+        jMenuItemMonitorarLotacao2.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
+        jMenuItemMonitorarLotacao2.setText("Monitorar Lotação");
+        jMenuPrincipal2.add(jMenuItemMonitorarLotacao2);
 
-        jMenuItemMonitorarLotacao.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
-        jMenuItemMonitorarLotacao.setText("Monitorar Lotação");
-        jMenuPrincipal.add(jMenuItemMonitorarLotacao);
-
-        jMenuItemCardapio.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
-        jMenuItemCardapio.setText("Cardápio");
-        jMenuItemCardapio.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemCardapio2.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
+        jMenuItemCardapio2.setText("Cardápio");
+        jMenuItemCardapio2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemCardapioActionPerformed(evt);
+                jMenuItemCardapio2ActionPerformed(evt);
             }
         });
-        jMenuPrincipal.add(jMenuItemCardapio);
+        jMenuPrincipal2.add(jMenuItemCardapio2);
 
         jMenuItemEncomenda.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jMenuItemEncomenda.setText("Encomenda de Refeição");
@@ -70,15 +66,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 jMenuItemEncomendaActionPerformed(evt);
             }
         });
-        jMenuPrincipal.add(jMenuItemEncomenda);
+        jMenuPrincipal2.add(jMenuItemEncomenda);
 
         jMenuItemRegistraHorario.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jMenuItemRegistraHorario.setText("Registrar Horários");
-        jMenuPrincipal.add(jMenuItemRegistraHorario);
+        jMenuPrincipal2.add(jMenuItemRegistraHorario);
 
         jMenuItemAgendarHorario.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jMenuItemAgendarHorario.setText("Agendar Horário");
-        jMenuPrincipal.add(jMenuItemAgendarHorario);
+        jMenuPrincipal2.add(jMenuItemAgendarHorario);
 
         jMenuItemEticket.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jMenuItemEticket.setText("e-Ticket");
@@ -87,11 +83,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 jMenuItemEticketActionPerformed(evt);
             }
         });
-        jMenuPrincipal.add(jMenuItemEticket);
+        jMenuPrincipal2.add(jMenuItemEticket);
 
-        jMenuBarTelaPrincipal.add(jMenuPrincipal);
+        jMenuBarTelaPrincipal2.add(jMenuPrincipal2);
 
-        jMenuPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/usuario-de-perfil.png"))); // NOI18N
         jMenuPerfil.setText("Perfil");
         jMenuPerfil.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 14)); // NOI18N
 
@@ -104,36 +99,35 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenuPerfil.add(jMenuItemEditarPerfil);
 
-        jMenuBarTelaPrincipal.add(jMenuPerfil);
+        jMenuBarTelaPrincipal2.add(jMenuPerfil);
 
-        jMenuContato.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/letter.png"))); // NOI18N
         jMenuContato.setText("Contato");
         jMenuContato.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 14)); // NOI18N
-        jMenuBarTelaPrincipal.add(jMenuContato);
+        jMenuBarTelaPrincipal2.add(jMenuContato);
 
-        jMenuSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/botao-ligar-desligar.png"))); // NOI18N
         jMenuSair.setText("Sair");
         jMenuSair.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 14)); // NOI18N
-        jMenuBarTelaPrincipal.add(jMenuSair);
+        jMenuBarTelaPrincipal2.add(jMenuSair);
 
-        setJMenuBar(jMenuBarTelaPrincipal);
+        setJMenuBar(jMenuBarTelaPrincipal2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 690, Short.MAX_VALUE)
+            .addGap(0, 350, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addContainerGap(480, Short.MAX_VALUE))
+            .addGap(0, 325, Short.MAX_VALUE)
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItemCardapio2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCardapio2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemCardapio2ActionPerformed
 
     private void jMenuItemEncomendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEncomendaActionPerformed
         // TODO add your handling code here:
@@ -142,10 +136,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void jMenuItemEticketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEticketActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemEticketActionPerformed
-
-    private void jMenuItemCardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCardapioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItemCardapioActionPerformed
 
     private void jMenuItemEditarPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEditarPerfilActionPerformed
         // TODO add your handling code here:
@@ -177,7 +167,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -188,18 +177,25 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBarTelaPrincipal;
+    private javax.swing.JMenuBar jMenuBarTelaPrincipal1;
+    private javax.swing.JMenuBar jMenuBarTelaPrincipal2;
     private javax.swing.JMenu jMenuContato;
     private javax.swing.JMenuItem jMenuItemAgendarHorario;
     private javax.swing.JMenuItem jMenuItemCardapio;
+    private javax.swing.JMenuItem jMenuItemCardapio1;
+    private javax.swing.JMenuItem jMenuItemCardapio2;
     private javax.swing.JMenuItem jMenuItemEditarPerfil;
     private javax.swing.JMenuItem jMenuItemEncomenda;
     private javax.swing.JMenuItem jMenuItemEticket;
     private javax.swing.JMenuItem jMenuItemMonitorarLotacao;
+    private javax.swing.JMenuItem jMenuItemMonitorarLotacao1;
+    private javax.swing.JMenuItem jMenuItemMonitorarLotacao2;
     private javax.swing.JMenuItem jMenuItemRegistraHorario;
     private javax.swing.JMenu jMenuPerfil;
     private javax.swing.JMenu jMenuPrincipal;
+    private javax.swing.JMenu jMenuPrincipal1;
+    private javax.swing.JMenu jMenuPrincipal2;
     private javax.swing.JMenu jMenuSair;
     // End of variables declaration//GEN-END:variables
 }
