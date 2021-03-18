@@ -51,7 +51,7 @@ public class TelaPrincipal2 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(156, 156, 156)
                 .addComponent(jButtonCardápio)
-                .addContainerGap(171, Short.MAX_VALUE))
+                .addContainerGap(146, Short.MAX_VALUE))
         );
 
         pack();

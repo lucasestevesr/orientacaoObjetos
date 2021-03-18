@@ -57,7 +57,7 @@ public class UsuarioController {
         System.out.println("Autenticando o Login.");
         for (int i = 0; i < usuarios.size(); i++) {
             usuarios.get(i);
-            if (autenticador.getIdentificador() == usuarios.get(i).getIdentificador() && autenticador.getSenha() == usuarios.get(i).getSenha()) {
+            if ((autenticador.getIdentificador() == null ? usuarios.get(i).getIdentificador() == null : autenticador.getIdentificador().equals(usuarios.get(i).getIdentificador())) && autenticador.getSenha() == usuarios.get(i).getSenha()) {
                 System.out.println("Login Verificado" + usuarios.get(i).getNome());
                 return true;
             }
