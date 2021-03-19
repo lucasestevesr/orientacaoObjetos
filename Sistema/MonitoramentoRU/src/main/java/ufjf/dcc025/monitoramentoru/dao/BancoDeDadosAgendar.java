@@ -7,7 +7,7 @@ package ufjf.dcc025.monitoramentoru.dao;
 
 import java.util.ArrayList;
 import java.util.List;
-import ufjf.dcc025.monitoramentoru.model.Refeicao;
+
 
 /**
  *

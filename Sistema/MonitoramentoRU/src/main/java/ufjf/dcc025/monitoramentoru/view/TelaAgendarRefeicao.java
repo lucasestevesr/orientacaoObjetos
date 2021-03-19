@@ -8,6 +8,7 @@ package ufjf.dcc025.monitoramentoru.view;
 import javax.swing.JOptionPane;
 import ufjf.dcc025.monitoramentoru.controller.RefeicaoController;
 import ufjf.dcc025.monitoramentoru.controller.UsuarioController;
+import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
 
 
 /**
@@ -35,12 +36,12 @@ public class TelaAgendarRefeicao extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jComboBoxReserva = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jLabelTipoReserva = new javax.swing.JLabel();
+        jLabelDiaSemana = new javax.swing.JLabel();
         jComboBoxDiaSemana = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
+        jLabelTurno = new javax.swing.JLabel();
         jComboBoxTurno = new javax.swing.JComboBox<>();
-        jLabel5 = new javax.swing.JLabel();
+        jLabelHorario = new javax.swing.JLabel();
         jComboBoxHorario = new javax.swing.JComboBox<>();
         jButtonSalvar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
@@ -52,13 +53,13 @@ public class TelaAgendarRefeicao extends javax.swing.JFrame {
 
         jComboBoxReserva.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Escolha","Agendamento", "Encomenda" }));
 
-        jLabel2.setText("Tipo de Reserva:");
+        jLabelTipoReserva.setText("Tipo de Reserva:");
 
-        jLabel3.setText("Dia da Semana:");
+        jLabelDiaSemana.setText("Dia da Semana:");
 
         jComboBoxDiaSemana.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Escolha", "Segunda Feira", "Terça Feira", "Quarta Feira", "Quinta Feira", "Sexta Feira" }));
 
-        jLabel4.setText("Turno da Refeição:");
+        jLabelTurno.setText("Turno da Refeição:");
 
         jComboBoxTurno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Escolha", "Café da Manhã", "Almoço", "Janta"}));
         jComboBoxTurno.addItemListener(new java.awt.event.ItemListener() {
@@ -67,7 +68,7 @@ public class TelaAgendarRefeicao extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setText("Horário:");
+        jLabelHorario.setText("Horário:");
 
         jComboBoxHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Escolha" }));
 
@@ -84,30 +85,30 @@ public class TelaAgendarRefeicao extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(295, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(292, 292, 292))
             .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButtonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(106, 106, 106)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jComboBoxDiaSemana, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jComboBoxReserva, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jComboBoxTurno, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jComboBoxHorario, 0, 139, Short.MAX_VALUE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(66, 66, 66)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jButtonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(106, 106, 106)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabelHorario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabelTurno, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                                .addComponent(jLabelDiaSemana, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabelTipoReserva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGap(50, 50, 50)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jComboBoxDiaSemana, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jComboBoxReserva, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jComboBoxTurno, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jComboBoxHorario, 0, 139, Short.MAX_VALUE)))))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,25 +117,25 @@ public class TelaAgendarRefeicao extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelTipoReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBoxReserva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBoxDiaSemana)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelDiaSemana, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelTurno, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBoxTurno, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelHorario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jComboBoxHorario, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE))
-                .addGap(97, 97, 97)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButtonSalvar, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(140, 140, 140))
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24))
         );
 
         pack();
@@ -142,24 +143,39 @@ public class TelaAgendarRefeicao extends javax.swing.JFrame {
 
     private void jComboBoxTurnoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxTurnoItemStateChanged
         
-        if("Café da Manhã".equals(jComboBoxTurno.getSelectedItem().toString())){
-            jComboBoxHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Escolha", "6:00 as 6:30", "6:30 as 7:00", "7:30 as 8:00" }));
-        } else if("Almoço".equals(jComboBoxTurno.getSelectedItem().toString())){
-            jComboBoxHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Escolha", "11:00 as 11:30", "11:30 as 12:00", "12:00 as 12:30", "12:30 as 13:00", "13:00 as 13:30", "13:30 as 14:00" }));
-        } else if("Janta".equals(jComboBoxTurno.getSelectedItem().toString())){
-            jComboBoxHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Escolha", "17:00 as 17:30", "17:30 as 18:00", "18:00 as 18:30", "18:30 as 19:00", "19:00 as 19:30", "19:30 as 20:00" }));
+        if(null != jComboBoxTurno.getSelectedItem().toString())switch (jComboBoxTurno.getSelectedItem().toString()) {
+            case "Café da Manhã":
+                jComboBoxHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Escolha", "6:00 as 6:30", "6:30 as 7:00", "7:30 as 8:00" }));
+                break;
+            case "Almoço":
+                jComboBoxHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Escolha", "11:00 as 11:30", "11:30 as 12:00", "12:00 as 12:30", "12:30 as 13:00", "13:00 as 13:30", "13:30 as 14:00" }));
+                break;
+            case "Janta":
+                jComboBoxHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Escolha", "17:00 as 17:30", "17:30 as 18:00", "18:00 as 18:30", "18:30 as 19:00", "19:00 as 19:30", "19:30 as 20:00" }));
+                break;
+            default:
+                break;
         }
         
     }//GEN-LAST:event_jComboBoxTurnoItemStateChanged
 
     private void jButtonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalvarActionPerformed
-        salvarRegistro();
+        TelaPrincipal telaprincipal = new TelaPrincipal();;
+        boolean registro = BancoDeDadosUsuario.salvarRegistro(jComboBoxReserva.getSelectedItem().toString(),
+                jComboBoxDiaSemana.getSelectedItem().toString(), jComboBoxTurno.getSelectedItem().toString(),
+                jComboBoxHorario.getSelectedItem().toString());
+        if (registro) {
+            this.setVisible(false);
+            telaprincipal.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(this, "Os campos não foram preenchidos corretamente.");
+        }
     }//GEN-LAST:event_jButtonSalvarActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[]) {;
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -199,30 +215,9 @@ public class TelaAgendarRefeicao extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBoxReserva;
     private javax.swing.JComboBox<String> jComboBoxTurno;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabelDiaSemana;
+    private javax.swing.JLabel jLabelHorario;
+    private javax.swing.JLabel jLabelTipoReserva;
+    private javax.swing.JLabel jLabelTurno;
     // End of variables declaration//GEN-END:variables
-    private void salvarRegistro() {
-        boolean sucesso;
-        try {
-            RefeicaoController refeicaoContoller = new RefeicaoController();
-
-            sucesso = refeicaoContoller.cadastrarRefeicao(jComboBoxReserva.getSelectedItem().toString(), jComboBoxDiaSemana.getSelectedItem().toString(), jComboBoxTurno.getSelectedItem().toString(), jComboBoxHorario.getSelectedItem().toString());
-
-            if (sucesso) {
-                JOptionPane.showMessageDialog(null, "Você cadastrou uma refeicao do tipo " + jComboBoxReserva.getSelectedItem().toString() + 
-                " na " + jComboBoxDiaSemana.getSelectedItem().toString() + " no Turno " + jComboBoxTurno.getSelectedItem().toString() + 
-                " das " + jComboBoxHorario.getSelectedItem().toString());
-
-            } else {
-                JOptionPane.showMessageDialog(null, "Os campos não foram preenchidos corretamente.");
-            }
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Erro: " + ex);
-        }
-        
-        this.dispose();
-    }
 }

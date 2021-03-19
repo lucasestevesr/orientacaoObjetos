@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 import ufjf.dcc025.monitoramentoru.controller.UsuarioController;
+import ufjf.dcc025.monitoramentoru.controller.RefeicaoController;
 
 /**
  *
@@ -20,10 +21,13 @@ public class BancoDeDadosUsuario {
     private static Usuario usuarioLogado;
 
     private static final List<Usuario> usuarios;
+    
+    private static final List<Refeicao> refeicoes;
 
     static {
         usuarios = new ArrayList<>();
         usuarioLogado = null;
+        refeicoes = new ArrayList<>();
     }
 
     public static List<Usuario> getUsuarios() {
@@ -34,10 +38,14 @@ public class BancoDeDadosUsuario {
         return usuarioLogado;
     }
 
+    public static List<Refeicao> getRefeicao(){
+            return refeicoes;
+    }
+    
     public static void setUsuarioLogado(Usuario usuarioLogado) {
         BancoDeDadosUsuario.usuarioLogado = usuarioLogado;
     }
-
+    
     public static boolean autenticarLogin(String identificador, String senha) {
         try {
             for (int i = 0; i < usuarios.size(); i++) {
@@ -66,6 +74,19 @@ public class BancoDeDadosUsuario {
             return false;
         }
     }
+    
+    public static boolean salvarRegistro(String tipo, String diaSemana, String turno, String horario) {
+        
+        try {
+            RefeicaoController refeicaoContoller = new RefeicaoController();
+            refeicaoContoller.cadastrarRefeicao(tipo, diaSemana, turno, horario);
+            return true;
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Erro: " + ex);
+            return false;
+        }
+    }
+
 
     public static boolean editar(String nome, String identificador, String email, String telefone,
             String senha, String confirmarSenha) {

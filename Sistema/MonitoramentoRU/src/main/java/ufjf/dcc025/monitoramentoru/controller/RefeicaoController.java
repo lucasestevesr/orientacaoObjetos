@@ -9,7 +9,6 @@ import java.util.LinkedList;
 import ufjf.dcc025.monitoramentoru.model.AgendarRefeicao;
 import ufjf.dcc025.monitoramentoru.model.EncomendarRefeicao;
 import ufjf.dcc025.monitoramentoru.model.Refeicao;
-import ufjf.dcc025.monitoramentoru.controller.UsuarioController;
 
 /**
  *
