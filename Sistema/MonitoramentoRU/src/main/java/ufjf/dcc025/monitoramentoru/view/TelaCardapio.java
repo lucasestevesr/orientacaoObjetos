@@ -5,10 +5,6 @@
  */
 package ufjf.dcc025.monitoramentoru.view;
 
-
-import javax.swing.JComboBox;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import ufjf.dcc025.monitoramentoru.model.Cardapio;
 
 /**
@@ -67,6 +63,11 @@ public class TelaCardapio extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
         jButton2.setText("Voltar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 18)); // NOI18N
         jLabel3.setText("Informe dia e turno para visualizar o cardápio:");
@@ -135,21 +136,28 @@ public class TelaCardapio extends javax.swing.JFrame {
 
     private void jButtonVisualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonVisualizarMouseClicked
 //        JOptionPane.showMessageDialog(rootPane, "Apertou o botão ok!");
-//        
-//        Cardapio cardapio = new Cardapio();
-//        
-//        String diaSemana = JDiaSemana.getSelectedItem()+"";
-//        String turno = JTurno.getSelectedItem()+"";
-//        
-//        cardapio.declarar();
-//        cardapio.acessar(diaSemana, turno);
-        
+
+        Cardapio cardapio = new Cardapio();
+
+        String diaSemana = JDiaSemana.getSelectedItem() + "";
+        String turno = JTurno.getSelectedItem() + "";
+
+        cardapio.declarar();
+        cardapio.acessar(diaSemana, turno);
+
 //        MostraCardapio mostracardapio = new MostraCardapio();
 //        
 //        mostracardapio.jLabelOpcaoPrincipal.setText("Prato Principal");
 //        mostracardapio.setVisible(true);
-        
+
     }//GEN-LAST:event_jButtonVisualizarMouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.dispose();
+        TelaPrincipal telaPrincipal = new TelaPrincipal();
+        telaPrincipal.setVisible(true);
+
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

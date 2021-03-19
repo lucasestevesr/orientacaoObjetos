@@ -37,8 +37,13 @@ public abstract class Usuario {
         this.senha = senha;
         this.confirmarSenha = confirmarSenha;
         System.out.println("Foi realizado o cadastro do usúario identificado pelo email: " + this.email + " e pelo identificador: " + this.identificador);
-
     }
+
+    /* Código Arthur??
+//    public Usuario(Horarios horariosUsuario) {
+//        this.horariosUsuario = horariosUsuario;
+//    } 
+    */
 //    //USO AQUI OU NA UsuarioLogin ? preciso chamar na view porém essa classe é abstrata.
 //    //Faço a verificação no UsuarioController?
 //    public boolean autenticaLogin(String identificador, String senha) {

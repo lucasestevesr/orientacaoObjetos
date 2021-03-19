@@ -173,7 +173,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItemCardapio2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCardapio2ActionPerformed
-        // TODO add your handling code here:
+        TelaCardapio telaCardapio = new TelaCardapio();
+        telaCardapio.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jMenuItemCardapio2ActionPerformed
 
     private void jMenuItemEncomendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEncomendaActionPerformed
@@ -187,6 +189,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void jMenuItemEditarPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEditarPerfilActionPerformed
         TelaPerfil telaperfil = new TelaPerfil();
         telaperfil.setVisible(true);
+        
     }//GEN-LAST:event_jMenuItemEditarPerfilActionPerformed
 
     private void jMenuItemRegistraHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemRegistraHorarioActionPerformed

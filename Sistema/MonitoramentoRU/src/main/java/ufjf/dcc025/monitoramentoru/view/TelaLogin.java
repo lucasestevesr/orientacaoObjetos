@@ -142,12 +142,14 @@ public class TelaLogin extends javax.swing.JFrame {
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         this.dispose();
         boolean autenticar = BancoDeDadosUsuario.autenticarLogin(txtUser.getText(), txtPassword.getText());
+
         if (autenticar) {
             TelaPrincipal telaPrincipal = new TelaPrincipal();
             telaPrincipal.setVisible(true);
-            
+
         } else {
-            JOptionPane.showMessageDialog(null, "Login Invalido.");
+            JOptionPane.showMessageDialog(null, "Login Invalido, Faça novamente.");          
+            this.setVisible(true);
         }
     }//GEN-LAST:event_btnLoginActionPerformed
 

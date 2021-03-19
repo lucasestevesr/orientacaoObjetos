@@ -8,7 +8,6 @@ package ufjf.dcc025.monitoramentoru.model;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import ufjf.dcc025.monitoramentoru.view.MostraCardapio;
-import ufjf.dcc025.monitoramentoru.view.MostraCardapio;
 
 /**
  *

@@ -10,11 +10,14 @@ package ufjf.dcc025.monitoramentoru.model;
  * @author arthu
  */
 public class Horarios {
-    
+
     private boolean[][] horariosUsuario;
 
-    
-        public boolean[][] getHorariosUsuario() {
+    public Horarios() {
+        this.horariosUsuario = new boolean[6][14];
+    }
+
+    public boolean[][] getHorariosUsuario() {
         return horariosUsuario;
     }
 
@@ -22,8 +25,4 @@ public class Horarios {
         this.horariosUsuario = horariosUsuario;
     }
 
-    public Horarios() {
-        this.horariosUsuario = new boolean[6][14];
-    }
-    
 }

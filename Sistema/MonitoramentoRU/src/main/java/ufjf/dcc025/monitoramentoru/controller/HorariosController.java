@@ -18,10 +18,11 @@ public class HorariosController {
     public static LinkedList<Horarios> horarios = new LinkedList();
 
 //    public void cadastrarHorarios(Horarios grade, String DiaSemana, String id, boolean h7, boolean h8, boolean h9, boolean h10, boolean h11, boolean h12, boolean h13, boolean h14, boolean h15, boolean h16, boolean h17, boolean h18, boolean h19, boolean h20) {
-    public void cadastrarHorarios(Horarios grade, String DiaSemana, String id, boolean h7, boolean h8, boolean h9, boolean h10, boolean h11, boolean h12, boolean h13, boolean h14, boolean h15, boolean h16, boolean h17, boolean h18, boolean h19, boolean h20) {
+    public void cadastrarHorarios(Horarios grade, String DiaSemana, boolean h7, boolean h8, boolean h9, boolean h10, boolean h11, boolean h12, boolean h13, 
+            boolean h14, boolean h15, boolean h16, boolean h17, boolean h18, boolean h19, boolean h20) {
 
         int dia = ConverteDia(DiaSemana);
-
+        
         grade.getHorariosUsuario()[dia][0] = h7;
         grade.getHorariosUsuario()[dia][1] = h8;
         grade.getHorariosUsuario()[dia][2] = h9;
@@ -37,10 +38,12 @@ public class HorariosController {
         grade.getHorariosUsuario()[dia][12] = h19;
         grade.getHorariosUsuario()[dia][13] = h20;
 
-//            horarios.add(grade);
+            horarios.add(grade);
         JOptionPane.showMessageDialog(null, "Horários de " + DiaSemana + " registrados com sucesso!");
 
     }
+    
+    
 
     public Integer ConverteDia(String diaSemana) {
         int dia = 0;

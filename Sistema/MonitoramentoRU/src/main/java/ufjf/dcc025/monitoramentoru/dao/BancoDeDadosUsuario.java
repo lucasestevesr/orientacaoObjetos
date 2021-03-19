@@ -21,7 +21,7 @@ public class BancoDeDadosUsuario {
     private static Usuario usuarioLogado;
 
     private static final List<Usuario> usuarios;
-    
+
     private static final List<Refeicao> refeicoes;
 
     static {
@@ -38,14 +38,14 @@ public class BancoDeDadosUsuario {
         return usuarioLogado;
     }
 
-    public static List<Refeicao> getRefeicao(){
-            return refeicoes;
+    public static List<Refeicao> getRefeicao() {
+        return refeicoes;
     }
-    
+
     public static void setUsuarioLogado(Usuario usuarioLogado) {
         BancoDeDadosUsuario.usuarioLogado = usuarioLogado;
     }
-    
+
     public static boolean autenticarLogin(String identificador, String senha) {
         try {
             for (int i = 0; i < usuarios.size(); i++) {
@@ -74,9 +74,9 @@ public class BancoDeDadosUsuario {
             return false;
         }
     }
-    
+
     public static boolean salvarRegistro(String tipo, String diaSemana, String turno, String horario) {
-        
+
         try {
             RefeicaoController refeicaoContoller = new RefeicaoController();
             refeicaoContoller.cadastrarRefeicao(tipo, diaSemana, turno, horario);
@@ -86,7 +86,6 @@ public class BancoDeDadosUsuario {
             return false;
         }
     }
-
 
     public static boolean editar(String nome, String identificador, String email, String telefone,
             String senha, String confirmarSenha) {
@@ -98,14 +97,15 @@ public class BancoDeDadosUsuario {
             BancoDeDadosUsuario.getUsuarioLogado().setTelefone(telefone);
             BancoDeDadosUsuario.getUsuarioLogado().setSenha(senha);
             BancoDeDadosUsuario.getUsuarioLogado().setConfirmarSenha(confirmarSenha);
-            return true;
+            if (senha == null ? confirmarSenha == null : senha.equals(confirmarSenha)) {
+                return true;
+            }
             //}
 
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "Erro: " + ex);
-            return false;
         }
-
+        return false;
     }
 
     public int getId() {

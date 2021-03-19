@@ -18,20 +18,22 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
     /**
      * Creates new form TelaCadastraHorarios
      */
-//    private Usuario usuario;
+    private Usuario usuario;
 
     public TelaCadastraHorarios() {
         initComponents();
-//        this.usuario = null;
+        this.usuario = null;
     }
 
-//    public Usuario getUsuario() {
-//        return usuario;
-//    }
-//
-//    public void setUsuario(Usuario usuario) {
-//        this.usuario = usuario;
-//    }
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+    
+    Horarios grade = new Horarios();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -56,10 +58,8 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
         jCheckBox19h = new javax.swing.JCheckBox();
         jCheckBox20h = new javax.swing.JCheckBox();
         jComboBoxDiaSemana = new javax.swing.JComboBox<>();
-        jTextFieldIdentificador = new javax.swing.JTextField();
         jCheckBox7h = new javax.swing.JCheckBox();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jButtonCadastrar = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
@@ -68,34 +68,54 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jCheckBox8h.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jCheckBox8h.setText("08:00");
 
+        jCheckBox9h.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jCheckBox9h.setText("09:00");
 
+        jCheckBox10h.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jCheckBox10h.setText("10:00");
 
+        jCheckBox11h.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jCheckBox11h.setText("11:00");
 
+        jCheckBox12h.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jCheckBox12h.setText("12:00");
 
+        jCheckBox13h.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jCheckBox13h.setText("13:00");
 
+        jCheckBox14h.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jCheckBox14h.setText("14:00");
 
+        jCheckBox15h.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jCheckBox15h.setText("15:00");
 
+        jCheckBox16h.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jCheckBox16h.setText("16:00");
 
+        jCheckBox17h.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jCheckBox17h.setText("17:00");
+        jCheckBox17h.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox17hActionPerformed(evt);
+            }
+        });
 
+        jCheckBox18h.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jCheckBox18h.setText("18:00");
 
+        jCheckBox19h.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jCheckBox19h.setText("19:00");
 
+        jCheckBox20h.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jCheckBox20h.setText("20:00");
 
+        jComboBoxDiaSemana.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jComboBoxDiaSemana.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado" }));
 
+        jCheckBox7h.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jCheckBox7h.setText("07:00");
         jCheckBox7h.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,10 +123,10 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Dia da Semana");
+        jLabel1.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
+        jLabel1.setText("Dia da Semana:");
 
-        jLabel2.setText("Identificador");
-
+        jButtonCadastrar.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jButtonCadastrar.setText("Cadastrar");
         jButtonCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,14 +134,21 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jButton2.setText("Cancelar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
-        jLabel3.setFont(new java.awt.Font("Calibri Light", 0, 20)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 24)); // NOI18N
         jLabel3.setText("Cadastro de Horários");
 
-        jLabel4.setFont(new java.awt.Font("Calibri Light", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jLabel4.setText("Cadastre abaixo os horários em que estará presente na UFJF");
 
+        jButtonConcluir.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jButtonConcluir.setText("Concluir Registro");
         jButtonConcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,109 +160,97 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonConcluir))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(153, 153, 153)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jCheckBox9h)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jCheckBox8h, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jCheckBox7h, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jCheckBox12h, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jCheckBox11h, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jCheckBox10h, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jCheckBox13h, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jCheckBox20h)
-                                .addComponent(jCheckBox17h)
-                                .addComponent(jCheckBox15h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jCheckBox14h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jCheckBox16h)
-                                .addComponent(jCheckBox19h)
-                                .addComponent(jCheckBox18h)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(131, 131, 131)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
+                        .addGap(140, 140, 140)
+                        .addComponent(jLabel3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(jLabel4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(82, 82, 82)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jCheckBox7h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel1)
-                                        .addComponent(jLabel2))
-                                    .addGap(118, 118, 118))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextFieldIdentificador, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBoxDiaSemana, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(69, 69, 69)
-                            .addComponent(jLabel4))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(157, 157, 157)
-                            .addComponent(jLabel3))))
-                .addContainerGap(90, Short.MAX_VALUE))
+                                        .addComponent(jCheckBox9h)
+                                        .addComponent(jCheckBox8h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jCheckBox11h)
+                                        .addComponent(jCheckBox10h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jCheckBox12h))
+                                    .addComponent(jCheckBox13h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButtonCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(27, 27, 27)
+                                .addComponent(jButtonConcluir))
+                            .addComponent(jCheckBox14h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBoxDiaSemana, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBox15h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBox16h)
+                            .addComponent(jCheckBox17h)
+                            .addComponent(jCheckBox18h)
+                            .addComponent(jCheckBox19h)
+                            .addComponent(jCheckBox20h))))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(jLabel3)
+                .addContainerGap()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
-                .addGap(18, 18, 18)
+                .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextFieldIdentificador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
+                    .addComponent(jLabel1)
+                    .addComponent(jComboBoxDiaSemana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBoxDiaSemana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(32, 32, 32)
+                    .addComponent(jCheckBox14h)
+                    .addComponent(jCheckBox7h))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jCheckBox8h)
-                        .addComponent(jCheckBox15h))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBox7h)
-                            .addComponent(jCheckBox14h))
-                        .addGap(26, 26, 26)))
-                .addGap(4, 4, 4)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBox16h)
-                            .addComponent(jCheckBox9h))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jCheckBox16h))
+                    .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBox17h)
-                            .addComponent(jCheckBox10h))
-                        .addGap(25, 25, 25)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBox19h)
-                            .addComponent(jCheckBox12h))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBox20h)
-                            .addComponent(jCheckBox13h)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBox11h)
-                            .addComponent(jCheckBox18h))
-                        .addGap(46, 46, 46)))
-                .addGap(36, 36, 36)
+                            .addComponent(jCheckBox15h)
+                            .addComponent(jCheckBox8h))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox9h)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox17h)
+                    .addComponent(jCheckBox10h))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox18h)
+                    .addComponent(jCheckBox11h))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox19h)
+                    .addComponent(jCheckBox12h))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox20h)
+                    .addComponent(jCheckBox13h))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonConcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(79, Short.MAX_VALUE))
+                    .addComponent(jButtonConcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33))
         );
 
         pack();
@@ -249,13 +264,22 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
     private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
         TelaPrincipal telaprincipal = new TelaPrincipal();
 //        usuario = telaprincipal.getUsuario();
-//        cadastrar(usuario.getHorariosUsuario());
+        cadastrar(grade);
     }//GEN-LAST:event_jButtonCadastrarActionPerformed
 
     private void jButtonConcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConcluirActionPerformed
-//        HorariosController horariosController = new HorariosController();
-//        horariosController.ConcluirCadastro(usuario.getHorariosUsuario());
+        HorariosController horariosController = new HorariosController();
+        horariosController.ConcluirCadastro(grade);
+        
     }//GEN-LAST:event_jButtonConcluirActionPerformed
+
+    private void jCheckBox17hActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox17hActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox17hActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+          this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -307,7 +331,7 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
         HorariosController horariosController = new HorariosController();
 //        Horarios grade = new Horarios();
 
-        String id = jTextFieldIdentificador.getText();
+       
         String diaSemana = jComboBoxDiaSemana.getSelectedItem() + "";
 
         boolean h7 = jCheckBox7h.isSelected();
@@ -326,7 +350,7 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
         boolean h20 = jCheckBox20h.isSelected();
 
 //        horariosController.cadastrarHorarios(grade, diaSemana, id, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20);
-        horariosController.cadastrarHorarios(grade, diaSemana, id, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20);
+        horariosController.cadastrarHorarios(grade, diaSemana, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20);
 
         jCheckBox7h.setSelected(false);
         jCheckBox8h.setSelected(false);
@@ -364,9 +388,7 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
     protected javax.swing.JCheckBox jCheckBox9h;
     protected javax.swing.JComboBox<String> jComboBoxDiaSemana;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    protected javax.swing.JTextField jTextFieldIdentificador;
     // End of variables declaration//GEN-END:variables
 }
