@@ -140,6 +140,7 @@ public class TelaLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        this.dispose();
         boolean autenticar = BancoDeDadosUsuario.autenticarLogin(txtUser.getText(), txtPassword.getText());
         if (autenticar) {
             TelaPrincipal telaPrincipal = new TelaPrincipal();
@@ -156,6 +157,7 @@ public class TelaLogin extends javax.swing.JFrame {
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
         Usuario usuario = null;
+        this.dispose();
         TelaCadastro telacadastro = new TelaCadastro();
         telacadastro.setVisible(true);
 //        usuario = telacadastro.getUsuario();

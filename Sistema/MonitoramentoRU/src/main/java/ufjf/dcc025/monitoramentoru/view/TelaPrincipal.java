@@ -77,7 +77,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuPrincipal2.add(jMenuItemCardapio2);
 
         jMenuItemEncomenda.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
-        jMenuItemEncomenda.setText("Encomenda de Refeição");
+        jMenuItemEncomenda.setText("Encomendar Refeição");
         jMenuItemEncomenda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemEncomendaActionPerformed(evt);
