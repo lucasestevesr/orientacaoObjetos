@@ -52,10 +52,10 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="jPanelCadastroUsuario" alignment="1" pref="892" max="32767" attributes="0"/>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="343" max="-2" attributes="0"/>
               <Component id="jLabelTitulo" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="329" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -77,7 +77,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Gill Sans Ultra Bold" size="18" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Cadastro de Usu&#xe1;rio"/>
+        <Property name="text" type="java.lang.String" value="Perfil do Usu&#xe1;rio"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
@@ -94,31 +94,31 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabelEmail1" alignment="0" min="-2" pref="59" max="-2" attributes="0"/>
-                      <Component id="jLabelCargo" alignment="0" min="-2" pref="59" max="-2" attributes="0"/>
                       <Component id="jLabelNome" alignment="0" min="-2" pref="59" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabelSenha" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
                               <Component id="jButtonVoltar" min="-2" pref="124" max="-2" attributes="0"/>
-                              <Component id="jButtonSalvar" min="-2" pref="124" max="-2" attributes="0"/>
+                              <Component id="jButtonEditar" min="-2" pref="124" max="-2" attributes="0"/>
                               <Component id="jLabelTelefone" min="-2" pref="68" max="-2" attributes="0"/>
+                              <Component id="jLabelEmail1" alignment="0" min="-2" pref="59" max="-2" attributes="0"/>
                               <Component id="jLabelIdentificador" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
+                              <Component id="jLabelSenha" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jComboBoxCargo" min="-2" pref="133" max="-2" attributes="0"/>
-                              <Component id="textFieldEmail" alignment="0" max="32767" attributes="0"/>
-                              <Component id="textFieldTelefone" alignment="0" max="32767" attributes="0"/>
-                              <Component id="textFieldNome" alignment="0" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jPasswordFieldSenha" min="-2" pref="170" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jLabelConfirmarSenha" min="-2" pref="123" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jPasswordFieldConfirmarSenha" min="-2" pref="170" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="textFieldEmail" min="-2" pref="485" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="textFieldTelefone" alignment="0" pref="485" max="32767" attributes="0"/>
+                                  <Component id="textFieldNome" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jTextFieldIdentificador" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jPasswordFieldSenha" min="-2" pref="170" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                      <Component id="jLabelConfirmarSenha" min="-2" pref="123" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jPasswordFieldConfirmarSenha" min="-2" pref="170" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <Component id="jTextFieldIdentificador" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -134,41 +134,38 @@
                       <Component id="jLabelNome" max="32767" attributes="0"/>
                       <Component id="textFieldNome" pref="30" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jLabelCargo" pref="30" max="32767" attributes="0"/>
-                      <Component id="jComboBoxCargo" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="textFieldEmail" min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="jLabelEmail1" min="-2" pref="30" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jLabelTelefone" max="32767" attributes="0"/>
-                      <Component id="textFieldTelefone" pref="30" max="32767" attributes="0"/>
+                      <Component id="textFieldEmail" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabelIdentificador" pref="47" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabelTelefone" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="textFieldTelefone" min="-2" pref="30" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="jLabelIdentificador" pref="45" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabelSenha" alignment="3" pref="46" max="32767" attributes="0"/>
+                              <Component id="jPasswordFieldSenha" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="jLabelConfirmarSenha" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="jPasswordFieldConfirmarSenha" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                          <Component id="jButtonEditar" pref="64" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jButtonVoltar" pref="64" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                      </Group>
                       <Group type="102" attributes="0">
                           <Component id="jTextFieldIdentificador" min="-2" pref="30" max="-2" attributes="0"/>
-                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabelSenha" alignment="3" pref="46" max="32767" attributes="0"/>
-                      <Component id="jPasswordFieldSenha" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="jLabelConfirmarSenha" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="jPasswordFieldConfirmarSenha" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jButtonSalvar" pref="66" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButtonVoltar" pref="67" max="32767" attributes="0"/>
-                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -191,31 +188,6 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldNomeActionPerformed"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabelCargo">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Gill Sans MT" size="14" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Cargo:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBoxCargo">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Gill Sans MT" size="14" style="1"/>
-            </Property>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="Discente"/>
-                <StringItem index="1" value="Docente"/>
-                <StringItem index="2" value="Tae"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelTelefone">
           <Properties>
@@ -300,7 +272,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jPasswordFieldConfirmarSenhaActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButtonSalvar">
+        <Component class="javax.swing.JButton" name="jButtonEditar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -308,14 +280,14 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gill Sans MT" size="18" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Salvar"/>
+            <Property name="text" type="java.lang.String" value="Editar"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
               <Insets value="[5, 14, 5, 14]"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSalvarActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonEditarActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonVoltar">

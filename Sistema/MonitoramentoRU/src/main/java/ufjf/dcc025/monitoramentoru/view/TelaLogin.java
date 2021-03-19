@@ -6,9 +6,8 @@
 package ufjf.dcc025.monitoramentoru.view;
 
 import javax.swing.JOptionPane;
-import ufjf.dcc025.monitoramentoru.controller.UsuarioController;
+import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
 import ufjf.dcc025.monitoramentoru.model.Usuario;
-import ufjf.dcc025.monitoramentoru.model.UsuarioLogin;
 
 /**
  *
@@ -19,14 +18,19 @@ public class TelaLogin extends javax.swing.JFrame {
     /**
      * Creates new form TelaLogin
      */
-    
-    private Usuario usuario;
-    
+//    private Usuario usuario;
     public TelaLogin() {
         initComponents();
-        this.usuario = null;
+        //this.usuario = null;
     }
 
+//    public Usuario getUsuario() {
+//        return usuario;
+//    }
+//
+//    public void setUsuario(Usuario usuario) {
+//        this.usuario = usuario;
+//    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -43,13 +47,14 @@ public class TelaLogin extends javax.swing.JFrame {
         btnLogin = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
         btnCadastrar = new javax.swing.JButton();
+        jLabelTitulo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lbUser.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbUser.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         lbUser.setText("Identificador:");
 
-        lbPassword.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbPassword.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         lbPassword.setText("Senha:");
 
         txtUser.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
@@ -80,50 +85,54 @@ public class TelaLogin extends javax.swing.JFrame {
             }
         });
 
+        jLabelTitulo.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 18)); // NOI18N
+        jLabelTitulo.setText("Login");
+        jLabelTitulo.setToolTipText("");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbUser)
+                    .addComponent(lbPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
-                        .addComponent(btnCadastrar)
-                        .addGap(29, 29, 29)
-                        .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(116, 116, 116)
-                                .addComponent(lbPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(lbUser)
-                                .addGap(26, 26, 26)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtUser)
-                            .addComponent(txtPassword))))
-                .addContainerGap())
+                    .addComponent(txtPassword)
+                    .addComponent(txtUser))
+                .addGap(70, 70, 70))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCadastrar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(47, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelTitulo)
+                .addGap(164, 164, 164))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(61, 61, 61)
+                .addComponent(jLabelTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbUser)
                     .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbPassword)
-                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnCadastrar, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
-                    .addComponent(btnCancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbPassword))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnCadastrar, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                    .addComponent(btnLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -131,10 +140,14 @@ public class TelaLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        validar();
-        TelaPrincipal telaPrincipal = new TelaPrincipal();
-        telaPrincipal.setUsuario(usuario);
-
+        boolean autenticar = BancoDeDadosUsuario.autenticarLogin(txtUser.getText(), txtPassword.getText());
+        if (autenticar) {
+            TelaPrincipal telaPrincipal = new TelaPrincipal();
+            telaPrincipal.setVisible(true);
+            
+        } else {
+            JOptionPane.showMessageDialog(null, "Login Invalido.");
+        }
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
@@ -142,30 +155,13 @@ public class TelaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
+        Usuario usuario = null;
         TelaCadastro telacadastro = new TelaCadastro();
         telacadastro.setVisible(true);
-        usuario = telacadastro.getUsuario();
+//        usuario = telacadastro.getUsuario();
+//        BancoDeDadosUsuario.getUsuarios().add(usuario);
+
     }//GEN-LAST:event_btnCadastrarActionPerformed
-
-    public void validar() {
-
-        boolean sucesso;
-        try {
-            UsuarioController usuarioContoller = new UsuarioController();
-            UsuarioLogin usuarioLogin = new UsuarioLogin(txtUser.getText(), txtPassword.getText());
-            sucesso = usuarioContoller.autenticaLogin(usuarioLogin);
-
-            if (sucesso) {
-                JOptionPane.showMessageDialog(null, "Login Realizado.");
-                TelaPrincipal telaPrincipal = new TelaPrincipal();
-                telaPrincipal.setVisible(true);
-            } else {
-                JOptionPane.showMessageDialog(this, "Os campos não foram preenchidos corretamente.", "Aviso", JOptionPane.WARNING_MESSAGE);
-            }
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Erro: " + ex);
-        }
-    }
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -204,9 +200,30 @@ public class TelaLogin extends javax.swing.JFrame {
     private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnLogin;
+    private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JLabel lbPassword;
     private javax.swing.JLabel lbUser;
     private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUser;
     // End of variables declaration//GEN-END:variables
 }
+
+//    public void autenticarSenha() {
+//
+//        boolean sucesso;
+//        try {
+//            UsuarioController usuarioContoller = new UsuarioController();
+//            UsuarioLogin usuarioLogin = new UsuarioLogin(txtUser.getText(), txtPassword.getText());
+//            sucesso = usuarioContoller.autenticaLogin(usuarioLogin);
+//
+//            if (sucesso) {
+//                JOptionPane.showMessageDialog(null, "Login Realizado.");
+//                TelaPrincipal telaPrincipal = new TelaPrincipal();
+//                telaPrincipal.setVisible(true);
+//            } else {
+//                JOptionPane.showMessageDialog(this, "Os campos não foram preenchidos corretamente.", "Aviso", JOptionPane.WARNING_MESSAGE);
+//            }
+//        } catch (Exception ex) {
+//            JOptionPane.showMessageDialog(null, "Erro: " + ex);
+//        }
+//    }

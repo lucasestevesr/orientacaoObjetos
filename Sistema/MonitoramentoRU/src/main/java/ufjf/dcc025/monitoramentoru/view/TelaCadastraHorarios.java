@@ -5,7 +5,6 @@
  */
 package ufjf.dcc025.monitoramentoru.view;
 
-import java.awt.event.ActionEvent;
 import ufjf.dcc025.monitoramentoru.controller.HorariosController;
 import ufjf.dcc025.monitoramentoru.model.Horarios;
 import ufjf.dcc025.monitoramentoru.model.Usuario;
@@ -19,12 +18,20 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
     /**
      * Creates new form TelaCadastraHorarios
      */
-    private Usuario usuario;
+//    private Usuario usuario;
 
     public TelaCadastraHorarios() {
         initComponents();
-        this.usuario = null;
+//        this.usuario = null;
     }
+
+//    public Usuario getUsuario() {
+//        return usuario;
+//    }
+//
+//    public void setUsuario(Usuario usuario) {
+//        this.usuario = usuario;
+//    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -240,15 +247,16 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox7hActionPerformed
 
     private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
-        cadastrar(usuario.getHorariosUsuario());
+        TelaPrincipal telaprincipal = new TelaPrincipal();
+//        usuario = telaprincipal.getUsuario();
+//        cadastrar(usuario.getHorariosUsuario());
     }//GEN-LAST:event_jButtonCadastrarActionPerformed
 
     private void jButtonConcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConcluirActionPerformed
-        HorariosController horariosController = new HorariosController();
-        horariosController.ConcluirCadastro(usuario.getHorariosUsuario());
+//        HorariosController horariosController = new HorariosController();
+//        horariosController.ConcluirCadastro(usuario.getHorariosUsuario());
     }//GEN-LAST:event_jButtonConcluirActionPerformed
 
-    
     /**
      * @param args the command line arguments
      */
@@ -279,9 +287,8 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                TelaCadastraHorarios tela = new TelaCadastraHorarios();
-                tela.setVisible(true);
 
+                new TelaCadastraHorarios().setVisible(true);
 //                Horarios grade = new Horarios();
 //                tela.jButtonCadastrar.addActionListener((ActionEvent e) -> {
 //                    tela.cadastrar(usuario.getHorariosUsuario());
@@ -291,7 +298,6 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
 //                    HorariosController horariosController = new HorariosController();
 //                    horariosController.ConcluirCadastro(usuario.getHorariosUsuario());
 //                });
-
             }
         });
     }
