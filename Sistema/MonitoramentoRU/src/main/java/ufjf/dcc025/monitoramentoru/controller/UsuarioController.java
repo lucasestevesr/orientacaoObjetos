@@ -6,6 +6,7 @@
 package ufjf.dcc025.monitoramentoru.controller;
 
 import java.util.LinkedList;
+import javax.swing.JOptionPane;
 import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
 import ufjf.dcc025.monitoramentoru.model.*;
 
@@ -53,9 +54,12 @@ public class UsuarioController {
                     System.out.println("Tipo de Usuário inválido.");
                 }
             }
-
+            
+            JOptionPane.showMessageDialog(null,"Olá " + (nome) +  ", seu cadastro do tipo (" + (tipo) + ") foi realizado com sucesso.");           
+            
             return true;
         } else {
+            JOptionPane.showMessageDialog(null, "Dados inválidos, confirme novamente.");
             return false;
         }
     }
