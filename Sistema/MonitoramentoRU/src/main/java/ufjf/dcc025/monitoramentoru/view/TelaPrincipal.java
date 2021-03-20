@@ -189,7 +189,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void jMenuItemEditarPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEditarPerfilActionPerformed
         TelaPerfil telaperfil = new TelaPerfil();
         telaperfil.setVisible(true);
-        
+
     }//GEN-LAST:event_jMenuItemEditarPerfilActionPerformed
 
     private void jMenuItemRegistraHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemRegistraHorarioActionPerformed
@@ -212,7 +212,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemContatoActionPerformed
 
     private void jMenuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSairActionPerformed
-       this.dispose();
+        this.dispose();
     }//GEN-LAST:event_jMenuItemSairActionPerformed
 
     /**
