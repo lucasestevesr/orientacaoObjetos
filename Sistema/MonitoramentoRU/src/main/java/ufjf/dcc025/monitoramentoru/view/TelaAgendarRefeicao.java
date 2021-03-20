@@ -170,7 +170,6 @@ public class TelaAgendarRefeicao extends javax.swing.JFrame {
             default:
                 break;
         }
-        
     }//GEN-LAST:event_jComboBoxTurnoItemStateChanged
 
     private void jButtonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalvarActionPerformed

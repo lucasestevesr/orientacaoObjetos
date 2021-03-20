@@ -23,11 +23,22 @@ public class BancoDeDadosUsuario {
     private static final List<Usuario> usuarios;
 
     private static final List<Refeicao> refeicoes;
+    
+    private static final List<SemanaHorarios> horarios;
 
     static {
         usuarios = new ArrayList<>();
         usuarioLogado = null;
         refeicoes = new ArrayList<>();
+        horarios = new ArrayList<>();
+    }
+
+    public static List<Refeicao> getRefeicoes() {
+        return refeicoes;
+    }
+
+    public static List<SemanaHorarios> getHorarios() {
+        return horarios;
     }
 
     public static List<Usuario> getUsuarios() {

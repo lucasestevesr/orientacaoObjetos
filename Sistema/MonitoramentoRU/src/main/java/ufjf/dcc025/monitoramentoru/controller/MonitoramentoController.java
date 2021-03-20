@@ -5,6 +5,7 @@
 // */
 //package ufjf.dcc025.monitoramentoru.controller;
 //import static ufjf.dcc025.monitoramentoru.controller.UsuarioController.usuarios;
+//import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
 //import ufjf.dcc025.monitoramentoru.model.*;
 //
 ///**
@@ -13,10 +14,14 @@
 // */
 //public class MonitoramentoController {
 //   
-//    MonitorarLotacao monitorarlotacao = new MonitorarLotacao(lotacao);
-//   public boolean monitoramento(int lotacao){
-//      
-//       
-//       if (usuarios.size() == lotacao)
-//   }
+//    final int lotacaoMaxima = 10;
+//    
+//    public int monitorar(){
+//        
+//        for (int i = 0; i < BancoDeDadosUsuario.getUsuarios().size(); i++) {
+//            
+//            
+//            
+//        }
+//    }
 //}

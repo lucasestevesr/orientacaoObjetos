@@ -26,6 +26,7 @@ public class RefeicaoController {
                 case ("Agendamento") -> {
                     Refeicao agendarRefeicao = new AgendarRefeicao(diaSemana, turnoRefeicao, horario);
                     BancoDeDadosUsuario.getRefeicao().add(agendarRefeicao);
+
                 }
                 case ("Encomenda") -> {
                     Refeicao encomendarRefeicao = new EncomendarRefeicao(diaSemana, turnoRefeicao, horario);
