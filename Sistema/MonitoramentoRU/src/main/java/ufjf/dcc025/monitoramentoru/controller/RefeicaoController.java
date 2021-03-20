@@ -6,6 +6,7 @@
 package ufjf.dcc025.monitoramentoru.controller;
 
 import java.util.LinkedList;
+import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
 import ufjf.dcc025.monitoramentoru.model.AgendarRefeicao;
 import ufjf.dcc025.monitoramentoru.model.EncomendarRefeicao;
 import ufjf.dcc025.monitoramentoru.model.Refeicao;
@@ -24,11 +25,11 @@ public class RefeicaoController {
             switch (tipo) {
                 case ("Agendamento") -> {
                     Refeicao agendarRefeicao = new AgendarRefeicao(diaSemana, turnoRefeicao, horario);
-                    refeicoes.add(agendarRefeicao);
+                    BancoDeDadosUsuario.getRefeicao().add(agendarRefeicao);
                 }
                 case ("Encomenda") -> {
                     Refeicao encomendarRefeicao = new EncomendarRefeicao(diaSemana, turnoRefeicao, horario);
-                    refeicoes.add(encomendarRefeicao);
+                    BancoDeDadosUsuario.getRefeicao().add(encomendarRefeicao);
                 }
                 default -> {
                     System.out.println("Tipo de Usuário inválido.");

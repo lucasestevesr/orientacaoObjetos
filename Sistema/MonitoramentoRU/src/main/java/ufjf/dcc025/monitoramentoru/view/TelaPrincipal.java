@@ -200,7 +200,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemRegistraHorarioActionPerformed
 
     private void jMenuItemAgendarHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAgendarHorarioActionPerformed
-        // TODO add your handling code here:
+       TelaAgendarRefeicao telarefeicao = new TelaAgendarRefeicao();
+       telarefeicao.setVisible(true);
     }//GEN-LAST:event_jMenuItemAgendarHorarioActionPerformed
 
     private void jMenuItemMonitorarLotacao2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMonitorarLotacao2ActionPerformed
