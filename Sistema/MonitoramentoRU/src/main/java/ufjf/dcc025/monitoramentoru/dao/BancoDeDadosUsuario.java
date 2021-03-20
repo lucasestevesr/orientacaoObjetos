@@ -73,11 +73,11 @@ public class BancoDeDadosUsuario {
     }
 
     public static boolean validacaoCadastro(String tipo, String nome, String identificador,
-            String email, String telefone, String senha, String confirmarSenha) {
+            String email, String telefone, String senha, String confirmarSenha, SemanaHorarios horariosUsuario) {
 
         try {
             UsuarioController usuarioController = new UsuarioController();
-            usuarioController.cadastrarUsuario(tipo, nome, identificador, email, telefone, senha, confirmarSenha);
+            usuarioController.cadastrarUsuario(tipo, nome, identificador, email, telefone, senha, confirmarSenha, horariosUsuario);
             return true;
 
         } catch (Exception ex) {

@@ -27,7 +27,7 @@ public abstract class Usuario {
     private int total = 1;
     private SemanaHorarios horariosUsuario;
 
-    public Usuario(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha) {
+    public Usuario(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha, SemanaHorarios horariosUsuario) {
 
         Usuario.id = total++;
         this.nome = nome;
@@ -36,14 +36,9 @@ public abstract class Usuario {
         this.telefone = telefone;
         this.senha = senha;
         this.confirmarSenha = confirmarSenha;
-        System.out.println("Foi realizado o cadastro do usúario identificado pelo email: " + this.email + " e pelo identificador: " + this.identificador);
-    }
-
-    public Usuario(SemanaHorarios horariosUsuario) {
         this.horariosUsuario = horariosUsuario;
-    }
-    
-    
+        System.out.println("Foi realizado o cadastro do usúario identificado pelo email: " + this.email + " e pelo identificador: " + this.identificador);
+    }    
 
     /* Código Arthur??
 //    public Usuario(Horarios horariosUsuario) {

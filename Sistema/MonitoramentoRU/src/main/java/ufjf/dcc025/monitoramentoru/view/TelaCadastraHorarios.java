@@ -5,8 +5,7 @@
  */
 package ufjf.dcc025.monitoramentoru.view;
 
-import java.util.HashSet;
-import java.util.Set;
+
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
@@ -25,6 +24,8 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
      * Creates new form TelaCadastraHorarios
      */
     private Usuario usuario;
+    
+    
 
     public TelaCadastraHorarios() {
         initComponents();
@@ -36,6 +37,10 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
     }
 
     public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public TelaCadastraHorarios(Usuario usuario) {
         this.usuario = usuario;
     }
     
@@ -72,7 +77,7 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jButtonConcluir = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jCheckBox8h.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jCheckBox8h.setText("08:00");
@@ -175,39 +180,37 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
                         .addGap(70, 70, 70)
                         .addComponent(jLabel4))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(82, 82, 82)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jCheckBox7h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jCheckBox9h)
-                                        .addComponent(jCheckBox8h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jCheckBox11h)
-                                        .addComponent(jCheckBox10h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jCheckBox12h))
-                                    .addComponent(jCheckBox13h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(26, 26, 26)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButtonCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(27, 27, 27)
-                                .addComponent(jButtonConcluir))
-                            .addComponent(jCheckBox14h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBoxDiaSemana, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCheckBox15h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCheckBox16h)
-                            .addComponent(jCheckBox17h)
-                            .addComponent(jCheckBox18h)
-                            .addComponent(jCheckBox19h)
-                            .addComponent(jCheckBox20h))))
+                        .addGap(32, 32, 32)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(jButtonCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(jButtonConcluir)))
                 .addContainerGap(34, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addComponent(jCheckBox7h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jCheckBox9h)
+                        .addComponent(jCheckBox8h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jCheckBox11h)
+                        .addComponent(jCheckBox10h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jCheckBox12h))
+                    .addComponent(jCheckBox13h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jCheckBox14h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxDiaSemana, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox15h, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox16h)
+                    .addComponent(jCheckBox17h)
+                    .addComponent(jCheckBox18h)
+                    .addComponent(jCheckBox19h)
+                    .addComponent(jCheckBox20h))
+                .addGap(148, 148, 148))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -216,7 +219,7 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
-                .addGap(43, 43, 43)
+                .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jComboBoxDiaSemana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -251,7 +254,7 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox20h)
                     .addComponent(jCheckBox13h))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonConcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -268,10 +271,14 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox7hActionPerformed
 
     private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
+        
         cadastrar();
+        
     }//GEN-LAST:event_jButtonCadastrarActionPerformed
 
     private void jButtonConcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConcluirActionPerformed
+        
+        // Preparando para adicionar a grade semanado do usuário da lista de horários
         HorariosController horariosController = new HorariosController();
         horariosController.ConcluirCadastro(getUsuarioLogado().getHorariosUsuario());
         
@@ -315,45 +322,38 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-
                 new TelaCadastraHorarios().setVisible(true);
-//                Horarios grade = new Horarios();
-//                tela.jButtonCadastrar.addActionListener((ActionEvent e) -> {
-//                    tela.cadastrar(usuario.getHorariosUsuario());
-//                });
-
-//                tela.jButtonConcluir.addActionListener((ActionEvent e) -> {
-//                    HorariosController horariosController = new HorariosController();
-//                    horariosController.ConcluirCadastro(usuario.getHorariosUsuario());
-//                });
             }
         });
     }
 
     private void cadastrar() {
 
-//        HorariosController horariosController = new HorariosController();
-        Horarios grade = new Horarios(false, false, false, false, false, false, false, false, false, false, false, false, false, false);
-
+        Horarios grade = new Horarios();
         String diaSemana = jComboBoxDiaSemana.getSelectedItem() + "";
         
+        grade.setDia(jComboBoxDiaSemana.getSelectedItem() + "");
         grade.setH7(jCheckBox7h.isSelected());
-        grade.setH8(jCheckBox7h.isSelected());
-        grade.setH9(jCheckBox7h.isSelected());
-        grade.setH10(jCheckBox7h.isSelected());
-        grade.setH11(jCheckBox7h.isSelected());
-        grade.setH12(jCheckBox7h.isSelected());
-        grade.setH13(jCheckBox7h.isSelected());
-        grade.setH14(jCheckBox7h.isSelected());
-        grade.setH15(jCheckBox7h.isSelected());
-        grade.setH16(jCheckBox7h.isSelected());
-        grade.setH17(jCheckBox7h.isSelected());
-        grade.setH18(jCheckBox7h.isSelected());
-        grade.setH19(jCheckBox7h.isSelected());
-        grade.setH20(jCheckBox7h.isSelected());
-
+        grade.setH8(jCheckBox8h.isSelected());
+        grade.setH9(jCheckBox9h.isSelected());
+        grade.setH10(jCheckBox10h.isSelected());
+        grade.setH11(jCheckBox11h.isSelected());
+        grade.setH12(jCheckBox12h.isSelected());
+        grade.setH13(jCheckBox13h.isSelected());
+        grade.setH14(jCheckBox14h.isSelected());
+        grade.setH15(jCheckBox15h.isSelected());
+        grade.setH16(jCheckBox16h.isSelected());
+        grade.setH17(jCheckBox17h.isSelected());
+        grade.setH18(jCheckBox18h.isSelected());
+        grade.setH19(jCheckBox19h.isSelected());
+        grade.setH20(jCheckBox20h.isSelected());
+        
+        // Setando o id da grade de horarios do usuario
+        getUsuarioLogado().getHorariosUsuario().setId(getUsuarioLogado().getIdentificador());
+            
+        // Setando os horarios de cada dia da semana do usuario logado
         if ("Segunda-feira".equals(diaSemana)) 
-            getUsuarioLogado().getHorariosUsuario().setSegundafeira(grade);
+            getUsuarioLogado().getHorariosUsuario().setSegundafeira(grade);      
         if ("Terça-feira".equals(diaSemana)) 
             getUsuarioLogado().getHorariosUsuario().setTercafeira(grade);
         if ("Quarta-feira".equals(diaSemana)) 
@@ -364,46 +364,23 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
             getUsuarioLogado().getHorariosUsuario().setSextafeira(grade);
         if ("Sábado".equals(diaSemana)) 
             getUsuarioLogado().getHorariosUsuario().setSabado(grade);
-        
-        JOptionPane.showMessageDialog(null, "Horários de " + diaSemana + " registrados com sucesso!");
-        
-//        boolean h7 = jCheckBox7h.isSelected();
-//        boolean h8 = jCheckBox8h.isSelected();
-//        boolean h9 = jCheckBox9h.isSelected();
-//        boolean h10 = jCheckBox10h.isSelected();
-//        boolean h11 = jCheckBox11h.isSelected();
-//        boolean h12 = jCheckBox12h.isSelected();
-//        boolean h13 = jCheckBox13h.isSelected();
-//        boolean h14 = jCheckBox14h.isSelected();
-//        boolean h15 = jCheckBox15h.isSelected();
-//        boolean h16 = jCheckBox16h.isSelected();
-//        boolean h17 =  jCheckBox17h.isSelected();
-//        boolean h18 = jCheckBox18h.isSelected();
-//        boolean h19 = jCheckBox19h.isSelected();
-//        boolean h20 = jCheckBox20h.isSelected();
-        
-        
-        
-//        horariosController.cadastrarHorarios(grade, diaSemana, id, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20);
-//        horariosController.cadastrarHorarios(usuario, diaSemana, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20);
 
-        jCheckBox7h.setSelected(false);
-        jCheckBox8h.setSelected(false);
-        jCheckBox9h.setSelected(false);
-        jCheckBox10h.setSelected(false);
-        jCheckBox11h.setSelected(false);
-        jCheckBox12h.setSelected(false);
-        jCheckBox13h.setSelected(false);
-        jCheckBox14h.setSelected(false);
-        jCheckBox15h.setSelected(false);
-        jCheckBox16h.setSelected(false);
-        jCheckBox17h.setSelected(false);
-        jCheckBox18h.setSelected(false);
-        jCheckBox19h.setSelected(false);
-        jCheckBox20h.setSelected(false);
-        
-        
-        
+        JOptionPane.showMessageDialog(null, "Horários de " + diaSemana + " registrados com sucesso!");
+
+//        jCheckBox7h.setSelected(false);
+//        jCheckBox8h.setSelected(false);
+//        jCheckBox9h.setSelected(false);
+//        jCheckBox10h.setSelected(false);
+//        jCheckBox11h.setSelected(false);
+//        jCheckBox12h.setSelected(false);
+//        jCheckBox13h.setSelected(false);
+//        jCheckBox14h.setSelected(false);
+//        jCheckBox15h.setSelected(false);
+//        jCheckBox16h.setSelected(false);
+//        jCheckBox17h.setSelected(false);
+//        jCheckBox18h.setSelected(false);
+//        jCheckBox19h.setSelected(false);
+//        jCheckBox20h.setSelected(false);
     }
 
     public JComboBox<String> getjComboBoxDiaSemana() {
@@ -413,8 +390,6 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
     public void setjComboBoxDiaSemana(JComboBox<String> jComboBoxDiaSemana) {
         this.jComboBoxDiaSemana = jComboBoxDiaSemana;
     }
-
-    
     
     public JCheckBox getjCheckBox10h() {
         return jCheckBox10h;

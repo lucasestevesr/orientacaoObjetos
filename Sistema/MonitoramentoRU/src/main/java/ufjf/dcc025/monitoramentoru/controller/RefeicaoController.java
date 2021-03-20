@@ -6,9 +6,11 @@
 package ufjf.dcc025.monitoramentoru.controller;
 
 import java.util.LinkedList;
+import javax.swing.JOptionPane;
 import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
 import ufjf.dcc025.monitoramentoru.model.AgendarRefeicao;
 import ufjf.dcc025.monitoramentoru.model.EncomendarRefeicao;
+import ufjf.dcc025.monitoramentoru.model.Prioridade;
 import ufjf.dcc025.monitoramentoru.model.Refeicao;
 
 /**
@@ -17,7 +19,7 @@ import ufjf.dcc025.monitoramentoru.model.Refeicao;
  */
 public class RefeicaoController {
     
-    public static LinkedList<Refeicao> refeicoes = new LinkedList();
+//    public static LinkedList<Refeicao> refeicoes = new LinkedList();
 
     public boolean cadastrarRefeicao(String tipo, String diaSemana, String turnoRefeicao, String horario){
         if (diaSemana != null && turnoRefeicao != null && horario != null) {
@@ -25,8 +27,12 @@ public class RefeicaoController {
             switch (tipo) {
                 case ("Agendamento") -> {
                     Refeicao agendarRefeicao = new AgendarRefeicao(diaSemana, turnoRefeicao, horario);
-                    BancoDeDadosUsuario.getRefeicao().add(agendarRefeicao);
-
+                    BancoDeDadosUsuario.getRefeicoes().add(agendarRefeicao);
+                    JOptionPane.showMessageDialog(null, BancoDeDadosUsuario.getRefeicoes().size() + " refeições agendadas");
+                    Prioridade prioridade = new Prioridade();
+                    prioridade.VerificaPrioridade();
+                    
+                    
                 }
                 case ("Encomenda") -> {
                     Refeicao encomendarRefeicao = new EncomendarRefeicao(diaSemana, turnoRefeicao, horario);

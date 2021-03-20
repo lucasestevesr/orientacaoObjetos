@@ -254,6 +254,7 @@ public class TelaPerfil extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordFieldConfirmarSenhaActionPerformed
 
     private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
+        
         TelaPrincipal telaprincipal = new TelaPrincipal();
         boolean editar = BancoDeDadosUsuario.editar(textFieldNome.getText(), jTextFieldIdentificador.getText(), textFieldEmail.getText(),
                 textFieldTelefone.getText(), jPasswordFieldSenha.getText(), jPasswordFieldConfirmarSenha.getText());

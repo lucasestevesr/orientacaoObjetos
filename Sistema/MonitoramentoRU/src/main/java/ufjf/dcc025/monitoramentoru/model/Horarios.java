@@ -11,6 +11,7 @@ package ufjf.dcc025.monitoramentoru.model;
  */
 public class Horarios {
 
+    private String dia = "";
     private boolean h7 = false;
     private boolean h8 = false;
     private boolean h9 = false;
@@ -26,25 +27,15 @@ public class Horarios {
     private boolean h19 = false;
     private boolean h20 = false;
 
-    public Horarios(boolean h7, boolean h8, boolean h9, boolean h10, boolean h11, boolean h12, boolean h13, boolean h14, boolean h15, boolean h16, boolean h17, boolean h18, boolean h19, boolean h20) {
-        this.h7 = h7;
-        this.h8 = h8;
-        this.h9 = h9;
-        this.h10 = h10;
-        this.h11 = h11;
-        this.h12 = h12;
-        this.h13 = h13;
-        this.h14 = h14;
-        this.h15 = h15;
-        this.h16 = h16;
-        this.h17 = h17;
-        this.h18 = h18;
-        this.h19 = h19;
-        this.h20 = h20;
-    }
-    
-    
 
+    public String getDia() {
+        return dia;
+    }
+
+    public void setDia(String dia) {
+        this.dia = dia;
+    }    
+    
     public boolean isH7() {
         return h7;
     }
@@ -156,6 +147,8 @@ public class Horarios {
     public void setH20(boolean h20) {
         this.h20 = h20;
     }
+
+
     
     
     

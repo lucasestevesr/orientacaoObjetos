@@ -11,6 +11,7 @@ package ufjf.dcc025.monitoramentoru.model;
  */
 public class SemanaHorarios {
     
+    private String id;
     private Horarios segundafeira;
     private Horarios tercafeira;
     private Horarios quartafeira;
@@ -18,7 +19,16 @@ public class SemanaHorarios {
     private Horarios sextafeira;
     private Horarios sabado;
 
-    public SemanaHorarios(Horarios segundafeira, Horarios tercafeira, Horarios quartafeira, Horarios quintafeira, Horarios sextafeira, Horarios sabado) {
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public SemanaHorarios(String id, Horarios segundafeira, Horarios tercafeira, Horarios quartafeira, Horarios quintafeira, Horarios sextafeira, Horarios sabado) {
+        this.id = id;
         this.segundafeira = segundafeira;
         this.tercafeira = tercafeira;
         this.quartafeira = quartafeira;
@@ -26,8 +36,6 @@ public class SemanaHorarios {
         this.sextafeira = sextafeira;
         this.sabado = sabado;
     }
-
-    
     
     public Horarios getSegundafeira() {
         return segundafeira;
