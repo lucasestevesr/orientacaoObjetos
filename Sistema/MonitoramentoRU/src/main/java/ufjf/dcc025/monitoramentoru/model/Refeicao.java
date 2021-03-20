@@ -10,12 +10,14 @@ package ufjf.dcc025.monitoramentoru.model;
  * @author tawan
  */
 public abstract class Refeicao {
+    private String id;
     private String diaSemana;
     private String turnoRefeicao;
     private String horario;
     String tipo;
-    
-    public Refeicao(String diaSemana, String turnoRefeicao, String horario){
+
+    public Refeicao(String id, String diaSemana, String turnoRefeicao, String horario) {
+        this.id = id;
         this.diaSemana = diaSemana;
         this.turnoRefeicao = turnoRefeicao;
         this.horario = horario;
@@ -28,6 +30,14 @@ public abstract class Refeicao {
         this.horario = horario;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+    
     public String getTipo() {
         return tipo;
     }

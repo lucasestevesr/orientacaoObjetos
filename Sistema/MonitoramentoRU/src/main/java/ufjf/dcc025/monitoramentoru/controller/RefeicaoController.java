@@ -19,26 +19,41 @@ import ufjf.dcc025.monitoramentoru.model.Refeicao;
  */
 public class RefeicaoController {
     
-//    public static LinkedList<Refeicao> refeicoes = new LinkedList();
-
     public boolean cadastrarRefeicao(String tipo, String diaSemana, String turnoRefeicao, String horario){
         if (diaSemana != null && turnoRefeicao != null && horario != null) {
             
             switch (tipo) {
-                case ("Agendamento") -> {
-                    Refeicao agendarRefeicao = new AgendarRefeicao(diaSemana, turnoRefeicao, horario);
+                case ("Agendamento"): {
+                    Refeicao agendarRefeicao = new AgendarRefeicao(BancoDeDadosUsuario.getUsuarioLogado().getIdentificador(), diaSemana, turnoRefeicao, horario);
                     BancoDeDadosUsuario.getRefeicoes().add(agendarRefeicao);
-                    JOptionPane.showMessageDialog(null, BancoDeDadosUsuario.getRefeicoes().size() + " refeições agendadas");
+                    
+                    int contRefeicoesUsuario = 0;
+                    for (int i = 0; i < BancoDeDadosUsuario.getRefeicoes().size(); i++) {
+                        if (BancoDeDadosUsuario.getRefeicoes().get(i).getId().equals(BancoDeDadosUsuario.getUsuarioLogado().getIdentificador())){
+                            contRefeicoesUsuario++;
+                        }
+                    }
+                    JOptionPane.showMessageDialog(null, "Voce tem " + contRefeicoesUsuario + " refeições agendadas");
+                    
                     Prioridade prioridade = new Prioridade();
                     prioridade.VerificaPrioridade();
-                    
-                    
+                    break;
                 }
-                case ("Encomenda") -> {
-                    Refeicao encomendarRefeicao = new EncomendarRefeicao(diaSemana, turnoRefeicao, horario);
-                    BancoDeDadosUsuario.getRefeicao().add(encomendarRefeicao);
+                
+                case ("Encomenda"): {
+                    Refeicao encomendarRefeicao = new EncomendarRefeicao(BancoDeDadosUsuario.getUsuarioLogado().getIdentificador(), diaSemana, turnoRefeicao, horario);
+                    BancoDeDadosUsuario.getEncomendas().add(encomendarRefeicao);
+                    
+                    int contEncomendasUsuario = 0;
+                    for (int i = 0; i < BancoDeDadosUsuario.getRefeicoes().size(); i++) {
+                        if (BancoDeDadosUsuario.getEncomendas().get(i).getId().equals(BancoDeDadosUsuario.getUsuarioLogado().getIdentificador())) {
+                            contEncomendasUsuario++;
+                        }
+                    }
+                    JOptionPane.showMessageDialog(null, "Voce tem " + contEncomendasUsuario + " encomendas registradas");
+                    break;
                 }
-                default -> {
+                default: {
                     System.out.println("Tipo de Usuário inválido.");
                 }
             }

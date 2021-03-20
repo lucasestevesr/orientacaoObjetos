@@ -18,8 +18,8 @@ public class MonitoramentoController {
     
     public int monitorar(String diaSemana, String hora){
         for (int i = 0; i < BancoDeDadosUsuario.getUsuarios().size(); i++) {
-            if (BancoDeDadosUsuario.getRefeicao().get(i).getDiaSemana() == null ? diaSemana == null : BancoDeDadosUsuario.getRefeicao().get(i).getDiaSemana().equals(diaSemana)) {
-                if (BancoDeDadosUsuario.getRefeicao().get(i).getHorario() == null ? hora == null : BancoDeDadosUsuario.getRefeicao().get(i).getHorario().equals(hora)) {
+            if (BancoDeDadosUsuario.getRefeicoes().get(i).getDiaSemana() == null ? diaSemana == null : BancoDeDadosUsuario.getRefeicoes().get(i).getDiaSemana().equals(diaSemana)) {
+                if (BancoDeDadosUsuario.getRefeicoes().get(i).getHorario() == null ? hora == null : BancoDeDadosUsuario.getRefeicoes().get(i).getHorario().equals(hora)) {
                     contPessoas++;
                 }
             }

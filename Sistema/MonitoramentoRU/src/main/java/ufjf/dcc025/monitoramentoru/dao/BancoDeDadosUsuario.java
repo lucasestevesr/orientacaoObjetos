@@ -24,14 +24,21 @@ public class BancoDeDadosUsuario {
 
     private static final List<Refeicao> refeicoes;
     
+    private static final List<Refeicao> encomendas;
+    
     private static final List<SemanaHorarios> horarios;
 
     static {
         usuarios = new ArrayList<>();
         usuarioLogado = null;
         refeicoes = new ArrayList<>();
+        encomendas = new ArrayList<>();
         horarios = new ArrayList<>();
     }
+
+    public static List<Refeicao> getEncomendas() {
+        return encomendas;
+    }    
 
     public static List<Refeicao> getRefeicoes() {
         return refeicoes;
@@ -47,10 +54,6 @@ public class BancoDeDadosUsuario {
 
     public static Usuario getUsuarioLogado() {
         return usuarioLogado;
-    }
-
-    public static List<Refeicao> getRefeicao() {
-        return refeicoes;
     }
 
     public static void setUsuarioLogado(Usuario usuarioLogado) {

@@ -12,9 +12,10 @@ package ufjf.dcc025.monitoramentoru.model;
 public class EncomendarRefeicao extends Refeicao{
     
     private final String tipo = "Encomenda";
+    private String id;
     
-    public EncomendarRefeicao(String diaSemana, String turnoRefeicao, String horario){
-        super(diaSemana, turnoRefeicao, horario);
+    public EncomendarRefeicao(String id, String diaSemana, String turnoRefeicao, String horario){
+        super(id, diaSemana, turnoRefeicao, horario);
         super.tipo = this.tipo;
         
         System.out.println("Foi criado uma encomenda de refeição");
