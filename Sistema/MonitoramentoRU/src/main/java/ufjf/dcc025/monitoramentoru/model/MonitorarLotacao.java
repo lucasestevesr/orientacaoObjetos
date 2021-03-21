@@ -5,6 +5,7 @@
  */
 package ufjf.dcc025.monitoramentoru.model;
 
+import javax.swing.JOptionPane;
 import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
 
 /**
@@ -15,16 +16,25 @@ public class MonitorarLotacao {
     private int lotacaoMaxima = 10;
         int contPessoas;
        
-    public int monitorar(String diaSemana, String hora){
-        for (int i = 0; i < BancoDeDadosUsuario.getRefeicoes().size(); i++) {
-            if (BancoDeDadosUsuario.getRefeicoes().get(i).getDiaSemana().equals(diaSemana)) {
-                if (BancoDeDadosUsuario.getRefeicoes().get(i).getHorario().equals(hora)) {
-                    if(BancoDeDadosUsuario.getRefeicoes().get(i).getTipo().equals("Agendamento"))
-                        contPessoas++;
+    public void monitorar(String diaSemana, String hora) {
+
+        if ("Escolha".equals(diaSemana) || "Escolha".equals(hora)) {
+            JOptionPane.showMessageDialog(null, "Erro: os campos de dia e/ou hora estão vazios. Por favor,preencha-os corretamente");
+        } else {
+
+            for (int i = 0; i < BancoDeDadosUsuario.getRefeicoes().size(); i++) {
+                if (BancoDeDadosUsuario.getRefeicoes().get(i).getDiaSemana().equals(diaSemana)) {
+                    if (BancoDeDadosUsuario.getRefeicoes().get(i).getHorario().equals(hora)) {
+                        if (BancoDeDadosUsuario.getRefeicoes().get(i).getTipo().equals("Agendamento")) {
+                            contPessoas++;
+                        }
+                    }
                 }
             }
-        }return contPessoas*100/lotacaoMaxima;
-    } 
+            JOptionPane.showMessageDialog(null, "A lotacao do RU " + diaSemana + " das " + hora + "\né de " + (contPessoas * 100 / lotacaoMaxima) + "% da capacidade máxima");
+        }
+
+    }
 
 //    for (int i = 0; i < usuarios.size(); i++) {
 //                Usuario usuario = usuarios.get(i);

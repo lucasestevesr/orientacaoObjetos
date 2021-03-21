@@ -5,6 +5,8 @@
  */
 package ufjf.dcc025.monitoramentoru.model;
 
+import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
+
 /**
  *
  * @author tawan
@@ -12,7 +14,7 @@ package ufjf.dcc025.monitoramentoru.model;
 public class EncomendarRefeicao extends Refeicao{
     
     private final String tipo = "Encomenda";
-    private String id;
+//    private String id;
     
     public EncomendarRefeicao(String id, String diaSemana, String turnoRefeicao, String horario){
         super(id, diaSemana, turnoRefeicao, horario);
@@ -25,4 +27,13 @@ public class EncomendarRefeicao extends Refeicao{
     public void editaRefeicao(String tipo, String diaSemana, String turnoRefeicao, String horario) {
         super.editaRefeicao(this.tipo, diaSemana, turnoRefeicao, horario);
     }
+
+    @Override
+    public void adcLista(Refeicao refeicao) {
+        super.adcLista(refeicao);
+        BancoDeDadosUsuario.getRefeicoes().add(refeicao);
+    }
+    
+    
+    
 }

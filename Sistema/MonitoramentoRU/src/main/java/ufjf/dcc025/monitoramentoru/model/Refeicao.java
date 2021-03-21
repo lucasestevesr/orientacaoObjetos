@@ -29,6 +29,10 @@ public abstract class Refeicao {
         this.turnoRefeicao = turnoRefeicao;
         this.horario = horario;
     }
+    
+    public void adcLista(Refeicao refeicao){
+        
+    }
 
     public String getId() {
         return id;

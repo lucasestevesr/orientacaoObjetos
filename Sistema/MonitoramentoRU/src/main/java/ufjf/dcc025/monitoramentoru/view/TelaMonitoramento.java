@@ -48,7 +48,8 @@ public class TelaMonitoramento extends javax.swing.JFrame {
         jLabel2.setText("Horário:");
 
         jComboBoxDiaSemana.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
-        jComboBoxDiaSemana.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Segunda Feira", "Terça Feira", "Quarta Feira", "Quinta Feira", "Sexta Feira" }));
+        jComboBoxDiaSemana.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Escolha", "Segunda Feira", "Terça Feira", "Quarta Feira", "Quinta Feira", "Sexta Feira" }));
+        jComboBoxDiaSemana.setToolTipText("");
         jComboBoxDiaSemana.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxDiaSemanaActionPerformed(evt);
@@ -56,7 +57,13 @@ public class TelaMonitoramento extends javax.swing.JFrame {
         });
 
         jComboBoxHorario.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
-        jComboBoxHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "6:00 às 6:30", "6:30 às 7:00", "7:00 às 7:30", "7:30 às 8:00", "11:00 às 11:30", "11:30 às 12:00", "12:00 às 12:30", "12:30 às 13:00", "13:00 às 13:30", "13:30 às 14:00", "17:00 às 17:30", "17:30 às 18:00", "18:00 às 18:30", "18:30 às 19:00", "19:00 às 19:30", "19:30 às 20:00" }));
+        jComboBoxHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Escolha", "6:00 às 6:30", "6:30 às 7:00", "7:00 às 7:30", "7:30 às 8:00", "11:00 às 11:30", "11:30 às 12:00", "12:00 às 12:30", "12:30 às 13:00", "13:00 às 13:30", "13:30 às 14:00", "17:00 às 17:30", "17:30 às 18:00", "18:00 às 18:30", "18:30 às 19:00", "19:00 às 19:30", "19:30 às 20:00" }));
+        jComboBoxHorario.setToolTipText("");
+        jComboBoxHorario.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBoxHorarioItemStateChanged(evt);
+            }
+        });
         jComboBoxHorario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxHorarioActionPerformed(evt);
@@ -141,24 +148,25 @@ public class TelaMonitoramento extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonMonitorarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMonitorarActionPerformed
-        
+
         MonitorarLotacao monitoramento = new MonitorarLotacao();
-        double lotacao = monitoramento.monitorar(jComboBoxDiaSemana.getSelectedItem().toString(), jComboBoxHorario.getSelectedItem().toString());
-        JOptionPane.showMessageDialog(null, "A lotacao do RU "+ jComboBoxDiaSemana.getSelectedItem().toString() + " das " + jComboBoxHorario.getSelectedItem().toString() + "\né de " + lotacao + "% da capacidade máxima");
-        
+        monitoramento.monitorar(jComboBoxDiaSemana.getSelectedItem().toString(), jComboBoxHorario.getSelectedItem().toString());
+
     }//GEN-LAST:event_jButtonMonitorarActionPerformed
 
     private void jComboBoxDiaSemanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxDiaSemanaActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_jComboBoxDiaSemanaActionPerformed
 
     private void jComboBoxHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxHorarioActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jComboBoxHorarioActionPerformed
 
     private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
         this.dispose();
     }//GEN-LAST:event_jButtonVoltarActionPerformed
+
+    private void jComboBoxHorarioItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxHorarioItemStateChanged
+    }//GEN-LAST:event_jComboBoxHorarioItemStateChanged
 
     /**
      * @param args the command line arguments

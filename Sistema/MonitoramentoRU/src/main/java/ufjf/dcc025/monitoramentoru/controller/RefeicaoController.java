@@ -25,7 +25,8 @@ public class RefeicaoController {
             switch (tipo) {
                 case ("Agendamento"): {
                     Refeicao agendarRefeicao = new AgendarRefeicao(BancoDeDadosUsuario.getUsuarioLogado().getIdentificador(), diaSemana, turnoRefeicao, horario);
-                    BancoDeDadosUsuario.getRefeicoes().add(agendarRefeicao);
+//                    BancoDeDadosUsuario.getRefeicoes().add(agendarRefeicao);
+                    agendarRefeicao.adcLista(agendarRefeicao);
                     
                     int contRefeicoesUsuario = 0;
                     for (int i = 0; i < BancoDeDadosUsuario.getRefeicoes().size(); i++) {
@@ -39,10 +40,10 @@ public class RefeicaoController {
                     prioridade.VerificaPrioridade();
                     break;
                 }
-                
+                 
                 case ("Encomenda"): {
                     Refeicao encomendarRefeicao = new EncomendarRefeicao(BancoDeDadosUsuario.getUsuarioLogado().getIdentificador(), diaSemana, turnoRefeicao, horario);
-                    BancoDeDadosUsuario.getEncomendas().add(encomendarRefeicao);
+                    encomendarRefeicao.adcLista(encomendarRefeicao);
                     
                     int contEncomendasUsuario = 0;
                     for (int i = 0; i < BancoDeDadosUsuario.getRefeicoes().size(); i++) {
