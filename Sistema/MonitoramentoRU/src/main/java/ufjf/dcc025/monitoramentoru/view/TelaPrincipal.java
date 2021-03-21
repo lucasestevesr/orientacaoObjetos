@@ -173,7 +173,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemCardapio2ActionPerformed
 
     private void jMenuItemEticketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEticketActionPerformed
-        // TODO add your handling code here:
+        
+        TelaEticket telaeticket = new TelaEticket();
+        telaeticket.setVisible(true);
+        
     }//GEN-LAST:event_jMenuItemEticketActionPerformed
 
     private void jMenuItemEditarPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEditarPerfilActionPerformed

@@ -30,8 +30,10 @@ public class AgendarRefeicao extends Refeicao{
 
     @Override
     public void adcLista(Refeicao refeicao) {
+        
         super.adcLista(refeicao); 
         BancoDeDadosUsuario.getRefeicoes().add(refeicao);
+        
     }
     
     

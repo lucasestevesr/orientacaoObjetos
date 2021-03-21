@@ -34,14 +34,24 @@ public class Discente extends Usuario implements Eticket {
 //        return super.autenticaLogin(identificador, senha);
 //    }
     @Override
-    public void pagar(double valorCafe, double valorRefeicao, String tipo) {
+    public void pagar() {
         if (tipo == null ? this.tipo == null : tipo.equals(this.tipo)) {
-            valorCafe = 0.50;
-            valorRefeicao = 1.4;
+            double valorCafe = 0.50;
+            double valorRefeicao = 1.4;
         }
     }
     //Fica mais Elegante a sobreposição da Interface na classe mãe ou na filha? 
     //Caso seja na mãe, poderia ser um método ?
+
+    @Override
+    public double pagarRefeicao(String turnorefeicao) {
+        if ("Café da Manhã".equals(turnorefeicao)) 
+            return TICKETCAFE;
+        else if ("Almoço".equals(turnorefeicao) || "Janta".equals(turnorefeicao))
+             return TICKETREFEICAO;               
+        return 0;
+    }
+
 
 }
    

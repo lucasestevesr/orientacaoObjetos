@@ -12,10 +12,9 @@ package ufjf.dcc025.monitoramentoru.model;
 public abstract interface Estudante {
     
     public final double TICKETCAFE = 0.5;
-    public final double TICKETREFEICAO = 1.9;
+    public final double TICKETREFEICAO = 1.4;
     
     public abstract void pagar(String turnorefeicao);
     
-    public abstract void prioridade();
     
 }

@@ -45,7 +45,8 @@ public class UsuarioController {
                     break;
                 }
                 case ("Discente"): {
-                    Usuario registroDiscente = new Discente(nome, identificador, email, telefone, senha, confirmarSenha, horariosUsuario);
+                    Discente registroDiscente = new Discente(nome, identificador, email, telefone, senha, confirmarSenha, horariosUsuario);
+                    registroDiscente.pagar();
                     BancoDeDadosUsuario.getUsuarios().add(registroDiscente);
                     //registroDiscente.setId(usuarios.size());
                     // usuarios.add(registroDiscente);

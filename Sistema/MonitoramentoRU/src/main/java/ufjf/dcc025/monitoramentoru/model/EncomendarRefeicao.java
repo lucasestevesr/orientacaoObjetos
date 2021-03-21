@@ -31,7 +31,7 @@ public class EncomendarRefeicao extends Refeicao{
     @Override
     public void adcLista(Refeicao refeicao) {
         super.adcLista(refeicao);
-        BancoDeDadosUsuario.getRefeicoes().add(refeicao);
+        BancoDeDadosUsuario.getEncomendas().add(refeicao);
     }
     
     
