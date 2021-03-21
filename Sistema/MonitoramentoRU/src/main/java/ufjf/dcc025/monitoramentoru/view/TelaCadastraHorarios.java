@@ -326,46 +326,46 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
         });
     }
 
-    private void cadastrar(Horarios grade) {
-
-        HorariosController horariosController = new HorariosController();
-//        Horarios grade = new Horarios();
-
-       
-        String diaSemana = jComboBoxDiaSemana.getSelectedItem() + "";
-
-        boolean h7 = jCheckBox7h.isSelected();
-        boolean h8 = jCheckBox8h.isSelected();
-        boolean h9 = jCheckBox9h.isSelected();
-        boolean h10 = jCheckBox10h.isSelected();
-        boolean h11 = jCheckBox11h.isSelected();
-        boolean h12 = jCheckBox12h.isSelected();
-        boolean h13 = jCheckBox13h.isSelected();
-        boolean h14 = jCheckBox14h.isSelected();
-        boolean h15 = jCheckBox15h.isSelected();
-        boolean h16 = jCheckBox16h.isSelected();
-        boolean h17 = jCheckBox17h.isSelected();
-        boolean h18 = jCheckBox18h.isSelected();
-        boolean h19 = jCheckBox19h.isSelected();
-        boolean h20 = jCheckBox20h.isSelected();
-
-//        horariosController.cadastrarHorarios(grade, diaSemana, id, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20);
-        horariosController.cadastrarHorarios(grade, diaSemana, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20);
-
-        jCheckBox7h.setSelected(false);
-        jCheckBox8h.setSelected(false);
-        jCheckBox9h.setSelected(false);
-        jCheckBox10h.setSelected(false);
-        jCheckBox11h.setSelected(false);
-        jCheckBox12h.setSelected(false);
-        jCheckBox13h.setSelected(false);
-        jCheckBox14h.setSelected(false);
-        jCheckBox15h.setSelected(false);
-        jCheckBox16h.setSelected(false);
-        jCheckBox17h.setSelected(false);
-        jCheckBox18h.setSelected(false);
-        jCheckBox19h.setSelected(false);
-        jCheckBox20h.setSelected(false);
+//    private void cadastrar(Horarios grade) {
+//
+//        HorariosController horariosController = new HorariosController();
+////        Horarios grade = new Horarios();
+//
+//       
+//        String diaSemana = jComboBoxDiaSemana.getSelectedItem() + "";
+//
+//        boolean h7 = jCheckBox7h.isSelected();
+//        boolean h8 = jCheckBox8h.isSelected();
+//        boolean h9 = jCheckBox9h.isSelected();
+//        boolean h10 = jCheckBox10h.isSelected();
+//        boolean h11 = jCheckBox11h.isSelected();
+//        boolean h12 = jCheckBox12h.isSelected();
+//        boolean h13 = jCheckBox13h.isSelected();
+//        boolean h14 = jCheckBox14h.isSelected();
+//        boolean h15 = jCheckBox15h.isSelected();
+//        boolean h16 = jCheckBox16h.isSelected();
+//        boolean h17 = jCheckBox17h.isSelected();
+//        boolean h18 = jCheckBox18h.isSelected();
+//        boolean h19 = jCheckBox19h.isSelected();
+//        boolean h20 = jCheckBox20h.isSelected();
+//
+////        horariosController.cadastrarHorarios(grade, diaSemana, id, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20);
+//        horariosController.cadastrarHorarios(grade, diaSemana, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20);
+//
+//        jCheckBox7h.setSelected(false);
+//        jCheckBox8h.setSelected(false);
+//        jCheckBox9h.setSelected(false);
+//        jCheckBox10h.setSelected(false);
+//        jCheckBox11h.setSelected(false);
+//        jCheckBox12h.setSelected(false);
+//        jCheckBox13h.setSelected(false);
+//        jCheckBox14h.setSelected(false);
+//        jCheckBox15h.setSelected(false);
+//        jCheckBox16h.setSelected(false);
+//        jCheckBox17h.setSelected(false);
+//        jCheckBox18h.setSelected(false);
+//        jCheckBox19h.setSelected(false);
+//        jCheckBox20h.setSelected(false);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

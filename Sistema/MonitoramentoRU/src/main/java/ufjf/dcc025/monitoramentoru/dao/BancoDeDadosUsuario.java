@@ -51,7 +51,7 @@ public class BancoDeDadosUsuario {
             for (int i = 0; i < usuarios.size(); i++) {
                 Usuario usuario = usuarios.get(i);
                 if (usuario.getIdentificador().equals(identificador) && usuario.getSenha().equals(senha)) {
-                    setUsuarioLogado(usuario);
+                    setUsuarioLogado(usuario); 
                     return true;
                 }
             }

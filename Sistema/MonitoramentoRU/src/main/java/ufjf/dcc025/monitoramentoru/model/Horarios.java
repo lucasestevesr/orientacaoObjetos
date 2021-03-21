@@ -10,19 +10,29 @@ package ufjf.dcc025.monitoramentoru.model;
  * @author arthu
  */
 public class Horarios {
+     private String diaDaSemana;
+     private String hora;
+ 
 
-    private boolean[][] horariosUsuario;
-
-    public Horarios() {
-        this.horariosUsuario = new boolean[6][14];
+    public Horarios(String diaDaSemana, String hora) {
+        this.diaDaSemana = diaDaSemana;
+        this.hora = hora;
     }
 
-    public boolean[][] getHorariosUsuario() {
-        return horariosUsuario;
+    public String getDiaDaSemana() {
+        return diaDaSemana;
     }
 
-    public void setHorariosUsuario(boolean[][] horariosUsuario) {
-        this.horariosUsuario = horariosUsuario;
+    public void setDiaDaSemana(String diaDaSemana) {
+        this.diaDaSemana = diaDaSemana;
     }
+
+    public String getHora() {
+        return hora;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
+    }     
 
 }
