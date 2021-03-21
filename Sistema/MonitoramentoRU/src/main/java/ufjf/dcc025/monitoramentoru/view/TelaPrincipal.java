@@ -205,7 +205,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemMonitorarLotacao2ActionPerformed
 
     private void jMenuItemContatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemContatoActionPerformed
-        // TODO add your handling code here:
+     TelaContato contato = new TelaContato();
+     contato.setVisible(true);
     }//GEN-LAST:event_jMenuItemContatoActionPerformed
 
     private void jMenuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSairActionPerformed

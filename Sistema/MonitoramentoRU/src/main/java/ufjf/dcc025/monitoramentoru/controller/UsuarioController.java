@@ -5,7 +5,7 @@
  */
 package ufjf.dcc025.monitoramentoru.controller;
 
-import java.util.LinkedList;
+import com.google.gson.Gson;
 import javax.swing.JOptionPane;
 import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
 import ufjf.dcc025.monitoramentoru.model.*;
@@ -19,9 +19,17 @@ import ufjf.dcc025.monitoramentoru.model.*;
  * "banco" a modelagem das classes.
  */
 public class UsuarioController {
+    private static Gson SERIALIZADOR;
+    /**
+     *      
+     * @return A String do Usuario usuario.
+     */
+    public static final String getJSONFromUsuario(Usuario usuario){
+        SERIALIZADOR = new Gson();
+        return SERIALIZADOR.toJson(usuario);
+    }
 
 //    public static LinkedList<Usuario> usuarios = new LinkedList();
-
     public boolean cadastrarUsuario(String tipo, String nome, String identificador, String email, String telefone,
             String senha, String confirmarSenha, SemanaHorarios horariosUsuario) {
         if ((senha == null ? confirmarSenha == null : senha.equals(confirmarSenha)) && nome != null && nome.length() > 0
@@ -54,9 +62,9 @@ public class UsuarioController {
                     System.out.println("Tipo de Usuário inválido.");
                 }
             }
-            
-            JOptionPane.showMessageDialog(null,"Olá " + (nome) +  ", seu cadastro " + (tipo) + " foi realizado com sucesso.");           
-            
+
+            JOptionPane.showMessageDialog(null, "Olá " + (nome) + ", seu cadastro " + (tipo) + " foi realizado com sucesso.");
+
             return true;
         } else {
             JOptionPane.showMessageDialog(null, "Dados inválidos, confirme novamente.");
@@ -64,42 +72,22 @@ public class UsuarioController {
         }
     }
 
-//    public boolean autenticaLogin(UsuarioLogin autenticador) {
-//        System.out.println("Autenticando o Login.");
-//        for (int i = 0; i < usuarios.size(); i++) {
-//            usuarios.get(i);
-//            if ((autenticador.getIdentificador() == null ? usuarios.get(i).getIdentificador() == null : autenticador.getIdentificador().equals(usuarios.get(i).getIdentificador())) && autenticador.getSenha().equals(usuarios.get(i).getSenha())) {
-//                System.out.println("Login Verificado" + usuarios.get(i).getNome());
-//                return true;
-//            }
-//
-//        }
-//        System.out.println("Login Invalido");
-//        return false;
-//    }
-    String display = "";
+    public boolean enviarMensagem(String mensagem) {
+        if (mensagem != null && !mensagem.isEmpty()) {
+            Contato contato = new Contato(mensagem);
+            BancoDeDadosUsuario.getMensagem().add(contato);
+            return true;
+        } else {
+            return false;
+        }
+    }
 
+//    String display = "";
+//
 //    public void imprimirListaUsuarios() {
 //        for (int i = 0; i < usuarios.size(); i++) {
 //            display += "\n" + usuarios.get(i);
 //        }
 //        System.out.println(display);
 //    }
-
-    
-  
-    
-//    public void editar(int i, String nome, String identificador, String email, String telefone,
-//            String senha, String confirmarSenha) {
-//
-//        UsuarioController.usuarios.get(i).setNome(nome);
-//        UsuarioController.usuarios.get(i).setIdentificador(identificador);
-//        UsuarioController.usuarios.get(i).setEmail(email);
-//        UsuarioController.usuarios.get(i).setTelefone(telefone);
-//        UsuarioController.usuarios.get(i).setSenha(senha);
-//        UsuarioController.usuarios.get(i).setConfirmarSenha(confirmarSenha);
-//    }
-//    public static LinkedList<Usuario> getUsuarios() {
-//        return usuarios;
-//    }
-}
+    }

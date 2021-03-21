@@ -49,18 +49,18 @@ public class TelaPerfil extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabelTitulo = new javax.swing.JLabel();
         jPanelCadastroUsuario = new javax.swing.JPanel();
-        jLabelNome = new javax.swing.JLabel();
-        textFieldNome = new java.awt.TextField();
-        jLabelTelefone = new javax.swing.JLabel();
-        textFieldEmail = new java.awt.TextField();
-        jLabelEmail1 = new javax.swing.JLabel();
-        textFieldTelefone = new java.awt.TextField();
-        jLabelIdentificador = new javax.swing.JLabel();
-        jTextFieldIdentificador = new javax.swing.JTextField();
-        jLabelSenha = new javax.swing.JLabel();
-        jPasswordFieldSenha = new javax.swing.JPasswordField();
-        jLabelConfirmarSenha = new javax.swing.JLabel();
-        jPasswordFieldConfirmarSenha = new javax.swing.JPasswordField();
+        jLabelNomeEditar = new javax.swing.JLabel();
+        textFieldNomeEditar = new java.awt.TextField();
+        jLabelTelefoneEditar = new javax.swing.JLabel();
+        textFieldEmailEd = new java.awt.TextField();
+        jLabelEmailEditar = new javax.swing.JLabel();
+        textFieldTelefoneEd = new java.awt.TextField();
+        jLabelIdentificadorEditar = new javax.swing.JLabel();
+        jTextFieldIdentificadorEd = new javax.swing.JTextField();
+        jLabelSenhaEditar = new javax.swing.JLabel();
+        jPasswordFieldSenhaEd = new javax.swing.JPasswordField();
+        jLabelConfirmarSenhaEditar = new javax.swing.JLabel();
+        jPasswordFieldConfirmarSenhaEd = new javax.swing.JPasswordField();
         jButtonEditar = new javax.swing.JButton();
         jButtonVoltar = new javax.swing.JButton();
 
@@ -87,49 +87,49 @@ public class TelaPerfil extends javax.swing.JFrame {
 
         jPanelCadastroUsuario.setPreferredSize(new java.awt.Dimension(780, 400));
 
-        jLabelNome.setFont(new java.awt.Font("Gill Sans MT", 1, 14)); // NOI18N
-        jLabelNome.setText("Nome: ");
+        jLabelNomeEditar.setFont(new java.awt.Font("Gill Sans MT", 1, 14)); // NOI18N
+        jLabelNomeEditar.setText("Nome: ");
 
-        textFieldNome.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
-        textFieldNome.addActionListener(new java.awt.event.ActionListener() {
+        textFieldNomeEditar.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
+        textFieldNomeEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldNomeActionPerformed(evt);
+                textFieldNomeEditarActionPerformed(evt);
             }
         });
 
-        jLabelTelefone.setFont(new java.awt.Font("Gill Sans MT", 1, 14)); // NOI18N
-        jLabelTelefone.setText("Telefone:");
-        jLabelTelefone.setPreferredSize(new java.awt.Dimension(41, 17));
+        jLabelTelefoneEditar.setFont(new java.awt.Font("Gill Sans MT", 1, 14)); // NOI18N
+        jLabelTelefoneEditar.setText("Telefone:");
+        jLabelTelefoneEditar.setPreferredSize(new java.awt.Dimension(41, 17));
 
-        textFieldEmail.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
+        textFieldEmailEd.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
 
-        jLabelEmail1.setFont(new java.awt.Font("Gill Sans MT", 1, 14)); // NOI18N
-        jLabelEmail1.setText("Email:");
+        jLabelEmailEditar.setFont(new java.awt.Font("Gill Sans MT", 1, 14)); // NOI18N
+        jLabelEmailEditar.setText("Email:");
 
-        textFieldTelefone.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
+        textFieldTelefoneEd.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
 
-        jLabelIdentificador.setFont(new java.awt.Font("Gill Sans MT", 1, 14)); // NOI18N
-        jLabelIdentificador.setText("Identificador:");
-        jLabelIdentificador.setPreferredSize(new java.awt.Dimension(41, 17));
+        jLabelIdentificadorEditar.setFont(new java.awt.Font("Gill Sans MT", 1, 14)); // NOI18N
+        jLabelIdentificadorEditar.setText("Identificador:");
+        jLabelIdentificadorEditar.setPreferredSize(new java.awt.Dimension(41, 17));
 
-        jTextFieldIdentificador.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
-        jTextFieldIdentificador.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldIdentificadorEd.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
+        jTextFieldIdentificadorEd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldIdentificadorActionPerformed(evt);
+                jTextFieldIdentificadorEdActionPerformed(evt);
             }
         });
 
-        jLabelSenha.setFont(new java.awt.Font("Gill Sans MT", 1, 14)); // NOI18N
-        jLabelSenha.setText("Senha:");
-        jLabelSenha.setPreferredSize(new java.awt.Dimension(41, 17));
+        jLabelSenhaEditar.setFont(new java.awt.Font("Gill Sans MT", 1, 14)); // NOI18N
+        jLabelSenhaEditar.setText("Senha:");
+        jLabelSenhaEditar.setPreferredSize(new java.awt.Dimension(41, 17));
 
-        jLabelConfirmarSenha.setFont(new java.awt.Font("Gill Sans MT", 1, 14)); // NOI18N
-        jLabelConfirmarSenha.setText("Confirmar Senha:");
-        jLabelConfirmarSenha.setPreferredSize(new java.awt.Dimension(41, 17));
+        jLabelConfirmarSenhaEditar.setFont(new java.awt.Font("Gill Sans MT", 1, 14)); // NOI18N
+        jLabelConfirmarSenhaEditar.setText("Confirmar Senha:");
+        jLabelConfirmarSenhaEditar.setPreferredSize(new java.awt.Dimension(41, 17));
 
-        jPasswordFieldConfirmarSenha.addActionListener(new java.awt.event.ActionListener() {
+        jPasswordFieldConfirmarSenhaEd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordFieldConfirmarSenhaActionPerformed(evt);
+                jPasswordFieldConfirmarSenhaEdActionPerformed(evt);
             }
         });
 
@@ -162,28 +162,28 @@ public class TelaPerfil extends javax.swing.JFrame {
             .addGroup(jPanelCadastroUsuarioLayout.createSequentialGroup()
                 .addGap(87, 87, 87)
                 .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelNome, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelNomeEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelCadastroUsuarioLayout.createSequentialGroup()
                         .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButtonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButtonEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelEmail1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelIdentificador, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabelTelefoneEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelEmailEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelIdentificadorEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelSenhaEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(24, 24, 24)
                         .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(textFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldEmailEd, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(textFieldTelefone, javax.swing.GroupLayout.DEFAULT_SIZE, 485, Short.MAX_VALUE)
-                                .addComponent(textFieldNome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextFieldIdentificador, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(textFieldTelefoneEd, javax.swing.GroupLayout.DEFAULT_SIZE, 485, Short.MAX_VALUE)
+                                .addComponent(textFieldNomeEditar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jTextFieldIdentificadorEd, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(jPanelCadastroUsuarioLayout.createSequentialGroup()
-                                    .addComponent(jPasswordFieldSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPasswordFieldSenhaEd, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(16, 16, 16)
-                                    .addComponent(jLabelConfirmarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabelConfirmarSenhaEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jPasswordFieldConfirmarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(jPasswordFieldConfirmarSenhaEd, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(172, Short.MAX_VALUE))
         );
         jPanelCadastroUsuarioLayout.setVerticalGroup(
@@ -191,33 +191,33 @@ public class TelaPerfil extends javax.swing.JFrame {
             .addGroup(jPanelCadastroUsuarioLayout.createSequentialGroup()
                 .addGap(46, 46, 46)
                 .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabelNome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(textFieldNome, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
+                    .addComponent(jLabelNomeEditar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(textFieldNomeEditar, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelEmail1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelEmailEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldEmailEd, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelTelefoneEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldTelefoneEd, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelCadastroUsuarioLayout.createSequentialGroup()
-                        .addComponent(jLabelIdentificador, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                        .addComponent(jLabelIdentificadorEditar, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelSenha, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
-                            .addComponent(jPasswordFieldSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelConfirmarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPasswordFieldConfirmarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabelSenhaEditar, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
+                            .addComponent(jPasswordFieldSenhaEd, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelConfirmarSenhaEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPasswordFieldConfirmarSenhaEd, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(23, 23, 23)
                         .addComponent(jButtonEditar, javax.swing.GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonVoltar, javax.swing.GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE)
                         .addGap(53, 53, 53))
                     .addGroup(jPanelCadastroUsuarioLayout.createSequentialGroup()
-                        .addComponent(jTextFieldIdentificador, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldIdentificadorEd, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
@@ -245,19 +245,19 @@ public class TelaPerfil extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextFieldIdentificadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldIdentificadorActionPerformed
+    private void jTextFieldIdentificadorEdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldIdentificadorEdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldIdentificadorActionPerformed
+    }//GEN-LAST:event_jTextFieldIdentificadorEdActionPerformed
 
-    private void jPasswordFieldConfirmarSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldConfirmarSenhaActionPerformed
+    private void jPasswordFieldConfirmarSenhaEdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldConfirmarSenhaEdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordFieldConfirmarSenhaActionPerformed
+    }//GEN-LAST:event_jPasswordFieldConfirmarSenhaEdActionPerformed
 
     private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
         
         TelaPrincipal telaprincipal = new TelaPrincipal();
-        boolean editar = BancoDeDadosUsuario.editar(textFieldNome.getText(), jTextFieldIdentificador.getText(), textFieldEmail.getText(),
-                textFieldTelefone.getText(), jPasswordFieldSenha.getText(), jPasswordFieldConfirmarSenha.getText());
+        boolean editar = BancoDeDadosUsuario.editarCadastro(textFieldNomeEditar.getText(), jTextFieldIdentificadorEd.getText(), textFieldEmailEd.getText(),
+                textFieldTelefoneEd.getText(), jPasswordFieldSenhaEd.getText(), jPasswordFieldConfirmarSenhaEd.getText());
         if (editar) {
             JOptionPane.showMessageDialog(this, "Os dados foram editados corretamente.");
             this.setVisible(false);            
@@ -272,9 +272,9 @@ public class TelaPerfil extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButtonVoltarActionPerformed
 
-    private void textFieldNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldNomeActionPerformed
+    private void textFieldNomeEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldNomeEditarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldNomeActionPerformed
+    }//GEN-LAST:event_textFieldNomeEditarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -321,21 +321,21 @@ public class TelaPerfil extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonEditar;
     private javax.swing.JButton jButtonVoltar;
-    private javax.swing.JLabel jLabelConfirmarSenha;
-    private javax.swing.JLabel jLabelEmail1;
-    private javax.swing.JLabel jLabelIdentificador;
-    private javax.swing.JLabel jLabelNome;
-    private javax.swing.JLabel jLabelSenha;
-    private javax.swing.JLabel jLabelTelefone;
+    private javax.swing.JLabel jLabelConfirmarSenhaEditar;
+    private javax.swing.JLabel jLabelEmailEditar;
+    private javax.swing.JLabel jLabelIdentificadorEditar;
+    private javax.swing.JLabel jLabelNomeEditar;
+    private javax.swing.JLabel jLabelSenhaEditar;
+    private javax.swing.JLabel jLabelTelefoneEditar;
     private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelCadastroUsuario;
-    private javax.swing.JPasswordField jPasswordFieldConfirmarSenha;
-    private javax.swing.JPasswordField jPasswordFieldSenha;
-    private javax.swing.JTextField jTextFieldIdentificador;
-    private java.awt.TextField textFieldEmail;
-    private java.awt.TextField textFieldNome;
-    private java.awt.TextField textFieldTelefone;
+    private javax.swing.JPasswordField jPasswordFieldConfirmarSenhaEd;
+    private javax.swing.JPasswordField jPasswordFieldSenhaEd;
+    private javax.swing.JTextField jTextFieldIdentificadorEd;
+    private java.awt.TextField textFieldEmailEd;
+    private java.awt.TextField textFieldNomeEditar;
+    private java.awt.TextField textFieldTelefoneEd;
     // End of variables declaration//GEN-END:variables
 
 }

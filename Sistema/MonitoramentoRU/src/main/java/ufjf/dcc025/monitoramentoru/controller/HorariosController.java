@@ -5,13 +5,10 @@
  */
 package ufjf.dcc025.monitoramentoru.controller;
 
-import java.util.LinkedList;
 import javax.swing.JOptionPane;
 import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
-import ufjf.dcc025.monitoramentoru.model.Horarios;
 import ufjf.dcc025.monitoramentoru.model.SemanaHorarios;
 import ufjf.dcc025.monitoramentoru.model.Usuario;
-import ufjf.dcc025.monitoramentoru.view.TelaCadastraHorarios;
 
 /**
  *

@@ -94,29 +94,29 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabelNome" alignment="0" min="-2" pref="59" max="-2" attributes="0"/>
+                      <Component id="jLabelNomeEditar" alignment="0" min="-2" pref="59" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jButtonVoltar" min="-2" pref="124" max="-2" attributes="0"/>
                               <Component id="jButtonEditar" min="-2" pref="124" max="-2" attributes="0"/>
-                              <Component id="jLabelTelefone" min="-2" pref="68" max="-2" attributes="0"/>
-                              <Component id="jLabelEmail1" alignment="0" min="-2" pref="59" max="-2" attributes="0"/>
-                              <Component id="jLabelIdentificador" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
-                              <Component id="jLabelSenha" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                              <Component id="jLabelTelefoneEditar" min="-2" pref="68" max="-2" attributes="0"/>
+                              <Component id="jLabelEmailEditar" alignment="0" min="-2" pref="59" max="-2" attributes="0"/>
+                              <Component id="jLabelIdentificadorEditar" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
+                              <Component id="jLabelSenhaEditar" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="textFieldEmail" min="-2" pref="485" max="-2" attributes="0"/>
+                              <Component id="textFieldEmailEd" min="-2" pref="485" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="textFieldTelefone" alignment="0" pref="485" max="32767" attributes="0"/>
-                                  <Component id="textFieldNome" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jTextFieldIdentificador" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                                  <Component id="textFieldTelefoneEd" alignment="0" pref="485" max="32767" attributes="0"/>
+                                  <Component id="textFieldNomeEditar" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jTextFieldIdentificadorEd" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jPasswordFieldSenha" min="-2" pref="170" max="-2" attributes="0"/>
+                                      <Component id="jPasswordFieldSenhaEd" min="-2" pref="170" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                                      <Component id="jLabelConfirmarSenha" min="-2" pref="123" max="-2" attributes="0"/>
+                                      <Component id="jLabelConfirmarSenhaEditar" min="-2" pref="123" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jPasswordFieldConfirmarSenha" min="-2" pref="170" max="-2" attributes="0"/>
+                                      <Component id="jPasswordFieldConfirmarSenhaEd" min="-2" pref="170" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -131,29 +131,29 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jLabelNome" max="32767" attributes="0"/>
-                      <Component id="textFieldNome" pref="30" max="32767" attributes="0"/>
+                      <Component id="jLabelNomeEditar" max="32767" attributes="0"/>
+                      <Component id="textFieldNomeEditar" pref="30" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabelEmail1" min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="textFieldEmail" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jLabelEmailEditar" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="textFieldEmailEd" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabelTelefone" min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="textFieldTelefone" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jLabelTelefoneEditar" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="textFieldTelefoneEd" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jLabelIdentificador" pref="45" max="32767" attributes="0"/>
+                          <Component id="jLabelIdentificadorEditar" pref="45" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabelSenha" alignment="3" pref="46" max="32767" attributes="0"/>
-                              <Component id="jPasswordFieldSenha" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="jLabelConfirmarSenha" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="jPasswordFieldConfirmarSenha" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="jLabelSenhaEditar" alignment="3" pref="46" max="32767" attributes="0"/>
+                              <Component id="jPasswordFieldSenhaEd" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="jLabelConfirmarSenhaEditar" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="jPasswordFieldConfirmarSenhaEd" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                           <Component id="jButtonEditar" pref="64" max="32767" attributes="0"/>
@@ -162,7 +162,7 @@
                           <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="jTextFieldIdentificador" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="jTextFieldIdentificadorEd" min="-2" pref="30" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -171,7 +171,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabelNome">
+        <Component class="javax.swing.JLabel" name="jLabelNomeEditar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gill Sans MT" size="14" style="1"/>
@@ -179,17 +179,17 @@
             <Property name="text" type="java.lang.String" value="Nome: "/>
           </Properties>
         </Component>
-        <Component class="java.awt.TextField" name="textFieldNome">
+        <Component class="java.awt.TextField" name="textFieldNomeEditar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gill Sans MT" size="14" style="0"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldNomeActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldNomeEditarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabelTelefone">
+        <Component class="javax.swing.JLabel" name="jLabelTelefoneEditar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gill Sans MT" size="14" style="1"/>
@@ -200,14 +200,14 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="java.awt.TextField" name="textFieldEmail">
+        <Component class="java.awt.TextField" name="textFieldEmailEd">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gill Sans MT" size="14" style="0"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabelEmail1">
+        <Component class="javax.swing.JLabel" name="jLabelEmailEditar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gill Sans MT" size="14" style="1"/>
@@ -215,14 +215,14 @@
             <Property name="text" type="java.lang.String" value="Email:"/>
           </Properties>
         </Component>
-        <Component class="java.awt.TextField" name="textFieldTelefone">
+        <Component class="java.awt.TextField" name="textFieldTelefoneEd">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gill Sans MT" size="14" style="0"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabelIdentificador">
+        <Component class="javax.swing.JLabel" name="jLabelIdentificadorEditar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gill Sans MT" size="14" style="1"/>
@@ -233,17 +233,17 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextFieldIdentificador">
+        <Component class="javax.swing.JTextField" name="jTextFieldIdentificadorEd">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gill Sans MT" size="14" style="0"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldIdentificadorActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldIdentificadorEdActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabelSenha">
+        <Component class="javax.swing.JLabel" name="jLabelSenhaEditar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gill Sans MT" size="14" style="1"/>
@@ -254,9 +254,9 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="jPasswordFieldSenha">
+        <Component class="javax.swing.JPasswordField" name="jPasswordFieldSenhaEd">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabelConfirmarSenha">
+        <Component class="javax.swing.JLabel" name="jLabelConfirmarSenhaEditar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gill Sans MT" size="14" style="1"/>
@@ -267,9 +267,9 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="jPasswordFieldConfirmarSenha">
+        <Component class="javax.swing.JPasswordField" name="jPasswordFieldConfirmarSenhaEd">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jPasswordFieldConfirmarSenhaActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jPasswordFieldConfirmarSenhaEdActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonEditar">

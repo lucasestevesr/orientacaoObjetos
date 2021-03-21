@@ -23,10 +23,12 @@ public class BancoDeDadosUsuario {
     private static final List<Usuario> usuarios;
 
     private static final List<Refeicao> refeicoes;
-    
+
     private static final List<Refeicao> encomendas;
-    
+
     private static final List<SemanaHorarios> horarios;
+
+    private static final List<Contato> mensagem;
 
     static {
         usuarios = new ArrayList<>();
@@ -34,11 +36,16 @@ public class BancoDeDadosUsuario {
         refeicoes = new ArrayList<>();
         encomendas = new ArrayList<>();
         horarios = new ArrayList<>();
+        mensagem = new ArrayList<>();
+    }
+
+    public static List<Contato> getMensagem() {
+        return mensagem;
     }
 
     public static List<Refeicao> getEncomendas() {
         return encomendas;
-    }    
+    }
 
     public static List<Refeicao> getRefeicoes() {
         return refeicoes;
@@ -60,6 +67,20 @@ public class BancoDeDadosUsuario {
         BancoDeDadosUsuario.usuarioLogado = usuarioLogado;
     }
 
+    public static boolean validacaoCadastro(String tipo, String nome, String identificador,
+            String email, String telefone, String senha, String confirmarSenha, SemanaHorarios horariosUsuario) {
+
+        try {
+            UsuarioController usuarioController = new UsuarioController();
+            usuarioController.cadastrarUsuario(tipo, nome, identificador, email, telefone, senha, confirmarSenha, horariosUsuario);
+            return true;
+
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Erro: " + ex);
+            return false;
+        }
+    }
+
     public static boolean autenticarLogin(String identificador, String senha) {
         try {
             for (int i = 0; i < usuarios.size(); i++) {
@@ -75,33 +96,7 @@ public class BancoDeDadosUsuario {
         return false;
     }
 
-    public static boolean validacaoCadastro(String tipo, String nome, String identificador,
-            String email, String telefone, String senha, String confirmarSenha, SemanaHorarios horariosUsuario) {
-
-        try {
-            UsuarioController usuarioController = new UsuarioController();
-            usuarioController.cadastrarUsuario(tipo, nome, identificador, email, telefone, senha, confirmarSenha, horariosUsuario);
-            return true;
-
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Erro: " + ex);
-            return false;
-        }
-    }
-
-    public static boolean salvarRegistro(String tipo, String diaSemana, String turno, String horario) {
-
-        try {
-            RefeicaoController refeicaoContoller = new RefeicaoController();
-            refeicaoContoller.cadastrarRefeicao(tipo, diaSemana, turno, horario);
-            return true;
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Erro: " + ex);
-            return false;
-        }
-    }
-
-    public static boolean editar(String nome, String identificador, String email, String telefone,
+    public static boolean editarCadastro(String nome, String identificador, String email, String telefone,
             String senha, String confirmarSenha) {
         try {
             //if (autenticarLogin(identificador, senha) == true) {
@@ -118,6 +113,32 @@ public class BancoDeDadosUsuario {
 
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "Erro: " + ex);
+        }
+        return false;
+    }
+
+    public static boolean salvarRefeicoes(String tipo, String diaSemana, String turno, String horario) {
+
+        try {
+            RefeicaoController refeicaoContoller = new RefeicaoController();
+            refeicaoContoller.cadastrarRefeicao(tipo, diaSemana, turno, horario);
+            return true;
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Erro: " + ex);
+            return false;
+        }
+    }
+
+    public static boolean salvarContato(String mensagem) {
+        try {
+            UsuarioController msg = new UsuarioController();
+            if (msg.enviarMensagem(mensagem)) {
+                return true;
+            }
+
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Erro: " + ex);
+
         }
         return false;
     }

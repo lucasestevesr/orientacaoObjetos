@@ -278,6 +278,7 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
         // Preparando para adicionar a grade semanado do usuário da lista de horários
         HorariosController horariosController = new HorariosController();
         horariosController.ConcluirCadastro(getUsuarioLogado().getHorariosUsuario());
+        this.dispose();
         
     }//GEN-LAST:event_jButtonConcluirActionPerformed
 

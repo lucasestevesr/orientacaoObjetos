@@ -38,31 +38,7 @@ public abstract class Usuario {
         this.confirmarSenha = confirmarSenha;
         this.horariosUsuario = horariosUsuario;
         System.out.println("Foi realizado o cadastro do usúario identificado pelo email: " + this.email + " e pelo identificador: " + this.identificador);
-    }    
-
-    /* Código Arthur??
-//    public Usuario(Horarios horariosUsuario) {
-//        this.horariosUsuario = horariosUsuario;
-//    } 
-    */
-//    //USO AQUI OU NA UsuarioLogin ? preciso chamar na view porém essa classe é abstrata.
-//    //Faço a verificação no UsuarioController?
-//    public boolean autenticaLogin(String identificador, String senha) {
-//        System.out.println("Autenticando o Login.");
-//        return ((this.senha == null ? senha == null : this.senha.equals(senha)) && this.identificador.equals(identificador));
-//    }
-//
-//    public void editaCadastro(String nome, String identificador, String email, String telefone, String senha) {
-//        System.out.println("Editando o Cadastro.");        
-//        this.nome = nome;
-//        this.identificador = identificador;
-//        this.email = email;
-//        this.telefone = telefone;
-//        this.senha = senha;
-//    }
-//
-//    public void cadastrarUsuario() {        
-//    }
+    }
 
     public String getNome() {
         return this.nome;
@@ -135,9 +111,7 @@ public abstract class Usuario {
     public void setHorariosUsuario(SemanaHorarios horariosUsuario) {
         this.horariosUsuario = horariosUsuario;
     }
-    
-    
-    
+
     @Override
     public String toString() {
         return "Usuario{" + "id=" + id + ", nome=" + nome + ", identificador=" + identificador + ", email=" + email + ", telefone=" + telefone + ", senha=" + senha + ", confirmarSenha=" + confirmarSenha + ", tipo=" + tipo + '}';

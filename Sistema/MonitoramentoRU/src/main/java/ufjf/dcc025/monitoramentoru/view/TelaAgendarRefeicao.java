@@ -188,8 +188,8 @@ public class TelaAgendarRefeicao extends javax.swing.JFrame {
 
     private void jButtonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalvarActionPerformed
         
-        TelaPrincipal telaprincipal = new TelaPrincipal();
-        boolean registro = BancoDeDadosUsuario.salvarRegistro(jComboBoxReserva.getSelectedItem().toString(),
+//        TelaPrincipal telaprincipal = new TelaPrincipal();
+        boolean registro = BancoDeDadosUsuario.salvarRefeicoes(jComboBoxReserva.getSelectedItem().toString(),
                 jComboBoxDiaSemana.getSelectedItem().toString(), jComboBoxTurno.getSelectedItem().toString(),
                 jComboBoxHorario.getSelectedItem().toString());
         if (registro) {
