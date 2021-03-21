@@ -18,21 +18,21 @@ import ufjf.dcc025.monitoramentoru.model.Refeicao;
  * @author tawan
  */
 public class RefeicaoController {
-    
-    public boolean cadastrarRefeicao(String tipo, String diaSemana, String turnoRefeicao, String horario){
+
+    public boolean cadastrarRefeicao(String tipo, String diaSemana, String turnoRefeicao, String horario) {
         if (diaSemana != null && turnoRefeicao != null && horario != null) {
             boolean agendamentoJaExistente = false;
             boolean encomendaJaExistente = false;
-            
+
             for (int i = 0; i < BancoDeDadosUsuario.getRefeicoes().size(); i++) {
                 if (BancoDeDadosUsuario.getRefeicoes().get(i).getId().equals(BancoDeDadosUsuario.getUsuarioLogado().getIdentificador())) {
-                    if (BancoDeDadosUsuario.getRefeicoes().get(i).getDiaSemana().equals(diaSemana) && BancoDeDadosUsuario.getRefeicoes().get(i).getHorario().equals(horario) ){
+                    if (BancoDeDadosUsuario.getRefeicoes().get(i).getDiaSemana().equals(diaSemana) && BancoDeDadosUsuario.getRefeicoes().get(i).getHorario().equals(horario)) {
                         JOptionPane.showMessageDialog(null, "Você já agendou uma refeição para este horário");
                         agendamentoJaExistente = true;
                     }
                 }
             }
-            
+
             for (int i = 0; i < BancoDeDadosUsuario.getEncomendas().size(); i++) {
                 if (BancoDeDadosUsuario.getEncomendas().get(i).getId().equals(BancoDeDadosUsuario.getUsuarioLogado().getIdentificador())) {
                     if (BancoDeDadosUsuario.getEncomendas().get(i).getDiaSemana().equals(diaSemana) && BancoDeDadosUsuario.getEncomendas().get(i).getHorario().equals(horario)) {
@@ -86,5 +86,6 @@ public class RefeicaoController {
                 return false;
             }
         }
-
+        return false;
     }
+}
