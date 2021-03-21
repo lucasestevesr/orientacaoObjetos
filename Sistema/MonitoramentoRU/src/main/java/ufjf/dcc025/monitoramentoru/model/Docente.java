@@ -14,8 +14,8 @@ public class Docente extends Usuario implements Eticket{
     private final String tipo = "Docente";
     private static int id;
 
-    public Docente(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha) {
-        super(nome, identificador, email, telefone, senha, confirmarSenha);
+    public Docente(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha, SemanaHorarios horariosUsuario) {
+        super(nome, identificador, email, telefone, senha, confirmarSenha, horariosUsuario);
         setTipo(tipo);
         id = getId();
         System.out.println("Foi criado  um cadastro do tipo" + tipo +".");

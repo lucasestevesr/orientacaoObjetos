@@ -25,9 +25,9 @@ public abstract class Usuario {
     private String confirmarSenha;
     String tipo;
     private int total = 1;
-    private Horarios horariosUsuario;
+    private SemanaHorarios horariosUsuario;
 
-    public Usuario(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha) {
+    public Usuario(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha, SemanaHorarios horariosUsuario) {
 
         Usuario.id = total++;
         this.nome = nome;
@@ -36,8 +36,9 @@ public abstract class Usuario {
         this.telefone = telefone;
         this.senha = senha;
         this.confirmarSenha = confirmarSenha;
+        this.horariosUsuario = horariosUsuario;
         System.out.println("Foi realizado o cadastro do usúario identificado pelo email: " + this.email + " e pelo identificador: " + this.identificador);
-    }
+    }    
 
     /* Código Arthur??
 //    public Usuario(Horarios horariosUsuario) {
@@ -127,14 +128,16 @@ public abstract class Usuario {
         this.tipo = tipo;
     }
 
-    public Horarios getHorariosUsuario() {
+    public SemanaHorarios getHorariosUsuario() {
         return horariosUsuario;
     }
 
-    public void setHorariosUsuario(Horarios horariosUsuario) {
+    public void setHorariosUsuario(SemanaHorarios horariosUsuario) {
         this.horariosUsuario = horariosUsuario;
     }
-
+    
+    
+    
     @Override
     public String toString() {
         return "Usuario{" + "id=" + id + ", nome=" + nome + ", identificador=" + identificador + ", email=" + email + ", telefone=" + telefone + ", senha=" + senha + ", confirmarSenha=" + confirmarSenha + ", tipo=" + tipo + '}';

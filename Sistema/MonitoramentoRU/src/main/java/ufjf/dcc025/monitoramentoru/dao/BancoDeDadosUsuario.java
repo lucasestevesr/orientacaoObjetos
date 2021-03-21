@@ -23,11 +23,29 @@ public class BancoDeDadosUsuario {
     private static final List<Usuario> usuarios;
 
     private static final List<Refeicao> refeicoes;
+    
+    private static final List<Refeicao> encomendas;
+    
+    private static final List<SemanaHorarios> horarios;
 
     static {
         usuarios = new ArrayList<>();
         usuarioLogado = null;
         refeicoes = new ArrayList<>();
+        encomendas = new ArrayList<>();
+        horarios = new ArrayList<>();
+    }
+
+    public static List<Refeicao> getEncomendas() {
+        return encomendas;
+    }    
+
+    public static List<Refeicao> getRefeicoes() {
+        return refeicoes;
+    }
+
+    public static List<SemanaHorarios> getHorarios() {
+        return horarios;
     }
 
     public static List<Usuario> getUsuarios() {
@@ -36,10 +54,6 @@ public class BancoDeDadosUsuario {
 
     public static Usuario getUsuarioLogado() {
         return usuarioLogado;
-    }
-
-    public static List<Refeicao> getRefeicao() {
-        return refeicoes;
     }
 
     public static void setUsuarioLogado(Usuario usuarioLogado) {
@@ -51,7 +65,7 @@ public class BancoDeDadosUsuario {
             for (int i = 0; i < usuarios.size(); i++) {
                 Usuario usuario = usuarios.get(i);
                 if (usuario.getIdentificador().equals(identificador) && usuario.getSenha().equals(senha)) {
-                    setUsuarioLogado(usuario); 
+                    setUsuarioLogado(usuario);
                     return true;
                 }
             }
@@ -62,11 +76,11 @@ public class BancoDeDadosUsuario {
     }
 
     public static boolean validacaoCadastro(String tipo, String nome, String identificador,
-            String email, String telefone, String senha, String confirmarSenha) {
+            String email, String telefone, String senha, String confirmarSenha, SemanaHorarios horariosUsuario) {
 
         try {
             UsuarioController usuarioController = new UsuarioController();
-            usuarioController.cadastrarUsuario(tipo, nome, identificador, email, telefone, senha, confirmarSenha);
+            usuarioController.cadastrarUsuario(tipo, nome, identificador, email, telefone, senha, confirmarSenha, horariosUsuario);
             return true;
 
         } catch (Exception ex) {

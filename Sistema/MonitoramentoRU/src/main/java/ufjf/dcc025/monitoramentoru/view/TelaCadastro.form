@@ -65,7 +65,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabelTitulo" min="-2" pref="36" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanelCadastroUsuario" pref="493" max="32767" attributes="0"/>
+              <Component id="jPanelCadastroUsuario" pref="506" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -100,13 +100,16 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabelSenha" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                              <Component id="jButtonVoltar" min="-2" pref="124" max="-2" attributes="0"/>
-                              <Component id="jButtonSalvar" min="-2" pref="124" max="-2" attributes="0"/>
                               <Component id="jLabelTelefone" min="-2" pref="68" max="-2" attributes="0"/>
                               <Component id="jLabelIdentificador" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jButtonVoltar" min="-2" pref="166" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jButtonSalvar" min="-2" pref="170" max="-2" attributes="0"/>
+                              </Group>
                               <Component id="jComboBoxCargo" min="-2" pref="133" max="-2" attributes="0"/>
                               <Component id="textFieldEmail" alignment="0" max="32767" attributes="0"/>
                               <Component id="textFieldTelefone" alignment="0" max="32767" attributes="0"/>
@@ -151,7 +154,7 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabelIdentificador" pref="47" max="32767" attributes="0"/>
+                      <Component id="jLabelIdentificador" pref="56" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Component id="jTextFieldIdentificador" min="-2" pref="30" max="-2" attributes="0"/>
                           <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
@@ -164,11 +167,12 @@
                       <Component id="jLabelConfirmarSenha" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="jPasswordFieldConfirmarSenha" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jButtonSalvar" pref="66" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButtonVoltar" pref="67" max="32767" attributes="0"/>
-                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                  <EmptySpace pref="84" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jButtonVoltar" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
+                      <Component id="jButtonSalvar" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

@@ -5,8 +5,7 @@
  */
 package ufjf.dcc025.monitoramentoru.model;
 
-import ufjf.dcc025.monitoramentoru.controller.UsuarioController;
-import static ufjf.dcc025.monitoramentoru.controller.UsuarioController.usuarios;
+//import ufjf.dcc025.monitoramentoru.controller.UsuarioController;
 
 /**
  *

@@ -5,6 +5,7 @@
  */
 package ufjf.dcc025.monitoramentoru.view;
 
+import ufjf.dcc025.monitoramentoru.model.MonitorarLotacao;
 import ufjf.dcc025.monitoramentoru.model.Usuario;
 
 /**
@@ -42,7 +43,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuPrincipal2 = new javax.swing.JMenu();
         jMenuItemMonitorarLotacao2 = new javax.swing.JMenuItem();
         jMenuItemCardapio2 = new javax.swing.JMenuItem();
-        jMenuItemEncomenda = new javax.swing.JMenuItem();
         jMenuItemRegistraHorario = new javax.swing.JMenuItem();
         jMenuItemAgendarHorario = new javax.swing.JMenuItem();
         jMenuItemEticket = new javax.swing.JMenuItem();
@@ -53,7 +53,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuSair = new javax.swing.JMenu();
         jMenuItemSair = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jMenuPrincipal2.setText("Menu Principal");
         jMenuPrincipal2.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
@@ -75,15 +75,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenuPrincipal2.add(jMenuItemCardapio2);
-
-        jMenuItemEncomenda.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
-        jMenuItemEncomenda.setText("Encomendar Refeição");
-        jMenuItemEncomenda.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemEncomendaActionPerformed(evt);
-            }
-        });
-        jMenuPrincipal2.add(jMenuItemEncomenda);
 
         jMenuItemRegistraHorario.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jMenuItemRegistraHorario.setText("Registrar Horários");
@@ -170,23 +161,23 @@ public class TelaPrincipal extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItemCardapio2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCardapio2ActionPerformed
+        
         TelaCardapio telaCardapio = new TelaCardapio();
         telaCardapio.setVisible(true);
         this.dispose();
+        
     }//GEN-LAST:event_jMenuItemCardapio2ActionPerformed
-
-    private void jMenuItemEncomendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEncomendaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItemEncomendaActionPerformed
 
     private void jMenuItemEticketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEticketActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemEticketActionPerformed
 
     private void jMenuItemEditarPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEditarPerfilActionPerformed
+        
         TelaPerfil telaperfil = new TelaPerfil();
         telaperfil.setVisible(true);
 
@@ -200,12 +191,17 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemRegistraHorarioActionPerformed
 
     private void jMenuItemAgendarHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAgendarHorarioActionPerformed
+       
        TelaAgendarRefeicao telarefeicao = new TelaAgendarRefeicao();
        telarefeicao.setVisible(true);
+       
     }//GEN-LAST:event_jMenuItemAgendarHorarioActionPerformed
 
     private void jMenuItemMonitorarLotacao2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMonitorarLotacao2ActionPerformed
-        // TODO add your handling code here:
+        
+        TelaMonitoramento telamonitoramento = new TelaMonitoramento();
+        telamonitoramento.setVisible(true);
+        
     }//GEN-LAST:event_jMenuItemMonitorarLotacao2ActionPerformed
 
     private void jMenuItemContatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemContatoActionPerformed
@@ -213,7 +209,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemContatoActionPerformed
 
     private void jMenuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSairActionPerformed
+        
         this.dispose();
+        TelaLogin telalogin = new TelaLogin();
+        telalogin.setVisible(true);
+        
     }//GEN-LAST:event_jMenuItemSairActionPerformed
 
     /**
@@ -258,7 +258,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemCardapio2;
     private javax.swing.JMenuItem jMenuItemContato;
     private javax.swing.JMenuItem jMenuItemEditarPerfil;
-    private javax.swing.JMenuItem jMenuItemEncomenda;
     private javax.swing.JMenuItem jMenuItemEticket;
     private javax.swing.JMenuItem jMenuItemMonitorarLotacao2;
     private javax.swing.JMenuItem jMenuItemRegistraHorario;
