@@ -10,7 +10,9 @@ package ufjf.dcc025.monitoramentoru.model;
  * @author Your Name <lucas.esteves@engenharia.ufjf.br>
  */
 public abstract interface Eticket {
+    
+    
 
     public abstract void pagar(double valorCafe, double valorRefeicao, String tipo);
-
+    
 }

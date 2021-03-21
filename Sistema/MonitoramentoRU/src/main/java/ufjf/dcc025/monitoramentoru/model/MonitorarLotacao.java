@@ -13,7 +13,7 @@ import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
  * @author Your Name <lucas.esteves@engenharia.ufjf.br>
  */
 public class MonitorarLotacao {
-    private int lotacaoMaxima = 10;
+    private final int lotacaoMaxima = 10;
         int contPessoas;
        
     public void monitorar(String diaSemana, String hora) {
@@ -52,10 +52,6 @@ public class MonitorarLotacao {
 
     public int getLotacaoMaxima() {
         return lotacaoMaxima;
-    }
-
-    public void setLotacaoMaxima(int lotacaoMaxima) {
-        this.lotacaoMaxima = lotacaoMaxima;
     }
 
     public int getContPessoas() {

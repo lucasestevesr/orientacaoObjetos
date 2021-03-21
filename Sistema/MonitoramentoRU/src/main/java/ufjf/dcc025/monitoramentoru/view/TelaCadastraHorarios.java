@@ -5,7 +5,6 @@
  */
 package ufjf.dcc025.monitoramentoru.view;
 
-
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
@@ -24,8 +23,6 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
      * Creates new form TelaCadastraHorarios
      */
     private Usuario usuario;
-    
-    
 
     public TelaCadastraHorarios() {
         initComponents();
@@ -43,9 +40,8 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
     public TelaCadastraHorarios(Usuario usuario) {
         this.usuario = usuario;
     }
-    
-//    Horarios grade = new Horarios();
 
+//    Horarios grade = new Horarios();
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -268,18 +264,36 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox7hActionPerformed
 
     private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
+
+        HorariosController horarioscontroller = new HorariosController();
+        horarioscontroller.cadastrarHorarios(jComboBoxDiaSemana.getSelectedItem() + "", jCheckBox7h.isSelected(), jCheckBox8h.isSelected(),
+                jCheckBox9h.isSelected(), jCheckBox10h.isSelected(), jCheckBox11h.isSelected(), jCheckBox12h.isSelected(),
+                jCheckBox13h.isSelected(), jCheckBox14h.isSelected(), jCheckBox15h.isSelected(), jCheckBox16h.isSelected(),
+                jCheckBox17h.isSelected(), jCheckBox18h.isSelected(), jCheckBox19h.isSelected(), jCheckBox20h.isSelected());
         
-        cadastrar();
-        
+        jCheckBox7h.setSelected(false);
+        jCheckBox8h.setSelected(false);
+        jCheckBox9h.setSelected(false);
+        jCheckBox10h.setSelected(false);
+        jCheckBox11h.setSelected(false);
+        jCheckBox12h.setSelected(false);
+        jCheckBox13h.setSelected(false);
+        jCheckBox14h.setSelected(false);
+        jCheckBox15h.setSelected(false);
+        jCheckBox16h.setSelected(false);
+        jCheckBox17h.setSelected(false);
+        jCheckBox18h.setSelected(false);
+        jCheckBox19h.setSelected(false);
+        jCheckBox20h.setSelected(false);
     }//GEN-LAST:event_jButtonCadastrarActionPerformed
 
     private void jButtonConcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConcluirActionPerformed
-        
+
         // Preparando para adicionar a grade semanado do usuário da lista de horários
         HorariosController horariosController = new HorariosController();
         horariosController.ConcluirCadastro(getUsuarioLogado().getHorariosUsuario());
         this.dispose();
-        
+
     }//GEN-LAST:event_jButtonConcluirActionPerformed
 
     private void jCheckBox17hActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox17hActionPerformed
@@ -287,7 +301,7 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox17hActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-          this.dispose();
+        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -326,44 +340,50 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
     }
 
     private void cadastrar() {
-
-        Horarios grade = new Horarios();
-        String diaSemana = jComboBoxDiaSemana.getSelectedItem() + "";
-        
-        grade.setDia(jComboBoxDiaSemana.getSelectedItem() + "");
-        grade.setH7(jCheckBox7h.isSelected());
-        grade.setH8(jCheckBox8h.isSelected());
-        grade.setH9(jCheckBox9h.isSelected());
-        grade.setH10(jCheckBox10h.isSelected());
-        grade.setH11(jCheckBox11h.isSelected());
-        grade.setH12(jCheckBox12h.isSelected());
-        grade.setH13(jCheckBox13h.isSelected());
-        grade.setH14(jCheckBox14h.isSelected());
-        grade.setH15(jCheckBox15h.isSelected());
-        grade.setH16(jCheckBox16h.isSelected());
-        grade.setH17(jCheckBox17h.isSelected());
-        grade.setH18(jCheckBox18h.isSelected());
-        grade.setH19(jCheckBox19h.isSelected());
-        grade.setH20(jCheckBox20h.isSelected());
-        
-        // Setando o id da grade de horarios do usuario
-        getUsuarioLogado().getHorariosUsuario().setId(getUsuarioLogado().getIdentificador());
-            
-        // Setando os horarios de cada dia da semana do usuario logado
-        if ("Segunda-feira".equals(diaSemana)) 
-            getUsuarioLogado().getHorariosUsuario().setSegundafeira(grade);      
-        if ("Terça-feira".equals(diaSemana)) 
-            getUsuarioLogado().getHorariosUsuario().setTercafeira(grade);
-        if ("Quarta-feira".equals(diaSemana)) 
-            getUsuarioLogado().getHorariosUsuario().setQuartafeira(grade);
-        if ("Quinta-feira".equals(diaSemana)) 
-            getUsuarioLogado().getHorariosUsuario().setQuintafeira(grade);
-        if ("Sexta-feira".equals(diaSemana)) 
-            getUsuarioLogado().getHorariosUsuario().setSextafeira(grade);
-        if ("Sábado".equals(diaSemana)) 
-            getUsuarioLogado().getHorariosUsuario().setSabado(grade);
-
-        JOptionPane.showMessageDialog(null, "Horários de " + diaSemana + " registrados com sucesso!");
+//
+//        Horarios grade = new Horarios();
+//        String diaSemana = jComboBoxDiaSemana.getSelectedItem() + "";
+//
+//        grade.setDia(jComboBoxDiaSemana.getSelectedItem() + "");
+//        grade.setH7(jCheckBox7h.isSelected());
+//        grade.setH8(jCheckBox8h.isSelected());
+//        grade.setH9(jCheckBox9h.isSelected());
+//        grade.setH10(jCheckBox10h.isSelected());
+//        grade.setH11(jCheckBox11h.isSelected());
+//        grade.setH12(jCheckBox12h.isSelected());
+//        grade.setH13(jCheckBox13h.isSelected());
+//        grade.setH14(jCheckBox14h.isSelected());
+//        grade.setH15(jCheckBox15h.isSelected());
+//        grade.setH16(jCheckBox16h.isSelected());
+//        grade.setH17(jCheckBox17h.isSelected());
+//        grade.setH18(jCheckBox18h.isSelected());
+//        grade.setH19(jCheckBox19h.isSelected());
+//        grade.setH20(jCheckBox20h.isSelected());
+//
+//        // Setando o id da grade de horarios do usuario
+//        getUsuarioLogado().getHorariosUsuario().setId(getUsuarioLogado().getIdentificador());
+//
+//        // Setando os horarios de cada dia da semana do usuario logado
+//        if ("Segunda-feira".equals(diaSemana)) {
+//            getUsuarioLogado().getHorariosUsuario().setSegundafeira(grade);
+//        }
+//        if ("Terça-feira".equals(diaSemana)) {
+//            getUsuarioLogado().getHorariosUsuario().setTercafeira(grade);
+//        }
+//        if ("Quarta-feira".equals(diaSemana)) {
+//            getUsuarioLogado().getHorariosUsuario().setQuartafeira(grade);
+//        }
+//        if ("Quinta-feira".equals(diaSemana)) {
+//            getUsuarioLogado().getHorariosUsuario().setQuintafeira(grade);
+//        }
+//        if ("Sexta-feira".equals(diaSemana)) {
+//            getUsuarioLogado().getHorariosUsuario().setSextafeira(grade);
+//        }
+//        if ("Sábado".equals(diaSemana)) {
+//            getUsuarioLogado().getHorariosUsuario().setSabado(grade);
+//        }
+//
+//        JOptionPane.showMessageDialog(null, "Horários de " + diaSemana + " registrados com sucesso!");
 
 //        jCheckBox7h.setSelected(false);
 //        jCheckBox8h.setSelected(false);
@@ -388,7 +408,7 @@ public class TelaCadastraHorarios extends javax.swing.JFrame {
     public void setjComboBoxDiaSemana(JComboBox<String> jComboBoxDiaSemana) {
         this.jComboBoxDiaSemana = jComboBoxDiaSemana;
     }
-    
+
     public JCheckBox getjCheckBox10h() {
         return jCheckBox10h;
     }
