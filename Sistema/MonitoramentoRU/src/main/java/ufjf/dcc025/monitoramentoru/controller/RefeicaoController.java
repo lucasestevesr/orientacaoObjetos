@@ -21,27 +21,10 @@ public class RefeicaoController {
 
     public boolean cadastrarRefeicao(String tipo, String diaSemana, String turnoRefeicao, String horario) {
         if (diaSemana != null && turnoRefeicao != null && horario != null) {
-            boolean agendamentoJaExistente = false;
-            boolean encomendaJaExistente = false;
+            
+            boolean refeicaoRepetida = verificaRefeicaoDuplicada(diaSemana, horario);
 
-            for (int i = 0; i < BancoDeDadosUsuario.getRefeicoes().size(); i++) {
-                if (BancoDeDadosUsuario.getRefeicoes().get(i).getId().equals(BancoDeDadosUsuario.getUsuarioLogado().getIdentificador())) {
-                    if (BancoDeDadosUsuario.getRefeicoes().get(i).getDiaSemana().equals(diaSemana) && BancoDeDadosUsuario.getRefeicoes().get(i).getHorario().equals(horario)) {
-                        JOptionPane.showMessageDialog(null, "Você já agendou uma refeição para este horário");
-                        agendamentoJaExistente = true;
-                    }
-                }
-            }
-
-            for (int i = 0; i < BancoDeDadosUsuario.getEncomendas().size(); i++) {
-                if (BancoDeDadosUsuario.getEncomendas().get(i).getId().equals(BancoDeDadosUsuario.getUsuarioLogado().getIdentificador())) {
-                    if (BancoDeDadosUsuario.getEncomendas().get(i).getDiaSemana().equals(diaSemana) && BancoDeDadosUsuario.getEncomendas().get(i).getHorario().equals(horario)) {
-                        JOptionPane.showMessageDialog(null, "Você já encomendou uma refeição para este horário");
-                        encomendaJaExistente = true;
-                    }
-                }
-            }
-            if (!agendamentoJaExistente && !encomendaJaExistente) {
+            if (!refeicaoRepetida ) {
                 switch (tipo) {
                     case ("Agendamento"): {
 
@@ -88,4 +71,38 @@ public class RefeicaoController {
         }
         return false;
     }
+
+    public boolean verificaRefeicaoDuplicada(String diaSemana, String horario) {
+
+        boolean agendamentoJaExistente = false;
+        boolean encomendaJaExistente = false;
+        boolean refeicaoRepetida;
+
+        for (int i = 0; i < BancoDeDadosUsuario.getRefeicoes().size(); i++) {
+            if (BancoDeDadosUsuario.getRefeicoes().get(i).getId().equals(BancoDeDadosUsuario.getUsuarioLogado().getIdentificador())) {
+                if (BancoDeDadosUsuario.getRefeicoes().get(i).getDiaSemana().equals(diaSemana) && BancoDeDadosUsuario.getRefeicoes().get(i).getHorario().equals(horario)) {
+                    JOptionPane.showMessageDialog(null, "Você já agendou uma refeição para este horário");
+                    agendamentoJaExistente = true;
+                }
+            }
+        }
+
+        for (int i = 0; i < BancoDeDadosUsuario.getEncomendas().size(); i++) {
+            if (BancoDeDadosUsuario.getEncomendas().get(i).getId().equals(BancoDeDadosUsuario.getUsuarioLogado().getIdentificador())) {
+                if (BancoDeDadosUsuario.getEncomendas().get(i).getDiaSemana().equals(diaSemana) && BancoDeDadosUsuario.getEncomendas().get(i).getHorario().equals(horario)) {
+                    JOptionPane.showMessageDialog(null, "Você já encomendou uma refeição para este horário");
+                    encomendaJaExistente = true;
+                }
+            }
+        }
+
+        if (agendamentoJaExistente || encomendaJaExistente) {
+            refeicaoRepetida = true;
+        } else {
+            refeicaoRepetida = false;
+        }
+        return refeicaoRepetida;
+    }
+
+
 }
