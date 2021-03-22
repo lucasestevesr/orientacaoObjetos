@@ -21,3 +21,9 @@ Indicamos NetBeans IDE.
 Att.
 
 @Lucas Esteves dos Reis Salgado, aluno do curso de Eng. Computacional da UFJF.
+
+Equipe:
+@Arthur Mesquita
+@Lucas Esteves dos Reis
+@Lucas Neponucemo
+@Tawan Victor
