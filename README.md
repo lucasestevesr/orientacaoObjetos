@@ -15,7 +15,7 @@ o Sistema não possuí banco de dados, e por isso, os dados são salvos em arqui
 
 #Instalação:
 
-Basta clonar ou fazer downaload do arquivos do repesitório e abri-los utilizando uma IDE.
+Basta clonar ou fazer downaload do arquivos do repósitorio e abri-los utilizando uma IDE.
 Indicamos NetBeans IDE.
 
 Att.
