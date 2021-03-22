@@ -214,9 +214,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSairActionPerformed
         
-        this.dispose();
-        TelaLogin telalogin = new TelaLogin();
-        telalogin.setVisible(true);
+        this.dispose();     
         
     }//GEN-LAST:event_jMenuItemSairActionPerformed
 

@@ -5,12 +5,15 @@
  */
 package ufjf.dcc025.monitoramentoru.model;
 
+import javax.swing.JOptionPane;
+import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
+
 /**
  *
  * @author Your Name <lucas.esteves@engenharia.ufjf.br>
  */
 public class AuxUsuario {
-    
+
     private static int id;
     private String nome;
     private String identificador;
@@ -18,8 +21,7 @@ public class AuxUsuario {
     private String telefone;
     private String senha;
     private String confirmarSenha;
-    private String tipo; 
-   
+    private String tipo;
 
     public AuxUsuario(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha, String tipo) {
         this.nome = nome;
@@ -29,7 +31,7 @@ public class AuxUsuario {
         this.senha = senha;
         this.confirmarSenha = confirmarSenha;
         this.tipo = tipo;
-        
+
     }
 
     public static int getId() {
@@ -95,7 +97,5 @@ public class AuxUsuario {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-    
-    
 
 }

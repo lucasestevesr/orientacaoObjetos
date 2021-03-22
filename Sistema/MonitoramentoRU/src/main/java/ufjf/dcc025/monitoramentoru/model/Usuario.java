@@ -11,9 +11,8 @@ import java.util.Objects;
  *
  * @author Your Name <lucas.esteves@engenharia.ufjf.br>
  */
-public abstract class Usuario {
+public abstract class Usuario implements Eticket {
 
-    private static int id;
     private String nome;
     private String identificador;
     private String email;
@@ -24,8 +23,7 @@ public abstract class Usuario {
     private transient SemanaHorarios horariosUsuario;
 
     public Usuario(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha, SemanaHorarios horariosUsuario) {
-        
-        
+
         this.nome = nome;
         this.identificador = identificador;
         this.email = email;
@@ -76,14 +74,6 @@ public abstract class Usuario {
         this.senha = senha;
     }
 
-    public int getId() {
-        return this.id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getConfirmarSenha() {
         return confirmarSenha;
     }
@@ -110,7 +100,7 @@ public abstract class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" + "id=" + id + ", nome=" + nome + ", identificador=" + identificador + ", email=" + email + ", telefone=" + telefone + ", senha=" + senha + ", confirmarSenha=" + confirmarSenha + ", tipo=" + tipo + '}';
+        return "Usuario{" + "nome=" + nome + ", identificador=" + identificador + ", email=" + email + ", telefone=" + telefone + ", senha=" + senha + ", confirmarSenha=" + confirmarSenha + ", tipo=" + tipo + ", horariosUsuario=" + horariosUsuario + '}';
     }
 
     @Override
@@ -132,5 +122,33 @@ public abstract class Usuario {
             return false;
         }
         return true;
+    }
+
+//    @Override;
+//    public double (double valorCafe, double valorRefeicao, String tipo) {
+//        if ("Discente".equals(tipo)) {
+//            valorCafe = 0.50;
+//            valorRefeicao = 1.4;
+//        } else {
+//            valorCafe = 1.64;
+//            valorRefeicao = 8.4;
+//        }
+//    }
+    @Override
+    public double pagarRefeicao(double valorRefeicao, String tipo) {
+        if ("Discente".equals(tipo)) {
+            return valorRefeicao = 1.4;
+        } else {
+            return valorRefeicao = 8.4;
+        }
+    }
+
+    @Override
+    public double pagarCafe(double valorCafe, String tipo) {
+        if ("Discente".equals(tipo)) {
+            return valorCafe = 0.5;
+        } else {
+            return valorCafe = 1.64;
+        }
     }
 }

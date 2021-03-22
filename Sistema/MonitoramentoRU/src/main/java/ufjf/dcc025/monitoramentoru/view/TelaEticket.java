@@ -123,15 +123,15 @@ public class TelaEticket extends javax.swing.JFrame {
 
     private void jToggleButtonProcuraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonProcuraActionPerformed
         
-        String eticket = buscaEticket(jComboBoxDiaSemana.getSelectedItem().toString());
+        String eticket = BancoDeDadosUsuario.buscaEticket(jComboBoxDiaSemana.getSelectedItem().toString());
         jTextArea1.setText(eticket);
 
     }//GEN-LAST:event_jToggleButtonProcuraActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       TelaAgendarRefeicao telagendarefeicao = new TelaAgendarRefeicao();
-       this.setVisible(false);
-       telagendarefeicao.setVisible(true);
+        TelaPrincipal tp = new TelaPrincipal();
+        this.dispose();
+        tp.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -168,11 +168,11 @@ public class TelaEticket extends javax.swing.JFrame {
             }
         });
     }
-
+    
     public JTextArea getjTextArea1() {
         return jTextArea1;
     }
-
+    
     public void setjTextArea1(JTextArea jTextArea1) {
         this.jTextArea1 = jTextArea1;
     }

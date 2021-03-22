@@ -19,7 +19,6 @@ import ufjf.dcc025.monitoramentoru.model.*;
  */
 public class UsuarioController {
 
-
 //    public static LinkedList<Usuario> usuarios = new LinkedList();
     public boolean cadastrarUsuario(String tipo, String nome, String identificador, String email, String telefone,
             String senha, String confirmarSenha, SemanaHorarios horariosUsuario) {
@@ -31,7 +30,7 @@ public class UsuarioController {
                 case ("Docente"): {
                     Usuario registroDocente = new Docente(nome, identificador, email, telefone, senha, confirmarSenha, horariosUsuario);
                     BancoDeDadosUsuario.getUsuarios().add(registroDocente);
-                    
+
                     //registroDocente.setId(usuarios.size());
                     //usuarios.add(registroDocente);
                     break;
@@ -53,9 +52,8 @@ public class UsuarioController {
                 default: {
                     System.out.println("Tipo de Usuário inválido.");
                 }
-                
+
             }
-            
 
             JOptionPane.showMessageDialog(null, "Olá " + (nome) + ", seu cadastro " + (tipo) + " foi realizado com sucesso.");
 
@@ -84,4 +82,45 @@ public class UsuarioController {
 //        }
 //        System.out.println(display);
 //    }
+    public boolean cadastrarUsuarioaux(String tipo, String nome, String identificador, String email, String telefone,
+            String senha, String confirmarSenha, SemanaHorarios horariosUsuario) {
+        if ((senha == null ? confirmarSenha == null : senha.equals(confirmarSenha)) && nome != null && nome.length() > 0
+                && identificador != null && identificador.length() > 0 && email != null && email.length() > 0
+                && telefone != null && telefone.length() > 0
+                && senha != null && senha.length() > 0) {
+            switch (tipo) {
+                case ("Docente"): {
+                    Usuario registroDocente = new Docente(nome, identificador, email, telefone, senha, confirmarSenha, horariosUsuario);
+                    BancoDeDadosUsuario.getUsuarios().add(registroDocente);
+
+                    //registroDocente.setId(usuarios.size());
+                    //usuarios.add(registroDocente);
+                    break;
+                }
+                case ("Discente"): {
+                    Usuario registroDiscente = new Discente(nome, identificador, email, telefone, senha, confirmarSenha, horariosUsuario);
+                    BancoDeDadosUsuario.getUsuarios().add(registroDiscente);
+                    //registroDiscente.setId(usuarios.size());
+                    // usuarios.add(registroDiscente);
+                    break;
+                }
+                case ("Tae"): {
+                    Usuario registroTae = new Tae(nome, identificador, email, telefone, senha, confirmarSenha, horariosUsuario);
+                    BancoDeDadosUsuario.getUsuarios().add(registroTae);
+                    //registroTae.setId(usuarios.size());
+                    //usuarios.add(registroTae);
+                    break;
+                }
+                default: {
+                    System.out.println("Tipo de Usuário inválido.");
+                }
+
+            }
+
+            return true;
+        } else {
+
+            return false;
+        }
     }
+}

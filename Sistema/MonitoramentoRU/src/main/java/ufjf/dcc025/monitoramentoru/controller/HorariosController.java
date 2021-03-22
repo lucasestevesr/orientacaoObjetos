@@ -10,7 +10,6 @@ import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
 import static ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario.getUsuarioLogado;
 import ufjf.dcc025.monitoramentoru.model.Horarios;
 import ufjf.dcc025.monitoramentoru.model.SemanaHorarios;
-import ufjf.dcc025.monitoramentoru.model.Usuario;
 
 /**
  *
@@ -58,16 +57,13 @@ public class HorariosController {
         if ("Sábado".equals(diaSemana)) 
             getUsuarioLogado().getHorariosUsuario().setSabado(grade);
 
-        JOptionPane.showMessageDialog(null, "Horários de " + diaSemana + " registrados com sucesso!");
-        
+        JOptionPane.showMessageDialog(null, "Horários de " + diaSemana + " registrados com sucesso!");        
 
     }
-
     public void ConcluirCadastro(SemanaHorarios semana) {
         
         BancoDeDadosUsuario.getHorarios().add(semana);
         JOptionPane.showMessageDialog(null, "Todos os horários foram registrados!");
 
     }
-
 }

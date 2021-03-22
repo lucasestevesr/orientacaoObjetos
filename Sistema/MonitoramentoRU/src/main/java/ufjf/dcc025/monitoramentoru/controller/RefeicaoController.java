@@ -5,12 +5,10 @@
  */
 package ufjf.dcc025.monitoramentoru.controller;
 
-import java.util.LinkedList;
 import javax.swing.JOptionPane;
 import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
 import ufjf.dcc025.monitoramentoru.model.AgendarRefeicao;
 import ufjf.dcc025.monitoramentoru.model.EncomendarRefeicao;
-import ufjf.dcc025.monitoramentoru.model.Prioridade;
 import ufjf.dcc025.monitoramentoru.model.Refeicao;
 
 /**
@@ -39,8 +37,8 @@ public class RefeicaoController {
                         }
                         JOptionPane.showMessageDialog(null, "Voce tem " + contRefeicoesUsuario + " refeições agendadas");
 
-                        Prioridade prioridade = new Prioridade();
-                        prioridade.VerificaPrioridade(turnoRefeicao);
+                        
+                        BancoDeDadosUsuario.VerificaPrioridade(turnoRefeicao);
                         break;
 
                     }

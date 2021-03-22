@@ -11,6 +11,8 @@ package ufjf.dcc025.monitoramentoru.model;
  */
 public abstract interface Eticket {
 
-    public abstract void pagar(double valorCafe, double valorRefeicao, String tipo);
+    public abstract double pagarCafe(double valorCafe, String tipo);
+    
+    public abstract double pagarRefeicao(double valorRefeicao, String tipo);
 
 }
