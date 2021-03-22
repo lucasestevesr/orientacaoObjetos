@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
 import ufjf.dcc025.monitoramentoru.model.Horarios;
 import ufjf.dcc025.monitoramentoru.model.SemanaHorarios;
+import utils.Arquivo;
 
 /**
  *
@@ -19,13 +20,12 @@ public class TelaCadastro extends javax.swing.JFrame {
     /**
      * Creates new form TelaCadastro
      */
-    
     //Usuario usuario;
     public TelaCadastro() {
         initComponents();
         this.setLocationRelativeTo(null);
-    //this.usuario = null;
-    //txtId.setText(Integer.toString(UsuarioController.getId()));
+        //this.usuario = null;
+        //txtId.setText(Integer.toString(UsuarioController.getId()));
 
     }
 //
@@ -272,18 +272,19 @@ public class TelaCadastro extends javax.swing.JFrame {
 
     private void jButtonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalvarActionPerformed
         TelaLogin telalogin = new TelaLogin();
-        
+
         // Iniciando o atributo de horarios do usuario
         Horarios dia = new Horarios();
         SemanaHorarios horariosUsuario = new SemanaHorarios(jTextFieldIdentificador.getText(), dia, dia, dia, dia, dia, dia);
-        
+
         boolean validacao = BancoDeDadosUsuario.validacaoCadastro(jComboBoxCargo.getSelectedItem().toString(),
                 textFieldNome.getText(), jTextFieldIdentificador.getText(), textFieldEmail.getText(),
                 textFieldTelefone.getText(), jPasswordFieldSenha.getText(), jPasswordFieldConfirmarSenha.getText(), horariosUsuario);
-        
+
         if (validacao) {
             this.setVisible(false);
             telalogin.setVisible(true);
+            Arquivo.getJSONFromUsuario();
         } else {
             JOptionPane.showMessageDialog(this, "Os campos não foram preenchidos corretamente.");
         }
@@ -294,7 +295,7 @@ public class TelaCadastro extends javax.swing.JFrame {
 
     private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
         this.dispose();
-        TelaLogin tl= new TelaLogin();
+        TelaLogin tl = new TelaLogin();
         tl.setVisible(true);
     }//GEN-LAST:event_jButtonVoltarActionPerformed
 

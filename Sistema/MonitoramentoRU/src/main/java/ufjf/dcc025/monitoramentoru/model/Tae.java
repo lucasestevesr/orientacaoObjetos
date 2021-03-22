@@ -9,7 +9,7 @@ package ufjf.dcc025.monitoramentoru.model;
  *
  * @author Your Name <lucas.esteves@engenharia.ufjf.br>
  */
-public class Tae extends Usuario implements Eticket {
+public class Tae extends Usuario implements Eticket  {
 
     private final String tipo = "Tae";
     private static int id;

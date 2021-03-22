@@ -5,12 +5,19 @@
  */
 package utils;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
+import ufjf.dcc025.monitoramentoru.model.*;
+import java.util.ArrayList;
+import java.util.List;
+import ufjf.dcc025.monitoramentoru.controller.UsuarioController;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.lang.reflect.Type;
+import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
+
 
 /**
  *
@@ -18,40 +25,45 @@ import java.io.PrintWriter;
  */
 public class Arquivo {
 
-    public static String Read(String caminho) { //passa o caminho do arquivo que vc quer ler
-        String conteudo = "";
-        try { // tentar
-            FileReader arq = new FileReader(caminho); //classe para leitura
-            BufferedReader lerArq = new BufferedReader(arq); // dessa classe utiliza o BufferedReader - Uma classe encapsulando a outra;
-            String linha = "";
-            try {
-                linha = lerArq.readLine();
-                while (linha != null) {
-                    conteudo += linha + "\n";
-                    linha = lerArq.readLine();
-                }
-                arq.close();
-                return conteudo;
-            } catch (IOException ex) {
-                System.out.println("Erro: não foi possível ler o arquivo.");
-                return "";
-            }
-        } catch (FileNotFoundException ex) {
-            System.out.println("Erro: arquivo não encontrado.");
-            return "";
+    private static Gson SERIALIZADOR;
+
+    public static final void getJSONFromUsuario() {
+        SERIALIZADOR = new Gson();
+        try ( FileWriter writer = new FileWriter("C:\\Users\\Lucas\\Desktop\\UFJF\\DCC\\Orientação de Objetos\\sistema-monitoramento-ru\\Sistema\\MonitoramentoRU\\teste.json")) {
+            SERIALIZADOR.toJson(BancoDeDadosUsuario.getUsuarios(), writer);
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
     }
 
-    public static boolean Write(String caminho, String texto) {
+    public static <T> List<T> getList(BufferedReader jsonArray, Class<T> clazz) {
+        Type typeOfT = TypeToken.getParameterized(List.class, clazz).getType();
+        return new Gson().fromJson(jsonArray, typeOfT);
+    }
+
+    public static final void setFromJsonUsuario() {
+        List<AuxUsuario> retornaUsuarios = new ArrayList<>();
+
         try {
-            FileWriter arq = new FileWriter(caminho);
-            PrintWriter gravarArq = new PrintWriter(arq);
-            gravarArq.println(texto);
-            gravarArq.close();
-            return true;
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-            return false;
+            Gson gson = new Gson();
+            FileReader arq = new FileReader("C:\\Users\\Lucas\\Desktop\\UFJF\\DCC\\Orientação de Objetos\\sistema-monitoramento-ru\\Sistema\\MonitoramentoRU\\teste.json"); //classe para leitura
+            BufferedReader lerArq = new BufferedReader(arq);
+            retornaUsuarios = Arquivo.getList(lerArq, AuxUsuario.class);
+            lerArq.close();
+
+        } catch (Exception ex) {
+
+            ex.printStackTrace();
+        }
+        if (retornaUsuarios != null) {
+            for (AuxUsuario user : retornaUsuarios) {
+                Horarios dia = new Horarios();
+                SemanaHorarios horariosUsuario = new SemanaHorarios("id", dia, dia, dia, dia, dia, dia);
+                UsuarioController uc = new UsuarioController();
+                uc.cadastrarUsuario(user.getTipo(), user.getNome(), user.getIdentificador(), user.getEmail(), user.getEmail(), user.getSenha(), user.getConfirmarSenha(), horariosUsuario);
+            }
         }
     }
 }

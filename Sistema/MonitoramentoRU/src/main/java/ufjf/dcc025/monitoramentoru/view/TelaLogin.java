@@ -8,6 +8,7 @@ package ufjf.dcc025.monitoramentoru.view;
 import javax.swing.JOptionPane;
 import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
 import ufjf.dcc025.monitoramentoru.model.Usuario;
+import utils.Arquivo;
 
 /**
  *
@@ -143,7 +144,7 @@ public class TelaLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        
+
         this.dispose();
         boolean autenticar = BancoDeDadosUsuario.autenticarLogin(txtUser.getText(), txtPassword.getText());
 
@@ -152,7 +153,7 @@ public class TelaLogin extends javax.swing.JFrame {
             telaPrincipal.setVisible(true);
 
         } else {
-            JOptionPane.showMessageDialog(null, "Login Invalido, Faça novamente.");          
+            JOptionPane.showMessageDialog(null, "Login Invalido, Faça novamente.");
             this.setVisible(true);
         }
     }//GEN-LAST:event_btnLoginActionPerformed
@@ -162,7 +163,7 @@ public class TelaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-        
+
         Usuario usuario = null;
         this.setVisible(false);
         TelaCadastro telacadastro = new TelaCadastro();
@@ -198,6 +199,7 @@ public class TelaLogin extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                Arquivo.setFromJsonUsuario();
                 new TelaLogin().setVisible(true);
             }
         });

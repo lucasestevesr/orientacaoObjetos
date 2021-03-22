@@ -12,7 +12,6 @@ import java.util.stream.Collectors;
 import javax.swing.JOptionPane;
 import ufjf.dcc025.monitoramentoru.controller.UsuarioController;
 import ufjf.dcc025.monitoramentoru.controller.RefeicaoController;
-import ufjf.dcc025.monitoramentoru.view.TelaEticket;
 
 /**
  *

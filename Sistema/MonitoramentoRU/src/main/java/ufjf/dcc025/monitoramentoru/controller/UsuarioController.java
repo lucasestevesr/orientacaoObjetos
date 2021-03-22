@@ -5,7 +5,6 @@
  */
 package ufjf.dcc025.monitoramentoru.controller;
 
-import com.google.gson.Gson;
 import javax.swing.JOptionPane;
 import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
 import ufjf.dcc025.monitoramentoru.model.*;
@@ -19,15 +18,7 @@ import ufjf.dcc025.monitoramentoru.model.*;
  * "banco" a modelagem das classes.
  */
 public class UsuarioController {
-    private static Gson SERIALIZADOR;
-    /**
-     *      
-     * @return A String do Usuario usuario.
-     */
-    public static final String getJSONFromUsuario(Usuario usuario){
-        SERIALIZADOR = new Gson();
-        return SERIALIZADOR.toJson(usuario);
-    }
+
 
 //    public static LinkedList<Usuario> usuarios = new LinkedList();
     public boolean cadastrarUsuario(String tipo, String nome, String identificador, String email, String telefone,
@@ -40,13 +31,13 @@ public class UsuarioController {
                 case ("Docente"): {
                     Usuario registroDocente = new Docente(nome, identificador, email, telefone, senha, confirmarSenha, horariosUsuario);
                     BancoDeDadosUsuario.getUsuarios().add(registroDocente);
+                    
                     //registroDocente.setId(usuarios.size());
                     //usuarios.add(registroDocente);
                     break;
                 }
                 case ("Discente"): {
-                    Discente registroDiscente = new Discente(nome, identificador, email, telefone, senha, confirmarSenha, horariosUsuario);
-                    registroDiscente.pagar();
+                    Usuario registroDiscente = new Discente(nome, identificador, email, telefone, senha, confirmarSenha, horariosUsuario);
                     BancoDeDadosUsuario.getUsuarios().add(registroDiscente);
                     //registroDiscente.setId(usuarios.size());
                     // usuarios.add(registroDiscente);
@@ -62,7 +53,9 @@ public class UsuarioController {
                 default: {
                     System.out.println("Tipo de Usuário inválido.");
                 }
+                
             }
+            
 
             JOptionPane.showMessageDialog(null, "Olá " + (nome) + ", seu cadastro " + (tipo) + " foi realizado com sucesso.");
 

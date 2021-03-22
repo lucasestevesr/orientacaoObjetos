@@ -5,14 +5,12 @@
  */
 package ufjf.dcc025.monitoramentoru.model;
 
-import java.util.Objects;
-
 /**
  *
  * @author Your Name <lucas.esteves@engenharia.ufjf.br>
  */
-public abstract class Usuario {
-
+public class AuxUsuario {
+    
     private static int id;
     private String nome;
     private String identificador;
@@ -20,24 +18,30 @@ public abstract class Usuario {
     private String telefone;
     private String senha;
     private String confirmarSenha;
-    private transient String tipo;  //o Json ñ vai puxar 
-    private transient SemanaHorarios horariosUsuario;
+    private String tipo; 
+   
 
-    public Usuario(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha, SemanaHorarios horariosUsuario) {
-        
-        
+    public AuxUsuario(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha, String tipo) {
         this.nome = nome;
         this.identificador = identificador;
         this.email = email;
         this.telefone = telefone;
         this.senha = senha;
         this.confirmarSenha = confirmarSenha;
-        this.horariosUsuario = horariosUsuario;
-        System.out.println("Foi realizado o cadastro do usúario identificado pelo email: " + this.email + " e pelo identificador: " + this.identificador);
+        this.tipo = tipo;
+        
+    }
+
+    public static int getId() {
+        return id;
+    }
+
+    public static void setId(int id) {
+        AuxUsuario.id = id;
     }
 
     public String getNome() {
-        return this.nome;
+        return nome;
     }
 
     public void setNome(String nome) {
@@ -76,14 +80,6 @@ public abstract class Usuario {
         this.senha = senha;
     }
 
-    public int getId() {
-        return this.id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getConfirmarSenha() {
         return confirmarSenha;
     }
@@ -99,38 +95,7 @@ public abstract class Usuario {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+    
+    
 
-    public SemanaHorarios getHorariosUsuario() {
-        return horariosUsuario;
-    }
-
-    public void setHorariosUsuario(SemanaHorarios horariosUsuario) {
-        this.horariosUsuario = horariosUsuario;
-    }
-
-    @Override
-    public String toString() {
-        return "Usuario{" + "id=" + id + ", nome=" + nome + ", identificador=" + identificador + ", email=" + email + ", telefone=" + telefone + ", senha=" + senha + ", confirmarSenha=" + confirmarSenha + ", tipo=" + tipo + '}';
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Usuario other = (Usuario) obj;
-        if (!Objects.equals(this.identificador, other.identificador)) {
-            return false;
-        }
-        if (!Objects.equals(this.senha, other.senha)) {
-            return false;
-        }
-        return true;
-    }
 }

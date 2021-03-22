@@ -11,11 +11,6 @@ package ufjf.dcc025.monitoramentoru.model;
  */
 public abstract interface Eticket {
 
-    public final double TICKETCAFE = 0.5;
-    public final double TICKETREFEICAO = 1.9;
-
-    public abstract double pagarRefeicao(String turnorefeicao);
-
-    public abstract void pagar();
+    public abstract void pagar(double valorCafe, double valorRefeicao, String tipo);
 
 }
