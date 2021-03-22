@@ -31,7 +31,7 @@ public abstract class Usuario implements Eticket {
         this.senha = senha;
         this.confirmarSenha = confirmarSenha;
         this.horariosUsuario = horariosUsuario;
-        System.out.println("Foi realizado o cadastro do usúario identificado pelo email: " + this.email + " e pelo identificador: " + this.identificador);
+        //System.out.println("Foi realizado o cadastro do usúario identificado pelo email: " + this.email + " e pelo identificador: " + this.identificador);
     }
 
     public String getNome() {

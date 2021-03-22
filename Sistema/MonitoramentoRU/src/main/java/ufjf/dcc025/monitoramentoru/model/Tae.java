@@ -17,7 +17,7 @@ public class Tae extends Usuario {
         super(nome, identificador, email, telefone, senha, confirmarSenha, horariosUsuario);
         setTipo(tipo);
 
-        System.out.println("Foi criado  um cadastro do tipo " + tipo + ".");
+        //System.out.println("Foi criado  um cadastro do tipo " + tipo + ".");
     }
 
 }

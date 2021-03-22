@@ -16,7 +16,7 @@ public class Docente extends Usuario {
     public Docente(String nome, String identificador, String email, String telefone, String senha, String confirmarSenha, SemanaHorarios horariosUsuario) {
         super(nome, identificador, email, telefone, senha, confirmarSenha, horariosUsuario);
         setTipo(tipo);
-        System.out.println("Foi criado  um cadastro do tipo" + tipo + ".");
+        //System.out.println("Foi criado  um cadastro do tipo" + tipo + ".");
     }
 
 }
