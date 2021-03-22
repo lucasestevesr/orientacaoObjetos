@@ -57,7 +57,7 @@ public class RefeicaoController {
                         JOptionPane.showMessageDialog(null, "Voce tem " + contRefeicoesUsuario + " refeições agendadas");
 
                         Prioridade prioridade = new Prioridade();
-                        prioridade.VerificaPrioridade();
+                        prioridade.VerificaPrioridade(turnoRefeicao);
                         break;
 
                     }

@@ -28,15 +28,37 @@ public class Prioridade {
         this.prioridade = prioridade;
     }
 
-    public void VerificaPrioridade() {
+    public void VerificaPrioridade(String turno) {
 
         for (int i = 0; i < BancoDeDadosUsuario.getHorarios().size(); i++) {
 
-            if (BancoDeDadosUsuario.getHorarios().get(i).getSegundafeira().isH11() || BancoDeDadosUsuario.getHorarios().get(i).getSegundafeira().isH12() || BancoDeDadosUsuario.getHorarios().get(i).getSegundafeira().isH13()) {
-                if(BancoDeDadosUsuario.getHorarios().get(i).getId().equals(BancoDeDadosUsuario.getUsuarioLogado().getIdentificador())){
-                JOptionPane.showMessageDialog(null, BancoDeDadosUsuario.getHorarios().get(i).getId() + " tem prioridade!");
-            }
-                
+            switch (turno) {
+
+                case ("Almoço"): {
+                    if (BancoDeDadosUsuario.getHorarios().get(i).getSegundafeira().isH11() || BancoDeDadosUsuario.getHorarios().get(i).getSegundafeira().isH12() || BancoDeDadosUsuario.getHorarios().get(i).getSegundafeira().isH13()) 
+                        if (BancoDeDadosUsuario.getHorarios().get(i).getId().equals(BancoDeDadosUsuario.getUsuarioLogado().getIdentificador())) 
+                            JOptionPane.showMessageDialog(null, BancoDeDadosUsuario.getHorarios().get(i).getId() + " tem prioridade!");
+                        
+                    break;
+                }
+                case ("Café da Manhã"): {
+                    if (BancoDeDadosUsuario.getHorarios().get(i).getSegundafeira().isH7() || BancoDeDadosUsuario.getHorarios().get(i).getSegundafeira().isH8() || BancoDeDadosUsuario.getHorarios().get(i).getSegundafeira().isH9()) 
+                        if (BancoDeDadosUsuario.getHorarios().get(i).getId().equals(BancoDeDadosUsuario.getUsuarioLogado().getIdentificador())) 
+                            JOptionPane.showMessageDialog(null, BancoDeDadosUsuario.getHorarios().get(i).getId() + " tem prioridade!");
+                        
+                    break;
+                }
+                case ("Janta"): {
+
+                    if (BancoDeDadosUsuario.getHorarios().get(i).getSegundafeira().isH17() || BancoDeDadosUsuario.getHorarios().get(i).getSegundafeira().isH18() || BancoDeDadosUsuario.getHorarios().get(i).getSegundafeira().isH19()) 
+                        if (BancoDeDadosUsuario.getHorarios().get(i).getId().equals(BancoDeDadosUsuario.getUsuarioLogado().getIdentificador())) 
+                            JOptionPane.showMessageDialog(null, BancoDeDadosUsuario.getHorarios().get(i).getId() + " tem prioridade!");
+                        
+                    break;
+                }
+                default: {
+                        System.out.println("Turno da refeição inválido.");
+                    }
             }
         }
     }
