@@ -138,7 +138,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBarTelaPrincipal2.add(jMenuContato);
 
-        jMenuSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ufjf/dcc025/monitoramentoru/view/botao-ligar-desligar.png"))); // NOI18N
+        jMenuSair.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lucas\\Desktop\\UFJF\\DCC\\Orientação de Objetos\\sistema-monitoramento-ru\\Sistema\\MonitoramentoRU\\src\\main\\java\\ufjf\\dcc025\\monitoramentoru\\imagens\\botao-ligar-desligar.png")); // NOI18N
         jMenuSair.setText(" Sair ");
         jMenuSair.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 14)); // NOI18N
 
