@@ -8,7 +8,7 @@ package ufjf.dcc025.monitoramentoru.view;
 import javax.swing.JOptionPane;
 import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
 import ufjf.dcc025.monitoramentoru.model.Usuario;
-import utils.Arquivo;
+import ufjf.dcc025.monitoramentoru.utils.Arquivo;
 
 /**
  *

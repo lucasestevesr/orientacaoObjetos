@@ -49,12 +49,14 @@ public class TelaEticket extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jLabel1.setText("Dia da Semana:");
 
+        jComboBoxDiaSemana.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jComboBoxDiaSemana.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Escolha", "Segunda Feira", "Terça Feira", "Quarta Feira", "Quinta Feira", "Sexta Feira"}));
+        jComboBoxDiaSemana.setName(""); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 18)); // NOI18N
         jLabel2.setText("Eticket");
 
-        jToggleButtonProcura.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
+        jToggleButtonProcura.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jToggleButtonProcura.setText("Procurar");
         jToggleButtonProcura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,7 +64,7 @@ public class TelaEticket extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jButton1.setText("Voltar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,42 +81,40 @@ public class TelaEticket extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addComponent(jToggleButtonProcura))
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComboBoxDiaSemana, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(85, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(146, 146, 146))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jToggleButtonProcura)
-                            .addComponent(jLabel1))
-                        .addGap(32, 32, 32)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBoxDiaSemana, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1))))
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addComponent(jLabel2)
+                .addGap(190, 190, 190))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jComboBoxDiaSemana, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButtonProcura)
-                    .addComponent(jButton1))
-                .addGap(25, 25, 25)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jToggleButtonProcura))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addGap(28, 28, 28))
         );
 
         pack();
@@ -122,16 +122,14 @@ public class TelaEticket extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButtonProcuraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonProcuraActionPerformed
-        
+
         String eticket = BancoDeDadosUsuario.buscaEticket(jComboBoxDiaSemana.getSelectedItem().toString());
         jTextArea1.setText(eticket);
 
     }//GEN-LAST:event_jToggleButtonProcuraActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        TelaPrincipal tp = new TelaPrincipal();
         this.dispose();
-        tp.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -168,11 +166,11 @@ public class TelaEticket extends javax.swing.JFrame {
             }
         });
     }
-    
+
     public JTextArea getjTextArea1() {
         return jTextArea1;
     }
-    
+
     public void setjTextArea1(JTextArea jTextArea1) {
         this.jTextArea1 = jTextArea1;
     }

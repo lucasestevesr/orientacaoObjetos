@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 import ufjf.dcc025.monitoramentoru.dao.BancoDeDadosUsuario;
 import ufjf.dcc025.monitoramentoru.model.Horarios;
 import ufjf.dcc025.monitoramentoru.model.SemanaHorarios;
-import utils.Arquivo;
+import ufjf.dcc025.monitoramentoru.utils.Arquivo;
 
 /**
  *

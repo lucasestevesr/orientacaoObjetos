@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package utils;
+package ufjf.dcc025.monitoramentoru.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -30,12 +30,12 @@ public class Arquivo {
     public static final void getJSONFromUsuario() {
         SERIALIZADOR = new Gson();
         String filePath = new File("").getAbsolutePath();
-        try ( FileWriter writer = new FileWriter(filePath +"\\bd.json")) {
+        try ( FileWriter writer = new FileWriter(filePath + "\\bd.json")) {
             SERIALIZADOR.toJson(BancoDeDadosUsuario.getUsuarios(), writer);
 
         } catch (IOException e) {
             e.printStackTrace();
-            
+
         }
 
     }
@@ -44,18 +44,15 @@ public class Arquivo {
         Type typeOfT = TypeToken.getParameterized(List.class, clazz).getType();
         return new Gson().fromJson(jsonArray, typeOfT);
     }
-    
-    
-    
-    
+
     public static final void setFromJsonUsuario() {
         List<AuxUsuario> retornaUsuarios = new ArrayList<>();
         String filePath = new File("").getAbsolutePath();
-        
+
         try {
 
             Gson gson = new Gson();
-            FileReader arq = new FileReader(filePath +"\\bd.json"); //classe para leitura
+            FileReader arq = new FileReader(filePath + "\\bd.json"); //classe para leitura
             BufferedReader lerArq = new BufferedReader(arq);
             retornaUsuarios = Arquivo.getList(lerArq, AuxUsuario.class);
             lerArq.close();

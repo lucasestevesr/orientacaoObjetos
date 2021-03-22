@@ -116,17 +116,16 @@ public class TelaContato extends javax.swing.JFrame {
     private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
 
         boolean enviar = BancoDeDadosUsuario.salvarContato(jTextFieldMensagem.getText());
-
+        
         if (enviar) {
             JOptionPane.showMessageDialog(null, "Mensagem Enviada.");
             this.dispose();
-            TelaPrincipal tp = new TelaPrincipal();
-            tp.setVisible(true);
-
+            
         } else {
             JOptionPane.showMessageDialog(null, "Mensagem inválida, conteúdo vazio.");
             this.setVisible(true);
         }
+       
     }//GEN-LAST:event_btnEnviarActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed

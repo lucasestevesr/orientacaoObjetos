@@ -5,21 +5,20 @@
  */
 package ufjf.dcc025.monitoramentoru.view;
 
-import ufjf.dcc025.monitoramentoru.model.MonitorarLotacao;
-import ufjf.dcc025.monitoramentoru.model.Usuario;
 
 /**
  *
  * @author Your Name <lucas.esteves@engenharia.ufjf.br>
  */
 public class TelaPrincipal extends javax.swing.JFrame {
-
+        
+  
     /**
      * Creates new form TelaPrincipal
      */
 //    private Usuario usuario;
     public TelaPrincipal() {
-        initComponents();
+        initComponents();        
 //        this.usuario = null;
     }
 
@@ -39,6 +38,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         jMenuBarTelaPrincipal2 = new javax.swing.JMenuBar();
         jMenuPrincipal2 = new javax.swing.JMenu();
         jMenuItemMonitorarLotacao2 = new javax.swing.JMenuItem();
@@ -55,6 +55,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lucas\\Desktop\\UFJF\\DCC\\Orientação de Objetos\\sistema-monitoramento-ru\\Sistema\\MonitoramentoRU\\src\\main\\java\\ufjf\\dcc025\\monitoramentoru\\imagens\\Sistema Monitoramento RU.png")); // NOI18N
+
+        jMenuPrincipal2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lucas\\Desktop\\UFJF\\DCC\\Orientação de Objetos\\sistema-monitoramento-ru\\Sistema\\MonitoramentoRU\\src\\main\\java\\ufjf\\dcc025\\monitoramentoru\\imagens\\botao-de-menu-de-tres-linhas-horizontais.png")); // NOI18N
         jMenuPrincipal2.setText("Menu Principal");
         jMenuPrincipal2.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
 
@@ -105,7 +108,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBarTelaPrincipal2.add(jMenuPrincipal2);
 
-        jMenuPerfil.setText("Perfil");
+        jMenuPerfil.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lucas\\Desktop\\UFJF\\DCC\\Orientação de Objetos\\sistema-monitoramento-ru\\Sistema\\MonitoramentoRU\\src\\main\\java\\ufjf\\dcc025\\monitoramentoru\\imagens\\usuario-de-perfil.png")); // NOI18N
+        jMenuPerfil.setText("  Perfil ");
         jMenuPerfil.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 14)); // NOI18N
 
         jMenuItemEditarPerfil.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
@@ -119,7 +123,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBarTelaPrincipal2.add(jMenuPerfil);
 
-        jMenuContato.setText("Contato");
+        jMenuContato.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lucas\\Desktop\\UFJF\\DCC\\Orientação de Objetos\\sistema-monitoramento-ru\\Sistema\\MonitoramentoRU\\src\\main\\java\\ufjf\\dcc025\\monitoramentoru\\imagens\\letter.png")); // NOI18N
+        jMenuContato.setText(" Contato ");
         jMenuContato.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 14)); // NOI18N
 
         jMenuItemContato.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
@@ -133,7 +138,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBarTelaPrincipal2.add(jMenuContato);
 
-        jMenuSair.setText("Sair");
+        jMenuSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ufjf/dcc025/monitoramentoru/view/botao-ligar-desligar.png"))); // NOI18N
+        jMenuSair.setText(" Sair ");
         jMenuSair.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 14)); // NOI18N
 
         jMenuItemSair.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
@@ -153,11 +159,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
+            .addComponent(jLabel1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 325, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -249,11 +257,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TelaPrincipal().setVisible(true);
+                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBarTelaPrincipal2;
     private javax.swing.JMenu jMenuContato;
     private javax.swing.JMenuItem jMenuItemAgendarHorario;
